@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article itemscope itemtype="http://schema.org/Book">
+	<header>
+		<h1 itemprop="name headline">{{ page.title }}</h1>
+	</header>
+
+	<div class="content" itemprop="articleBody">
+		{{ content }}
+
+		
+	</div>
+
+	<footer>
+		<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished"></time>
+	</footer>
+
+	{% include _pagination.html %}
+</article>

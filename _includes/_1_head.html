@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>{% if page.meta_title %}{{ page.meta_title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+	<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/ebook-styles.css">
+	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ site.baseurl }}/feed.xml">
+
+	{% include _favicon.html %}
+
+	{% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification}}" />{% endif %}
+	{% if site.bing_webmastertools_id %}<meta name="msvalidate.01" content="{{ site.bing_webmastertools_id }}" />{% endif %}
+	{% if site.alexa_verify_id %}<meta name="alexaVerifyID" content="{{ site.alexa_verify_id }}" />{% endif %}
+
+	<!-- Search Engine Optimization -->
+	{% if page.noindex == true %}<meta name="robots" content="noindex" />{% endif %}
+	{% if page.meta_description %}<meta name="description" content="{{ page.meta_description | strip_html | escape }}"/>{% elsif page.teaser %}<meta name="description" content="{{ page.teaser | strip_html | escape }}" />{% elsif site.description %}<meta name="description" content="{{ site.description | strip_html | escape }}" />{% endif %}
+
+	<link type="text/plain" rel="author" href="{{ site.url }}{{ site.baseurl }}/humans.txt" />
+	{% unless page.style == NULL %}
+	<style type="text/css">{{ page.style }}</style>
+	{% endunless %}
+
+
+</head>
+<body id="top-of-page" class="{{ page.layout }}">

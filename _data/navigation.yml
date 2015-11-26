@@ -1,0 +1,14 @@
+# - name: "Buchcover"
+#   url: "/cover/"
+#   class: "cover"
+#   title: "Startseite von Lulu & Oskar mit Cover"
+
+- name: "Kontakt"
+  url: "/kontakt/"
+  class: "kontakt"
+  title: "Kontakt"
+
+- name: "Impressum"
+  url: "/impressum/"
+  class: "impressum"
+  title: "Impressum der Website"

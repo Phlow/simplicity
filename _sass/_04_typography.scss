@@ -1,0 +1,448 @@
+/* TOC – Typography
+
+Check typography variables › _3_typography_settings.scss
+
+- Variables
+  - Font Families
+  - Font Sizes
+  - Line-height
+  - Font Weight
+- Body
+- Links
+- Customize Foundation Typography
+- Headlines
+- Images
+- Lists
+- Tables
+- Code
+- Quotes
+- Typography for Articles
+- Additional typographical elements
+- Footnotes
+- Masthead Typography
+- Media Queries Typography
+
+*/
+
+// Alternative Headline Fonts
+// @import url(https://fonts.googleapis.com/css?family=Great+Vibes);
+// @import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+
+
+
+
+/* Variables
+------------------------------------------------------------------- */
+
+/* Font Families */
+
+$base-font-family:          Georgia, "Times New Roman", serif;
+$font-family-serif:         Georgia, "Times New Roman", serif;
+$font-family-sans-serif:    "Open Sans", "Neue Helvetica", Arial, serif;
+$font-family-monospace:     "Lucida Console", Monaco, monospace;
+
+$header-font-family: $font-family-sans-serif;
+
+/* Font Sizes
+   http://www.modularscale.com/?1&em&1.125&web&table
+------------------------------------------------------------------- */
+
+$base-font-size:                    16px;
+$base-font-size-medium-screen:      22px;
+$base-font-size-large-screen:      26px;
+$font-size-p:                        1em;
+$font-size-h1:                   1.802em;
+$font-size-h2:                   1.602em;
+$font-size-h3:                   1.424em;
+$font-size-h4:                   1.266em;
+$font-size-h5:                   1.125em;
+$font-size-small:                0.75em;
+
+
+/* Line-height */
+
+$base-line-height: 1.5;
+
+
+/* Font Weight */
+
+$base-font-weight: normal;
+
+
+
+/* Body
+------------------------------------------------------------------- */
+
+body {
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    color: $text-color;
+    -webkit-text-size-adjust: 100%;
+    // http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern=1";
+}
+
+
+
+/* Links
+------------------------------------------------------------------- */
+
+a,
+a:link {
+    transition: all .3s;
+    color: $ci-1;
+    text-decoration: none;
+    border-bottom: 1px solid $ci-1;
+}
+
+a:visited {
+    border-bottom: $grey-color-light;
+}
+
+a:hover {
+    color: darken( $ci-1, 10% );
+    border-bottom: 4px solid $ci-1;
+}
+
+a:focus {
+    color: lighten( $ci-1, 20% );
+}
+
+a:active {
+    color: darken( $ci-1, 20% );
+}
+
+
+
+/* Customize Typography
+------------------------------------------------------------------- */
+
+p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    -ms-word-break: break-all;
+    /* Non standard for webkit */
+    word-break: break-word;
+}
+
+
+
+/* Headlines
+------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $header-font-family;
+    font-weight: normal;
+    padding: 0;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    margin-top: 0;
+}
+h2 {
+    font-size: $font-size-h2;
+    margin: 1.563em 0 0 0;
+}
+    .blog-index h2 {
+        margin-top: 0;
+    }
+h3 {
+    font-size: $font-size-h3;
+    margin: 1.152em 0 0 0;
+}
+h4 {
+    font-size: $font-size-h4;
+    margin: 1.152em 0 0 0;
+}
+h5 {
+    font-size: $font-size-h5;
+    margin: 1em 0 0 0;
+}
+h6 {
+    font-size: 1em;
+    margin: 1em 0 0 0;
+}
+
+
+
+/* Images
+------------------------------------------------------------------- */
+
+img {
+    border-radius: $global-radius;
+    max-width: 100%;
+    vertical-align: middle;
+    }
+    img.alignleft,
+    img.left        { float: left; margin:5px 15px 5px 0; }
+    img.alignright,
+    img.right       { float: right; margin:5px 0 5px 15px; }
+    img.aligncenter,
+    img.center      { display: block; margin:0 auto 10px; }
+
+figure {
+    margin: 0 0 1em 0;
+}
+#masthead-with-background-color figure,
+#masthead-with-pattern figure {
+    margin: 0;
+}
+figcaption,
+.masthead-caption {
+    color: $grey-color;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+    padding-top: .25em;
+    text-align: right;
+}
+figcaption a,
+.masthead-caption a {
+    border-bottom: 1px dotted $grey-color-light;
+    color: $grey-color-dark;
+}
+figcaption a:hover,
+.masthead-caption a:hover {
+    border-bottom: 2px solid $ci-1;
+    color: $ci-1;
+}
+.masthead-caption {
+    padding-right: 10px;
+    text-align: right;
+}
+
+
+
+/* Tables
+------------------------------------------------------------------- */
+
+td {
+    vertical-align: top;
+}
+
+
+
+/* Code
+------------------------------------------------------------------- */
+
+pre {
+    overflow: auto;
+    margin-bottom: rem-calc(20);
+    padding: 5px;
+    background-color: scale-color($ci-1, $lightness: 70%);
+    border-radius: $global-radius;
+}
+pre code {
+    padding: rem-calc(2) rem-calc(5) rem-calc(1) rem-calc(0);
+    border: 0;
+}
+
+code {
+    font-size: rem-calc(14);
+    line-height: 1.5;
+}
+
+
+
+/* Lists
+------------------------------------------------------------------- */
+
+ul, ol {
+    margin-left: 1.25em;
+    padding: 0;
+}
+li {
+    margin-left: 0;
+}
+
+.no-bullet {
+    list-style: none;
+    margin-left: 0;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+dl {
+
+}
+dt:first-child {
+    padding-top: 0px;
+}
+dt {
+    font-weight: bold;
+    padding-top: 30px;
+}
+dd {
+}
+article dl dt   { line-height: 1.3; }
+article dl dd   { line-height: 1.6; margin-bottom: rem-calc(12); margin-left: rem-calc(24); }
+
+
+
+/* Quotes
+------------------------------------------------------------------- */
+
+blockquote {
+    font-style: italic;
+    position: relative;
+    border: none;
+    color:  $grey-color;
+}
+
+    blockquote p {
+        font-style: italic;
+        color: $grey-color;
+    }
+
+    blockquote:before {
+        display:block;content:"\00BB";
+        font-size: $font-size-h1;
+        line-height: 0;
+        position:absolute;
+        left: -.55em;
+        top: 0.35em;
+        color: $grey-color;
+    }
+    blockquote:after {
+        display:block;
+        content:"\00AB";
+        font-size: $font-size-h1;
+        line-height: 0;
+        position:absolute;
+        right: -.55em;
+        bottom: .55em;
+        color: $grey-color;
+    }
+    blockquote cite:before {
+        content:"\2014 \0020";
+        margin-left: .25em;
+    }
+    blockquote cite a,blockquote cite a:visited {
+        color: $grey-color;
+    }
+cite {
+    padding-top: 5px;
+}
+
+button, .button {
+    letter-spacing: 1px;
+}
+
+mark {
+    background-color: scale-color($warning-color, $lightness: 50%);
+}
+
+
+
+/* Typography
+------------------------------------------------------------------- */
+
+.small {
+    font-size: $font-size-small;
+    line-height: 1.3;
+}
+
+hr {
+    border: 0;
+    border-top: dotted 1px $grey-color-light;
+}
+
+
+/* Additional typographical elements
+------------------------------------------------------------------- */
+
+.sans           { font-family: $font-family-sans-serif; }
+.serif          { font-family: $font-family-serif; }
+
+.font-size-h1   { font-size: $font-size-h1; }
+.font-size-h2   { font-size: $font-size-h2; }
+.font-size-h3   { font-size: $font-size-h3; }
+.font-size-h4   { font-size: $font-size-h4; }
+.font-size-h5   { font-size: $font-size-h5; }
+.font-size-p    { font-size: $font-size-p; }
+
+
+
+/* Footnotes
+------------------------------------------------------------------- */
+
+.footnotes:before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 60px;
+    margin-top: -10px;
+    border-bottom: 1px solid $grey-color-light;
+}
+.footnotes {
+    margin-top: 60px;
+}
+.footnotes ol {
+    font-size: $font-size-small;
+}
+.footnotes p {
+    font-size: inherit;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+/* Media Queries Layout
+------------------------------------------------------------------- */
+
+
+
+/* Small
+------------------------------------------------------------------- */
+
+
+@media (max-width: $small - 1) {
+
+
+}
+
+
+
+/* Medium
+------------------------------------------------------------------- */
+
+@media (min-width: $small + 1) and (max-width: $medium) {
+
+    body {
+        font-size: $base-font-size-medium-screen;
+    }
+
+
+}
+
+
+
+/* Large
+------------------------------------------------------------------- */
+
+@media (min-width: $medium + 1) {
+
+    body {
+        font-size: $base-font-size-large-screen;
+    }
+
+
+}
+
+
+

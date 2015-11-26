@@ -1,0 +1,289 @@
+/* TOC
+
+- Adjustments: Video Layout
+- Navigation
+- Search
+- Masthead
+- Logo
+- Content
+- Breadcrumb
+- Meta
+- Pagination
+- Jump to top
+- Footer
+- Media Queries Layout
+    - Site Header
+
+*/
+
+// Don't hide scrollbar – Makes the logo jump
+html {
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
+body {
+    background-color: $background-color;
+}
+
+
+
+/* Navigation
+------------------------------------------------------------------- */
+
+#navigation {
+}
+
+
+
+/* Search
+------------------------------------------------------------------- */
+
+
+
+/* Masthead
+------------------------------------------------------------------- */
+#masthead {
+}
+
+
+
+
+/* Logo
+------------------------------------------------------------------- */
+
+#logo {
+}
+#logo a {
+    font-size: $font-size-p;
+    font-family: $font-family-serif;
+    border: 0;
+}
+
+#logo a:hover {
+    text-decoration: none;
+    color: $ci-1;
+}
+
+
+
+
+/* Content
+------------------------------------------------------------------- */
+
+.content {
+  margin-top: 30px;
+  margin-bottom: 120px;
+}
+
+
+/* Breadcrumb
+------------------------------------------------------------------- */
+
+#breadcrumb {
+    background: scale-color($grey-color-light, $lightness: 55%);
+    border-top: 1px solid scale-color($grey-color-light, $lightness: 45%);
+    border-bottom: 1px solid scale-color($grey-color-light, $lightness: 45%);
+}
+.breadcrumbs>.current {
+  font-weight: bold;
+}
+
+
+/* Meta
+------------------------------------------------------------------- */
+
+#page-meta, #page-meta a {
+    color: $grey-color;
+}
+
+#page-meta .button {
+    background: $grey-color;
+    border: 0;
+}
+#page-meta .button {
+    color: #fff;
+}
+#page-meta .button:hover {
+    background: $ci-1;
+}
+.meta-info p {
+  font-size: rem-calc(13);
+  color: scale-color($grey-color-light, $lightness: 40%);
+}
+  .meta-info a {
+    text-decoration: underline;
+    color: scale-color($grey-color-light, $lightness: 40%);
+  }
+  .meta-info a:hover {
+    text-decoration: none;
+    color: $ci-2;
+  }
+
+
+
+/* Pagination
+------------------------------------------------------------------- */
+
+#pagination a {
+  display: block;
+  font-size: $font-size-h4;
+  font-style: italic;
+  color: $grey-color;
+  text-decoration: none;
+  border: 0;
+  padding: .1em .5em;
+  border-radius: $global-radius;
+}
+#pagination a:hover {
+  background: $grey-color-light;
+  color: $ci-1;
+}
+#pagination a.next {
+  float: right;
+}
+
+#pagination a.prev {
+  float: left;
+}
+#pagination a span {
+  display: none;
+  font-weight: normal;
+}
+
+
+#pagination a span.skip {
+  display: block;
+  font-weight: normal;
+  margin: 0 .3em;
+}
+#pagination a:hover span.skip {
+  display: none;
+  font-weight: normal;
+  padding: 0 .3em;
+}
+
+#pagination a:hover span {
+  display: block;
+  transition: all .3s;
+  padding: 0 .3em;
+}
+#pagination a.next span {
+  float: left;
+}
+
+#pagination a.prev span {
+  float: right;
+}
+
+#pagination {
+  @extend %clearfix;
+}
+
+
+/* Jump to top
+------------------------------------------------------------------- */
+
+#up-to-top {
+    padding: 160px 0 10px 0;
+}
+#up-to-top a {
+    font-size: 24px;
+    padding: 5px;
+    border-radius: 3px;
+}
+#up-to-top a:hover {
+    background: $grey-color-light;
+}
+
+
+
+/* Footer
+------------------------------------------------------------------- */
+
+#footer {
+  margin-top: $spacing-unit*3;
+  padding-bottom: $spacing-unit*3;
+  letter-spacing: 1px;
+  line-height: $font-size-small;
+  color: $grey-color;
+}
+
+#footer a {
+  border: 0;
+  text-transform: uppercase;
+}
+
+
+
+
+/* Media Queries Layout
+------------------------------------------------------------------- */
+
+
+/* Small
+------------------------------------------------------------------- */
+
+@media (max-width: $small - 1) {
+
+  #masthead {
+    margin: 0;
+    font-size: $font-size-h2;
+    height: 120px;
+    line-height: 120px;
+  }
+  .wrapper {
+    max-width: 34rem;
+    margin: 0 auto;
+    padding: 0 $spacing-unit;
+  }
+  #pagination a span.skip {
+    display: none;
+  }
+  #pagination a:hover span.skip {
+    display: none;
+  }
+}
+
+
+
+/* Medium
+------------------------------------------------------------------- */
+
+@media (min-width: $small ) and (max-width: $medium) {
+
+  #masthead {
+    margin: 0 0 0 0;
+    font-size: $font-size-h1;
+    height: 150px;
+    line-height: 150px;
+  }
+
+  .wrapper {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 0 $spacing-unit;
+  }
+}
+
+
+
+/* Large
+------------------------------------------------------------------- */
+
+@media (min-width: $medium + 1) {
+
+  #masthead {
+    margin: $spacing-unit*2 0 $spacing-unit*2 0;
+    padding-top: $spacing-unit;
+    font-size: $font-size-h1;
+    line-height: 1.5;
+  }
+
+  .wrapper {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 $spacing-unit;
+  }
+
+}

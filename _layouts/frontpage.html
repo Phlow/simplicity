@@ -1,0 +1,22 @@
+{% include _1_head.html %}
+
+<div class="wrapper">
+
+{% include _2_masthead.html %}
+
+{% for post in site.posts reversed %}
+	{% if forloop.first %}
+		<h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
+		<p>{{ post.teaser }}</p>
+		<ul class="toc">
+	{% elsif forloop.last %}
+		<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+		</ul>
+	{% else %}
+		<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+	{% endif %}
+{% endfor %}
+
+{% include _3_footer.html %}
+
+</div><!-- /.wrapper -->

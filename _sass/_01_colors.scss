@@ -1,0 +1,104 @@
+/* TOC – Color Variables
+
+- Basics
+- Corporate Identity Colorpalette
+- Alerts
+- Grey Scale
+- Code
+
+*/
+
+/* Color Variables
+------------------------------------------------------------------- */
+
+
+// Phlow Colors
+$phlow-hell: #f5b6c9;
+$phlow-mittel: #d4007a;
+$phlow-dunkel: #900055;
+
+$phlow-haupt-hell: #fabb00;
+$phlow-haupt-mittel: #aa0132;
+$phlow-haupt-dunkel: #4b4b4d;
+
+// Phlow CI
+// Hauptfarben
+$phlow-dunkel-grau: #4b4b4d;
+$phlow-dunkel-braun: #771e1e;
+$phlow-rotbraun: #aa0132;
+$phlow-orange: #fabb00;
+
+// Netlabels
+$phlow-dunkel-gruen: #00792c;
+$phlow-mittel-gruen: #6a9519;
+$phlow-hell-gruen: #acca57;
+
+// Video
+$phlow-dunkel-rot: #e05a10;
+$phlow-mittel-orange: #f29400;
+$phlow-hell-gelb: #ffe444;
+
+// Seminare
+$phlow-dunkel-blau: #005380;
+$phlow-mittel-blau: #0085ba;
+$phlow-hell-blau: #82cbd0;
+
+// Webdesign
+$phlow-dunkel-violett: #900055;
+$phlow-mittel-mangenta: #d4007a;
+$phlow-hell-pink: #f5b6c9;
+
+// Journalismus
+$phlow-dunkel-graubraun: #6b6351;
+$phlow-mittel-graubraun: #aaa296;
+$phlow-hell-graubraun: #e1dcd7;
+
+// Grautöne
+$phlow-grau-sehr-hell: #f0f0f0;
+$phlow-grau-hell: #7e7e7e;
+$phlow-grau-mittel: #4b4b4b;
+$phlow-grau-dunkel: #323232;
+
+
+
+
+/* Basics
+------------------------------------------------------------------- */
+
+$text-color:       #111;
+$background-color: #fefefe;
+
+
+
+/* Corporate Identity Colorpalette
+------------------------------------------------------------------- */
+
+$ci-1: $phlow-dunkel-violett;		     // is used as the primary branding color – for example for links.
+$ci-2: $phlow-mittel-mangenta;		     // is used as the secondary branding color.
+$ci-3: $phlow-orange;
+$ci-4: #51445F;
+$ci-5: $phlow-rotbraun;
+$ci-6: #D6F4A2;
+
+
+/* Alerts
+------------------------------------------------------------------- */
+
+$alert-color: 	$ci-5;
+$success-color: $ci-6;
+$warning-color: $phlow-rotbraun;
+$info-color: 	$phlow-dunkel-blau;
+
+
+
+/* Grey Scale
+------------------------------------------------------------------- */
+
+$grey-color:       #828282;
+$grey-color-light: #E4E4E4;
+$grey-color-dark:  #313131;
+
+
+
+/* Code Colors › _07_syntax-highlighting.scss
+------------------------------------------------------------------- */

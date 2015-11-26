@@ -1,0 +1,132 @@
+/* TOC
+
+- Table of Contents (Index)
+- Panel
+- Shadows
+- Alerts
+- Breadcrumb
+- Button
+- CSS-Classes to add margin at top or bottom
+
+*/
+
+
+
+/* Frontpage
+------------------------------------------------------------------- */
+
+// Remove margin only on frontpage - toc
+.first-h2 {
+  margin: 0;
+}
+
+
+/* Table of Contents (Index)
+------------------------------------------------------------------- */
+
+ul.toc  {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: $header-font-family;
+}
+
+ul.toc li a {
+  border: 0;
+}
+
+
+/* Panel
+------------------------------------------------------------------- */
+
+.border-dotted {
+  border: 1px dotted $grey-color;
+  padding: rem-calc(20);
+  border-radius: $global-radius;
+}
+
+
+
+/* Shadows
+------------------------------------------------------------------- */
+
+.shadow-no      {text-shadow: rgba(0, 0, 0, 0) 0 0 0;}
+.shadow-black   {text-shadow: rgba(0, 0, 0, 0.498039) 0px 1px 2px;}
+.shadow-white   {text-shadow: rgba(255, 255, 255, 0.498039) 0px 1px 2px;}
+
+
+
+/* Alerts
+------------------------------------------------------------------- */
+
+.alert-box {
+  font-family: $font-family-sans-serif;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
+}
+  .alert-box p {
+    margin-bottom: 0;
+  }
+  .alert-box a {
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+  }
+  .alert-box a:hover {
+    border-bottom: 1px solid #fff;
+  }
+  .alert-box.terminal {
+    background: $grey-color-dark;
+    color: #fff;
+    border-color: scale-color($grey-color-dark, $lightness: -14%);
+    font-family: $font-family-monospace;
+  }
+  .alert-box.terminal::before {
+    content: "$ ";
+    color: $ci-6;
+  }
+  .alert-box.text {
+    background-color: $grey-color-light;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.9);
+    border-color: scale-color($grey-color-light, $lightness: -14%);
+    color: $grey-color-dark;
+  }
+
+
+
+/* Button
+------------------------------------------------------------------- */
+
+button, .button         { letter-spacing: 1px; }
+  button.grey, .button.grey { background: $grey-color-dark; }
+  button.grey:hover,
+  button.grey:focus,
+  .button.grey:hover,
+  .button.grey:focus      { background-color: $grey-color-dark; }
+
+
+
+/* CSS-Classes to add margin at top or bottom
+------------------------------------------------------------------- */
+
+.t10 { margin-top: 10px !important; }
+.t15 { margin-top: 15px !important; }
+.t20 { margin-top: 20px !important; }
+.t30 { margin-top: 30px !important; }
+.t50 { margin-top: 50px !important; }
+.t60 { margin-top: 60px !important; }
+.t70 { margin-top: 70px !important; }
+.t80 { margin-top: 80px !important; }
+.t90 { margin-top: 90px !important; }
+
+.b15 { margin-bottom: 15px !important; }
+.b20 { margin-bottom: 20px !important; }
+.b30 { margin-bottom: 30px !important; }
+.b60 { margin-bottom: 60px !important; }
+
+.l15 { margin-left: 15px !important; }
+.r15 { margin-right: 15px !important; }
+
+.pl20 { padding-left: 20px !important; }
+.pr5  { padding-right: 5px !important; }
+.pr10 { padding-right: 10px !important; }
+.pr20 { padding-right: 20px !important; }
