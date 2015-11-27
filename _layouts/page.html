@@ -28,13 +28,18 @@ layout: default
 #
 #
 {% endcomment %}
-		{% if content contains '<!--more-->' and content.code == false %}
+
+
+
+		{% if page.code == true %}
+		{{ content }}
+		{% elsif page.content contains '<!--more-->' %}
 		{% assign pagecontent = page.content | split: '<!--more-->' %}
 			{% for item in pagecontent %}
 				{% if forloop.first %}
-				<div class="teaser">{{ item }}</div>
+				<div class="teaser">{{ item | markdownify }}</div>
 				{% else %}
-				{{ item }}
+				{{ item | markdownify }}
 				{% endif %}
 			{% endfor %}
 		{% else %}

@@ -25,11 +25,20 @@ Check typography variables › _3_typography_settings.scss
 
 */
 
-// Alternative Headline Fonts
-// @import url(https://fonts.googleapis.com/css?family=Great+Vibes);
-// @import url(https://fonts.googleapis.com/css?family=Dancing+Script);
-
-
+// Alternative Fonts
+//
+// Titillium Web
+// @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic);
+// Roboto
+// @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+// Source Sans Pro
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic);
+// Merriweather
+// @import url(https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic);
+// Arvo
+// @import url(https://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic);
+// Gentium Basic
+// @import url(https://fonts.googleapis.com/css?family=Gentium+Basic:400,400italic,700,700italic);
 
 
 /* Variables
@@ -38,7 +47,7 @@ Check typography variables › _3_typography_settings.scss
 /* Font Families */
 
 $font-family-serif:         Georgia, "Times New Roman", serif;
-$font-family-sans-serif:    "Open Sans", "Neue Helvetica", Arial, serif;
+$font-family-sans-serif:    "Source Sans Pro", "Neue Helvetica", Arial, serif;
 $base-font-family:          $font-family-sans-serif;
 $font-family-monospace:     "Lucida Console", Monaco, monospace;
 
