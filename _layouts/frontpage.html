@@ -15,16 +15,37 @@
 		</div>
 		{% endif %}
 
-		<h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
-		{{ post.excerpt  | replace: '<p>', '<p class="teaser">'}}
+		{% if post.image %}
+		<figure>
+			<img src="{{ site.urlimg }}{{ post.image.url }}" width="100%" alt="{{ post.title escape_once }}" itemprop="image">
+
+			{% if post.image.caption_url && post.image.caption %}
+			<figcaption>
+				<a href="{{ post.image.caption_url }}">{{ post.image.caption }}</a>
+			</figcaption>
+			{% elsif post.image.caption %}
+			<figcaptionß>
+				{{ post.image.caption }}
+			</figcaption>
+			{% endif %}
+		</figure>
+		{% endif %}
+
+		{% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
+		<h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+		<p class="teaser">
+			{{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
+			<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">Read more ›</a>
+
+		</p>
 
 		<h2>More Articles</h2>
 		<ul class="toc">
 	{% elsif forloop.last %}
-		<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 		</ul>
 	{% else %}
-		<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 	{% endif %}
 {% endfor %}
 

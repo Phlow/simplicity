@@ -3,6 +3,24 @@ layout: default
 ---
 <article itemscope itemtype="http://schema.org/Book">
 	<header>
+		{% if page.image %}
+		<figure>
+			<img src="{{ site.urlimg }}{{ page.image.url }}" width="100%" alt="{{ page.title escape_once }}" itemprop="image">
+
+			{% if page.image.caption_url && page.image.caption %}
+			<figcaption>
+				<a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
+			</figcaption>
+			{% elsif page.image.caption %}
+			<figcaptionß>
+				{{ page.image.caption }}
+			</figcaption>
+			{% endif %}
+		</figure>
+		{% endif %}
+
+		{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
+
 		<h1 itemprop="name headline">{{ page.title }}</h1>
 	</header>
 	<div class="content" itemprop="articleBody">
@@ -50,7 +68,7 @@ layout: default
 
 
 	<footer>
-		{{ page.date }}
+		<time class="text-right grey block">{{ page.date }}</time>
 	</footer>
 
 

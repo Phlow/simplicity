@@ -135,14 +135,18 @@ body {
 /* Pagination
 ------------------------------------------------------------------- */
 
+#pagination {
+  @extend %clearfix;
+  margin-top: 1em;
+}
 #pagination a {
+  padding: .1em .5em;
   display: block;
   font-size: $font-size-h4;
   font-style: italic;
   color: $grey-color;
   text-decoration: none;
   border: 0;
-  padding: .1em .5em;
   border-radius: $global-radius;
 }
 #pagination a:hover {
@@ -186,9 +190,6 @@ body {
   float: right;
 }
 
-#pagination {
-  @extend %clearfix;
-}
 
 
 /* Jump to top
@@ -237,7 +238,7 @@ body {
 @media (max-width: $small - 1) {
 
   #masthead {
-    margin: 0;
+    margin: $spacing-unit 0 $spacing-unit 0;
     font-size: $font-size-h2;
   }
   .wrapper {
@@ -261,8 +262,7 @@ body {
 @media (min-width: $small ) and (max-width: $medium) {
 
   #masthead {
-    margin: $spacing-unit*2 0 $spacing-unit*2 0;
-    padding-top: $spacing-unit;
+    height: $spacing-unit*2;
     font-size: $font-size-h1;
   }
 
@@ -281,8 +281,7 @@ body {
 @media (min-width: $medium + 1) {
 
   #masthead {
-    margin: $spacing-unit*2 0 $spacing-unit*2 0;
-    padding-top: $spacing-unit;
+    height: $spacing-unit*2;
     font-size: $font-size-h1;
     line-height: 1.5;
   }

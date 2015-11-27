@@ -1,5 +1,7 @@
 /* TOC
 
+- Text Align
+- Colors
 - Table of Contents (Index)
 - Frontpage
 - Panel
@@ -11,6 +13,33 @@
 - CSS-Classes to add margin at top or bottom
 
 */
+
+
+/* Text Align
+------------------------------------------------------------------- */
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.block { display: block; }
+.inline { display: inline; }
+
+/* Colors
+------------------------------------------------------------------- */
+
+
+.ci-1 { color: $ci-1; }
+.ci-2 { color: $ci-2; }
+.ci-3 { color: $ci-3; }
+.ci-4 { color: $ci-4; }
+
+.alert-color { color: $alert-color; }
+.success-color { color: $success-color; }
+.warning-color { color: $warning-color; }
+.info-color { color: $info-color; }
+
+.grey { color: $grey-color; }
+.grey-light { color: $grey-color-light; }
+.grey-dark { color: $grey-color-dark; }
 
 
 
