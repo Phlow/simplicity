@@ -54,8 +54,14 @@ Minimalism and simplicity don't stand for an option-less theme. On the contrary!
 
 …and Simplicity adds it.
 
+You want an image on top of your article? Just add…
 
+    image: death-to-the-stock-photography-3457.jpg
 
+And refine it with a caption and/or link if needed:
+
+    caption: Death to Stock Photography
+    caption_url: http://deathtothestockphoto.com/
 
 
 

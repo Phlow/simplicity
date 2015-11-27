@@ -48,7 +48,7 @@ Check typography variables › _3_typography_settings.scss
 $font-family-serif:         Georgia, "Times New Roman", serif;
 $font-family-sans-serif:    "Source Sans Pro", "Neue Helvetica", Arial, serif;
 $base-font-family:          $font-family-sans-serif;
-$font-family-monospace:     "Lucida Console", Monaco, monospace;
+$font-family-monospace:     "Lucida Console", "Courier New", Monaco, monospace;
 
 $header-font-family: $font-family-sans-serif;
 
@@ -105,10 +105,10 @@ body {
 
 a,
 a:link {
-    transition: all .3s;
+    transition: all .2s;
     color: $ci-1;
     text-decoration: none;
-    border-bottom: 1px solid $ci-1;
+    border-bottom: 2px solid $ci-1;
 }
 
 a:visited {
@@ -178,7 +178,7 @@ h2 {
     margin-top: 2em;
 }
 h3 {
-    text-transform: uppercase;
+    font-style: italic;
     font-size: $font-size-h3;
     margin-top: 2em;
 }
