@@ -76,23 +76,29 @@ $background-color: #fefefe;
 $ci-1: $phlow-dunkel-violett;		     // is used as the primary branding color – for example for links.
 $ci-2: $phlow-mittel-mangenta;		     // is used as the secondary branding color.
 $ci-3: $phlow-orange;
-$ci-4: #51445F;
-$ci-5: $phlow-rotbraun;
-$ci-6: #D6F4A2;
+$ci-4: $phlow-hell-pink;
 
 
 /* Alerts
 ------------------------------------------------------------------- */
 
-$alert-color: 	$ci-5;
-$success-color: $ci-6;
-$warning-color: $phlow-rotbraun;
-$info-color: 	$phlow-dunkel-blau;
+$alert-color: 	$phlow-rotbraun;
+$success-color: $phlow-hell-gruen;
+$warning-color: $phlow-orange;
+$info-color: 	$phlow-hell-blau;
 
 
 
 /* Grey Scale
-------------------------------------------------------------------- */
+-------------------------------------------------------------------
+
+*Simplicity* allows you to change the colors to your taste quickly.
+Just open *_sass/_01_colors.scss* and tune your colors.
+
+
+*/
+
+
 
 $grey-color:       #828282;
 $grey-color-light: #E4E4E4;

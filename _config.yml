@@ -9,9 +9,10 @@ urlimg:       "http://phlow.github.io/simplicity/images/"
 
 # Build settings
 markdown: kramdown
-highlight: rouge
+highlighter: rouge
 permalink: /:categories/:title/
-
+# Use <!--more--> in your posts to generate an excerpt and a teaser
+excerpt_separator: <!--more-->
 
 # The language setting is used in /includes/header.html for html-settings
 language: "de"
@@ -33,6 +34,37 @@ compress_html:
   profile: false
   ignore:
     envs: [development]
+
+
+
+#
+#       ____       ____            ____
+#      / __ \___  / __/___ ___  __/ / /_
+#     / / / / _ \/ /_/ __ `/ / / / / __/
+#    / /_/ /  __/ __/ /_/ / /_/ / / /_
+#   /_____/\___/_/  \__,_/\__,_/_/\__/
+#
+# Default Settings
+
+defaults:
+  -
+    scope:
+      path: ""        # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: page      # Set default layout to page
+      show_meta: false  # Hide metadata for all pages
+      comments: false
+      author: phlow     # Default author for pages
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: page      # Set default layout to page
+      show_meta: true   # Show metadata for all posts
+      comments: false
+      author: phlow     # Default author for posts
 
 
 #     _____ __________

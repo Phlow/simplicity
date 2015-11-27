@@ -1,12 +1,53 @@
 ---
 layout: default
 ---
-<article itemscope itemtype="http://schema.org/BlogPosting">
+<article itemscope itemtype="http://schema.org/Book">
 	<header>
 		<h1 itemprop="name headline">{{ page.title }}</h1>
 	</header>
-
 	<div class="content" itemprop="articleBody">
+
+{% if page.youtube %}
+<div class="flex-video">
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ page.youtube | remove: "https://www.youtube.com/watch?v=" }}" frameborder="0" allowfullscreen></iframe>
+</div>
+{% endif %}
+
+
+
+
+{% comment %}
+#
+#   Explanation:
+#
+#   The next code-snippet checks if {{ content }} contains the
+#   excerpt separator <!--more-->. If the separator is set
+#   the for loop will split the content to make styling of
+#   the teaser possible. If no separator is set, Jekyll just
+#   spits out the content without splitting.
+#
+#
+{% endcomment %}
+		{% if content contains '<!--more-->' and content.code == false %}
+		{% assign pagecontent = page.content | split: '<!--more-->' %}
+			{% for item in pagecontent %}
+				{% if forloop.first %}
+				<div class="teaser">{{ item }}</div>
+				{% else %}
+				{{ item }}
+				{% endif %}
+			{% endfor %}
+		{% else %}
 		{{ content }}
+		{% endif %}
 	</div>
+
+
+
+	<footer>
+		{{ page.date }}
+	</footer>
+
+
+	{% include _pagination.html %}
 </article>

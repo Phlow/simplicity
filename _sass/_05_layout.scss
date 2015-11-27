@@ -30,10 +30,21 @@ body {
 
 /* Navigation
 ------------------------------------------------------------------- */
-
 #navigation {
+  height: 2em;
+  line-height: 1.85em;
+  border-bottom: 1px solid $grey-color-light;
 }
-
+#navigation ul {
+  margin: 0;
+  padding: 0 .5em;
+  list-style: none;
+}
+#navigation li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
 
 
 /* Search
@@ -56,7 +67,6 @@ body {
 }
 #logo a {
     font-size: $font-size-p;
-    font-family: $font-family-serif;
     border: 0;
 }
 
@@ -229,13 +239,11 @@ body {
   #masthead {
     margin: 0;
     font-size: $font-size-h2;
-    height: 120px;
-    line-height: 120px;
   }
   .wrapper {
     max-width: 34rem;
     margin: 0 auto;
-    padding: 0 $spacing-unit;
+    padding: 0 $spacing-unit/2;
   }
   #pagination a span.skip {
     display: none;
@@ -253,10 +261,9 @@ body {
 @media (min-width: $small ) and (max-width: $medium) {
 
   #masthead {
-    margin: 0 0 0 0;
+    margin: $spacing-unit*2 0 $spacing-unit*2 0;
+    padding-top: $spacing-unit;
     font-size: $font-size-h1;
-    height: 150px;
-    line-height: 150px;
   }
 
   .wrapper {

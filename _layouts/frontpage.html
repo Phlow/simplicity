@@ -1,13 +1,24 @@
 {% include _1_head.html %}
 
+{% include _2_navigation.html %}
+
+{% include _3_masthead.html %}
+
 <div class="wrapper">
 
-{% include _2_masthead.html %}
-
-{% for post in site.posts reversed %}
+{% for post in site.posts %}
 	{% if forloop.first %}
-		<h2><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h2>
-		<p>{{ post.teaser }}</p>
+
+		{% if post.youtube %}
+		<div class="flex-video">
+		<iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ post.youtube | remove: "https://www.youtube.com/watch?v=" }}" frameborder="0" allowfullscreen></iframe>
+		</div>
+		{% endif %}
+
+		<h1><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h1>
+		{{ post.excerpt  | replace: '<p>', '<p class="teaser">'}}
+
+		<h2>More Articles</h2>
 		<ul class="toc">
 	{% elsif forloop.last %}
 		<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>

@@ -1,7 +1,9 @@
 /* TOC
 
 - Table of Contents (Index)
+- Frontpage
 - Panel
+- Responsive Video
 - Shadows
 - Alerts
 - Breadcrumb
@@ -10,6 +12,25 @@
 
 */
 
+
+
+
+/* Responsive Video
+------------------------------------------------------------------- */
+
+.flex-video {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 67.5%;
+}
+.flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
 
 
 /* Frontpage
@@ -31,8 +52,21 @@ ul.toc  {
     font-family: $header-font-family;
 }
 
+ul.toc li  {
+  border-top: 1px solid lighten(#000, 85);
+  line-height: 1.85em;
+}
+
+ul.toc li:last-child  {
+  border-bottom: 1px solid lighten(#000, 85);
+}
+
 ul.toc li a {
   border: 0;
+}
+
+ul.toc li:hover {
+  background: lighten(#000, 95);
 }
 
 
@@ -82,7 +116,7 @@ ul.toc li a {
   }
   .alert-box.terminal::before {
     content: "$ ";
-    color: $ci-6;
+    color: $grey-color-dark;
   }
   .alert-box.text {
     background-color: $grey-color-light;

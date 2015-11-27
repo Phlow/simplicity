@@ -1,0 +1,11 @@
+<nav id="navigation">
+	<ul>
+		{% for nav in site.data.navigation %}
+		{% if forloop.first %}<li id="logo"><a href="{{ site.url }}{{ site.baseurl }}{{ nav.url }}"{% if nav.class %} class="{{ nav.name }}"{% endif %}>{{ nav.name }}</a></li>
+		{% else %}
+		<li><a href="{{ site.url }}{{ site.baseurl }}{{ nav.url }}"{% if nav.class %} class="{{ nav.name }}"{% endif %}>{{ nav.name }}</a></li>
+
+		{% endif %}
+		{% endfor %}
+	</ul>
+</nav>

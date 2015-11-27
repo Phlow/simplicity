@@ -1,21 +1,10 @@
 ---
-layout: post
-title: "Wonderful Typography"
 subheadline: "Reading Experience"
-meta_teaser: "Feeling Responsive uses Volkhov for headlines, Lato for everything else and if you are in need to show some code, it will be in Lucida Console."
-teaser: "<em>Feeling Responsive</em> uses <a href='https://www.google.com/fonts/specimen/Volkhov'>Volkhov</a> for headlines, <a href='https://www.google.com/fonts/specimen/Lato'>Lato</a> for everything else and if you are in need to show some code, it will be in <a href='http://www.microsoft.com/typography/fonts/family.aspx?FID=18'>Lucida Console</a> or <a href='http://en.wikipedia.org/wiki/Monaco_(typeface)'>Monaco</a>."
-header:
-    image: homepage_typography.jpg
-    background-color: "#262930"
-    caption: This is a caption for the header image with link
-    caption_url: https://unsplash.com/
-image:
-    thumb:  homepage_typography-thumb.jpg
-    homepage: homepage_typography.jpg
-    caption: Image by Antonio
-    caption_url: "http://www.aisleone.net/"
-categories: Kapitel
+title: "Handcrafted Typography"
 ---
+With *Simplicity* you can use your favorite web font. Based on one font-size you can change the font and the size in a blink of an eye. Just open `_sass/_04_typography.scss` and change the font and size to your liking.
+
+<!--more-->
 
 ## Lato – A Sans Serif Typeface Family
 
@@ -44,11 +33,11 @@ The semi-rounded details of the letters give Lato a feeling of warmth, while the
 * &lt;h6&gt;-headings
 
 
-#### Heading in Volkhov &lt;h4&gt;
+#### Heading  &lt;h4&gt;
 
 As a four-weight family it is well-suited for complex text environments being economic and legible, contemporary and prominent. Many of its design solutions relate to this purpose: large open counters, rather short descenders, and brutal asymmetric serifs.
 
-##### Heading in Volkhov &lt;h5&gt;
+##### Heading  &lt;h5&gt;
 
 Spacing in Bold is slightly increased compared to the normal weight, because the bold mass is mostly grown inwards. The Italic has a steep angle and a distinctive calligraphically reminiscent character, as a counterpart to the rigorous Regular.
 
@@ -263,17 +252,19 @@ If you need footnotes for your posts, articles and entries, the Kramdown-Parser 
 [^1]: Find out more about Kramdown on <http://kramdown.gettalong.org/>
 [^2]: Kramdown has an excellent documentation of all its features. Check out, on how to [footnotes](http://kramdown.gettalong.org/syntax.html#footnotes).
 
-# &lt;h1&gt;-Heading in Volkhov
+## Headlines
 
-## &lt;h2&gt;-Heading in Volkhov
+# &lt;h1&gt;-Heading 
 
-### &lt;h3&gt;-Heading in Volkhov
+## &lt;h2&gt;-Heading 
 
-#### &lt;h4&gt;-Heading in Volkhov
+### &lt;h3&gt;-Heading 
 
-##### &lt;h5&gt;-Heading in Volkhov
+#### &lt;h4&gt;-Heading 
 
-###### &lt;h6&gt;-Heading in Volkhov
+##### &lt;h5&gt;-Heading 
+
+###### &lt;h6&gt;-Heading 
 
 
 ## Tables
