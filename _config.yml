@@ -9,13 +9,17 @@ urlimg:       "http://phlow.github.io/simplicity/images/"
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: /:categories/:title/
 # Use <!--more--> in your posts to generate an excerpt and a teaser
 excerpt_separator: <!--more-->
 
 # The language setting is used in /includes/header.html for html-settings
 language: "de"
+
+gems:
+  - jekyll-gist
+  - jekyll-sitemap
 
 # Exclude these files from your production _site
 exclude:

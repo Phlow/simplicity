@@ -34,7 +34,7 @@ layout: compress
 		</figure>
 		{% endif %}
 
-		{% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
+		
 		<h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 		<p class="teaser">
 			{{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
@@ -45,10 +45,10 @@ layout: compress
 		<h2>More Articles</h2>
 		<ul class="toc">
 	{% elsif forloop.last %}
-		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
 		</ul>
 	{% else %}
-		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
 	{% endif %}
 {% endfor %}
 

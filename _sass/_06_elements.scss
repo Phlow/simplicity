@@ -102,6 +102,21 @@ ul.toc li:last-child  {
 
 ul.toc li a {
   border: 0;
+  display: block;
+  transition: background .4s;
+}
+
+
+
+
+ul.toc li a span {
+  color: $grey-color;
+  display: none;
+  padding-right: .5em;
+}
+
+ul.toc li a:hover span {
+  display: inline;
 }
 
 ul.toc li:hover {
