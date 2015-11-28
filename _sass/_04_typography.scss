@@ -253,7 +253,7 @@ td {
 ------------------------------------------------------------------- */
 
 pre {
-    font-size: .85em;
+    font-size: .75em;
     font-weight: normal;
     overflow: auto;
     padding: 5px;
@@ -386,7 +386,8 @@ hr {
     color: $grey-color;
     margin: 0;
     }
-article .teaser {
+article .teaser,
+article div.content p:first-child {
     text-transform: uppercase;
 }
 

@@ -9,13 +9,13 @@ But you're not reduced to just one default-layout. Thanks to a nifty detection, 
 
 Imagine, you want to post a youtube video. Just grab the YouTube-URL and the machine does the rest. Your posting could look like this:
 
-~~~
+{% highlight html %}
 ---
 title: A YouTube
 youtube: https://www.youtube.com/watch?v=8pQAWOCofXo
 ---
 My favorite mash-up: Rave-People meeting Benny Hill.
-~~~
+{% endhighlight %}
 
 
 *Simplicity* offers you like Tumblr different kinds of post-types:

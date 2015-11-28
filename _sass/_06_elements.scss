@@ -100,14 +100,18 @@ ul.toc li:last-child  {
   border-bottom: 1px solid lighten(#000, 85);
 }
 
+// If there is a link to the article archive, don't
+// show border bottom and instead a border on top
+ul.toc li.archive-link  {
+  border: 0;
+  border-top: 1px solid lighten(#000, 85);
+}
+
 ul.toc li a {
   border: 0;
   display: block;
   transition: background .4s;
 }
-
-
-
 
 ul.toc li a span {
   color: $grey-color;

@@ -140,11 +140,12 @@ body {
   margin-top: 1em;
 }
 #pagination a {
-  padding: .1em .5em;
+  // padding: .1em .5em;
   display: block;
+  background: $grey-color-light;
+  color: $grey-color;
   font-size: $font-size-h4;
   font-style: italic;
-  color: $grey-color;
   text-decoration: none;
   border: 0;
   border-radius: $global-radius;

@@ -1,25 +1,38 @@
-# Site settings
+# ASCII-Font › http://patorjk.com/software/taag/#p=display&f=Slant&t=Phlow
+#
+#      _____ _ __          _____      __  __  _
+#     / ___/(_) /____     / ___/___  / /_/ /_(_)___  ____ ______
+#     \__ \/ / __/ _ \    \__ \/ _ \/ __/ __/ / __ \/ __ `/ ___/
+#    ___/ / / /_/  __/   ___/ /  __/ /_/ /_/ / / / / /_/ (__  )
+#   /____/_/\__/\___/   /____/\___/\__/\__/_/_/ /_/\__, /____/
+#                                                 /____/
+#
 
+# Title of your website
 title:        "Simplicity"
-description:  ""
-url:          "http://phlow.github.io/simplicity"
-baseurl:      ""
-urlimg:       "http://phlow.github.io/simplicity/images/"
+
+description:  "A Jekyll Theme for Minimalists"
 
 
 # Build settings
+url:          "http://phlow.github.io/simplicity"
+baseurl:      ""
+urlimg:       "http://phlow.github.io/simplicity/images/"
 markdown: kramdown
-highlighter: rouge
+highlighter: pygments
 permalink: /:categories/:title/
+
 # Use <!--more--> in your posts to generate an excerpt and a teaser
 excerpt_separator: <!--more-->
 
 # The language setting is used in /includes/header.html for html-settings
 language: "de"
 
+
 gems:
-  - jekyll-gist
-  - jekyll-sitemap
+    - jekyll-gist
+    - jekyll-sitemap
+    - jekyll-paginate
 
 # Exclude these files from your production _site
 exclude:

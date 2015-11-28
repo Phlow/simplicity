@@ -2,9 +2,12 @@
 title: "Style Guide"
 ---
 The *Simplicity* styleguide lists all available elemnts to style your content.
+
 <!--more-->
 
 ## Colors
+
+*Simplicity* allows you to change the colors to your taste quickly. Just open *_sass/_01_colors.scss* and tune your colors.
 
 Four possible brand colors and four colors to style alerts.
 

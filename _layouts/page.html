@@ -32,37 +32,9 @@ layout: default
 {% endif %}
 
 
+{{ content }}
 
 
-{% comment %}
-#
-#   Explanation:
-#
-#   The next code-snippet checks if {{ content }} contains the
-#   excerpt separator <!--more-->. If the separator is set
-#   the for loop will split the content to make styling of
-#   the teaser possible. If no separator is set, Jekyll just
-#   spits out the content without splitting.
-#
-#
-{% endcomment %}
-
-
-
-		{% if page.code == true %}
-		{{ content }}
-		{% elsif page.content contains '<!--more-->' %}
-		{% assign pagecontent = page.content | split: '<!--more-->' %}
-			{% for item in pagecontent %}
-				{% if forloop.first %}
-				<div class="teaser">{{ item | markdownify }}</div>
-				{% else %}
-				{{ item | markdownify }}
-				{% endif %}
-			{% endfor %}
-		{% else %}
-		{{ content }}
-		{% endif %}
 	</div>
 
 

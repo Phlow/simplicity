@@ -1,0 +1,29 @@
+---
+layout: compress
+---
+{% include _1_head.html %}
+
+{% include _2_navigation.html %}
+
+{% include _3_masthead.html %}
+
+<div class="wrapper">
+
+	<h1>{{ page.title }}</h1>
+
+	{{ content }}
+
+	<ul class="toc">
+		{% for post in site.posts %}
+
+		{% if forloop.last %}
+		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+	</ul>
+	{% else %}
+	<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+	{% endif %}
+	{% endfor %}
+
+	{% include _3_footer.html %}
+
+</div><!-- /.wrapper -->
