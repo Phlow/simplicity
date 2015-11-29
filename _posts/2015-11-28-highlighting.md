@@ -1,6 +1,5 @@
 ---
 title: "Highlighting Code"
-code: true
 ---
 *Simplicity* is GitHub Pages-ready, that means, it uses Pygments for syntax highlighting. To adjust the code highlighting to your taste, Just open *_sass/_07_syntax_highlighting.scss* and tune the colors to your taste.
 <!--more-->
