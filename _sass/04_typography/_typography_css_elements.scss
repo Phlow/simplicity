@@ -1,0 +1,32 @@
+/* Font Sizes
+------------------------------------------------------------------- */
+
+.sans           { font-family: $font-family-sans-serif; }
+.serif          { font-family: $font-family-serif; }
+
+.font-size-h1   { font-size: $font-size-h1; }
+.font-size-h2   { font-size: $font-size-h2; }
+.font-size-h3   { font-size: $font-size-h3; }
+.font-size-h4   { font-size: $font-size-h4; }
+.font-size-h5   { font-size: $font-size-h5; }
+.font-size-p    { font-size: $font-size-p; }
+
+
+
+/* Text Align
+------------------------------------------------------------------- */
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.block { display: block; }
+.inline { display: inline; }
+
+
+
+/* Shadows
+------------------------------------------------------------------- */
+
+.shadow-no      {text-shadow: rgba(0, 0, 0, 0) 0 0 0;}
+.shadow-black   {text-shadow: rgba(0, 0, 0, 0.498039) 0px 1px 2px;}
+.shadow-white   {text-shadow: rgba(255, 255, 255, 0.498039) 0px 1px 2px;}
+

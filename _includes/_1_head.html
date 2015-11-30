@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>{% if page.meta_title %}{{ page.meta_title }}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+	<meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% elsif post.excerpt %}{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.content contains '<!--more-->' %}{{ page.content | split:'<!--more-->' | first | strip_html | strip_newlines }}{% endif %}">
 
 	<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/simplicity.css">
 	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">

@@ -1,0 +1,61 @@
+
+
+/* Pagination
+------------------------------------------------------------------- */
+
+#pagination {
+  @extend %clearfix;
+  margin-top: 1em;
+}
+#pagination a {
+  // padding: .1em .5em;
+  display: block;
+  background: $grey-color-light;
+  color: $grey-color;
+  font-size: $font-size-h4;
+  font-style: italic;
+  text-decoration: none;
+  border: 0;
+  border-radius: $global-radius;
+}
+#pagination a:hover {
+  background: $grey-color-light;
+  color: $ci-1;
+}
+#pagination a.next {
+  float: right;
+}
+
+#pagination a.prev {
+  float: left;
+}
+#pagination a span {
+  display: none;
+  font-weight: normal;
+}
+
+
+#pagination a span.skip {
+  display: block;
+  font-weight: normal;
+  margin: 0 .3em;
+}
+#pagination a:hover span.skip {
+  display: none;
+  font-weight: normal;
+  padding: 0 .3em;
+}
+
+#pagination a:hover span {
+  display: block;
+  transition: all .3s;
+  padding: 0 .3em;
+}
+#pagination a.next span {
+  float: left;
+}
+
+#pagination a.prev span {
+  float: right;
+}
+

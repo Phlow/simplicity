@@ -1,0 +1,14 @@
+/* Logo
+------------------------------------------------------------------- */
+
+#logo {
+}
+#logo a {
+    font-size: $font-size-p;
+    border: 0;
+}
+
+#logo a:hover {
+    text-decoration: none;
+    color: $ci-1;
+}

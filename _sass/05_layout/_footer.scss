@@ -1,0 +1,15 @@
+/* Footer
+------------------------------------------------------------------- */
+
+#footer {
+  margin-top: $spacing-unit*3;
+  padding-bottom: $spacing-unit*3;
+  letter-spacing: 1px;
+  line-height: $font-size-small;
+  color: $grey-color;
+}
+
+#footer a {
+  border: 0;
+  text-transform: uppercase;
+}

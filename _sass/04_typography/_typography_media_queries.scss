@@ -1,0 +1,33 @@
+/* Media Queries Layout
+------------------------------------------------------------------- */
+
+
+/* Small
+------------------------------------------------------------------- */
+@media (max-width: $small - 1) {
+
+
+}
+
+
+
+/* Medium
+------------------------------------------------------------------- */
+@media (min-width: $small + 1) and (max-width: $medium) {
+
+    body {
+        font-size: $base-font-size-medium-screen;
+    }
+}
+
+
+
+/* Large
+------------------------------------------------------------------- */
+
+@media (min-width: $medium + 1) {
+
+    body {
+        font-size: $base-font-size-large-screen;
+    }
+}

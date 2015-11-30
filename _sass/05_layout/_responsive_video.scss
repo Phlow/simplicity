@@ -1,0 +1,16 @@
+/* Responsive Video
+------------------------------------------------------------------- */
+
+.flex-video {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 67.5%;
+}
+.flex-video iframe, .flex-video object, .flex-video embed, .flex-video video {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+}

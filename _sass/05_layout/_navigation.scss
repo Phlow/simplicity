@@ -1,0 +1,19 @@
+
+/* Navigation
+------------------------------------------------------------------- */
+#navigation {
+  height: 2em;
+  line-height: 1.85em;
+  border-bottom: 1px solid $grey-color-light;
+}
+#navigation ul {
+  margin: 0;
+  padding: 0 .5em;
+  list-style: none;
+}
+#navigation li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+

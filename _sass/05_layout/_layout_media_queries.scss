@@ -1,0 +1,65 @@
+/* Media Queries Layout
+------------------------------------------------------------------- */
+
+
+/* Small
+------------------------------------------------------------------- */
+
+@media (max-width: $small - 1) {
+
+  #masthead {
+    margin: $spacing-unit 0 $spacing-unit 0;
+    font-size: $font-size-h2;
+  }
+  .wrapper {
+    max-width: 34rem;
+    margin: 0 auto;
+    padding: 0 $spacing-unit/2;
+  }
+  #pagination a span.skip {
+    display: none;
+  }
+  #pagination a:hover span.skip {
+    display: none;
+  }
+}
+
+
+
+/* Medium
+------------------------------------------------------------------- */
+
+@media (min-width: $small ) and (max-width: $medium) {
+
+  #masthead {
+    height: $spacing-unit*2;
+    font-size: $font-size-h1;
+  }
+
+  .wrapper {
+    max-width: 40rem;
+    margin: 0 auto;
+    padding: 0 $spacing-unit;
+  }
+}
+
+
+
+/* Large
+------------------------------------------------------------------- */
+
+@media (min-width: $medium + 1) {
+
+  #masthead {
+    height: $spacing-unit*2;
+    font-size: $font-size-h1;
+    line-height: 1.5;
+  }
+
+  .wrapper {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 0 $spacing-unit;
+  }
+
+}

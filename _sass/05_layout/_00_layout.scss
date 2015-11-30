@@ -1,0 +1,43 @@
+/* TOC
+------------------------------------------------------------------- */
+
+// Don't hide scrollbar – Makes the logo jump
+html {
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
+body {
+    background-color: $background-color;
+}
+
+@import "navigation";
+
+@import "masthead";
+
+@import "logo";
+
+@import "search";
+
+@import "content";
+
+@import "meta";
+
+@import "pagination";
+
+@import "jump_to_top";
+
+@import "footer";
+
+@import "layout_media_queries.scss";
+
+@import "alerts.scss";
+
+@import "_toc.scss";
+
+@import "_buttons.scss";
+
+@import "_responsive_video.scss";
+
+@import "layout_elements.scss";
+

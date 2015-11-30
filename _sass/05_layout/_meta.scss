@@ -1,0 +1,30 @@
+/* Meta
+------------------------------------------------------------------- */
+
+#page-meta, #page-meta a {
+    color: $grey-color;
+}
+
+#page-meta .button {
+    background: $grey-color;
+    border: 0;
+}
+#page-meta .button {
+    color: #fff;
+}
+#page-meta .button:hover {
+    background: $ci-1;
+}
+.meta-info p {
+  font-size: rem-calc(13);
+  color: scale-color($grey-color-light, $lightness: 40%);
+}
+  .meta-info a {
+    text-decoration: underline;
+    color: scale-color($grey-color-light, $lightness: 40%);
+  }
+  .meta-info a:hover {
+    text-decoration: none;
+    color: $ci-2;
+  }
+

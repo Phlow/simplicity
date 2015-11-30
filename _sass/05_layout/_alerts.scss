@@ -1,0 +1,68 @@
+
+/* Alerts
+------------------------------------------------------------------- */
+.alert-box {
+  color: #fff;
+  background-color: $grey-color-light;
+  display: block;
+  margin-bottom: 1em;
+  position: relative;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  border-radius: $global-radius;
+}
+.alert-box p {
+  margin: 0;
+  padding: 0;
+}
+.alert-box a {
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
+  color: #fff;
+  border-bottom: 1px dotted #fff;
+}
+.alert-box a:hover {
+  border-bottom: 3px solid #fff;
+}
+
+.alert-box.text,
+.alert-box.text a {
+  text-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+  color: $grey-color-dark;
+}
+
+.alert-box.text a {
+  border-bottom: 1px dotted $grey-color-dark;
+}
+
+.alert-box.text a:hover {
+  border-bottom: 2px solid $grey-color-dark;
+}
+
+.alert-box.info {
+  background: $info-color;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
+}
+.alert-box.alert {
+  background: $alert-color;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
+}
+.alert-box.success {
+  background: $success-color;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
+}
+.alert-box.warning {
+  background: $warning-color;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
+}
+.alert-box.terminal {
+  background: $grey-color-dark;
+  text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
+  color: #fff;
+  font-family: $font-family-monospace;
+}
+.alert-box.terminal::before {
+  content: "$ ";
+  color: $ci-2;
+  float: left;
+  margin-right: .5em;
+}
+

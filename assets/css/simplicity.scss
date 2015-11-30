@@ -6,11 +6,15 @@ sitemap:
 @charset "utf-8";
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "00_functions";
-@import "01_colors";
-@import "02_settings";
-@import "03_normalize";
-@import "04_typography";
-@import "05_layout";
-@import "06_elements";
-@import "07_syntax_highlighting.scss";
+
+@import "00_functions/00_functions";
+
+@import "01_colors/00_colors";
+
+@import "02_settings/00_settings";
+
+@import "02_settings/00_normalize";
+
+@import "04_typography/00_typography";
+
+@import "05_layout/00_layout";

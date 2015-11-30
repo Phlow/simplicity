@@ -1,0 +1,11 @@
+/* Buttons
+------------------------------------------------------------------- */
+
+button, .button         { letter-spacing: 1px; }
+  button.grey, .button.grey { background: $grey-color-dark; }
+  button.grey:hover,
+  button.grey:focus,
+  .button.grey:hover,
+  .button.grey:focus      { background-color: $grey-color-dark; }
+
+

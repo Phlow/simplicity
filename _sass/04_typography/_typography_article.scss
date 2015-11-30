@@ -1,0 +1,14 @@
+/* Typography for Articles
+------------------------------------------------------------------- */
+
+.subheadline {
+	color: $grey-color;
+	margin: 0;
+}
+article .teaser,
+article div.content p:first-child {
+	text-transform: uppercase;
+}
+
+
+
