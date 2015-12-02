@@ -20,15 +20,15 @@ layout: compress
 
 		{% if post.image %}
 		<figure>
-			<img src="{{ site.urlimg }}{{ post.image.url }}" width="100%" alt="{{ post.title escape_once }}" itemprop="image">
+			<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" alt="{{ post.title escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" width="100%" alt="{{ post.title escape_once }}" itemprop="image"></a>
 
-			{% if post.image.caption_url && post.image.caption %}
+			{% if post.caption_url && post.caption %}
 			<figcaption>
-				<a href="{{ post.image.caption_url }}">{{ post.image.caption }}</a>
+				<a href="{{ post.caption_url }}">{{ post.caption }}</a>
 			</figcaption>
-			{% elsif post.image.caption %}
+			{% elsif post.caption %}
 			<figcaptionß>
-				{{ post.image.caption }}
+				{{ post.caption }}
 			</figcaption>
 			{% endif %}
 		</figure>

@@ -8,6 +8,10 @@
 url: 'http://localhost:4000'
 urlimg: 'http://localhost:4000/images/'
 
+# See › https://github.com/jekyll/jekyll-gist#disabling-noscript-support
+gist:
+  noscript: false
+
 sass:
   # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
   style: :expanded
