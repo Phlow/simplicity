@@ -7,6 +7,9 @@
     font-size: $font-size-p;
     border: 0;
 }
+#logo a img {
+	line-height: 2.5em;
+}
 
 #logo a:hover {
     text-decoration: none;

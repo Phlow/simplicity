@@ -16,4 +16,17 @@
   padding: 0;
   display: inline;
 }
-
+#navigation li.left {
+  float: left;
+}
+#navigation li.right {
+  float: right;
+}
+#navigation a {
+    font-size: $font-size-p;
+    border: 0;
+}
+#navigation a:hover {
+    text-decoration: none;
+    color: $ci-1;
+}

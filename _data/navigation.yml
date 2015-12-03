@@ -1,4 +1,9 @@
-- name: "Simplicity"
+- name: "Phlow"
+  class: "logo"
   url: "/"
-  class: "home"
+  image: logo-simplicity.svg
 
+- name: "Menu"
+  url: "/navigation/"
+  class: "menu"
+  side: right
