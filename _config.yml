@@ -28,7 +28,7 @@ posts_limit: 7
 excerpt_separator: <!--more-->
 
 # The language setting is used in /includes/header.html for html-settings
-language: "de"
+language: "en"
 
 
 gems:

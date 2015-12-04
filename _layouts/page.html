@@ -3,6 +3,7 @@ layout: default
 format: page
 ---
 <article itemscope itemtype="http://schema.org/Article">
+	<meta content="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}" itemprop="inLanguage" />
 	<header>
 		{% if page.image %}
 		<figure>
@@ -42,7 +43,7 @@ format: page
 	{% endif %}
 
 	<footer>
-		<time class="text-right grey block" datetime="{{ page.date | remove: ' +0100' }}"></time>
+		<time class="text-right grey block" datetime="{{ page.date | remove: ' +0100' }}" itemprop="datePublished">{{ page.date | remove: ' +0100' }}</time>
 	</footer>
 
 	{% include _pagination.html %}
