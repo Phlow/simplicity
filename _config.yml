@@ -21,6 +21,8 @@ urlimg:       "http://phlow.github.io/simplicity/images/"
 markdown: kramdown
 highlighter: pygments
 permalink: /:categories/:title/
+# How many posts should be seen on front page › here 7
+posts_limit: 7
 
 # Use <!--more--> in your posts to generate an excerpt and a teaser
 excerpt_separator: <!--more-->
@@ -127,6 +129,18 @@ msapplication_tilecolor:                "#fabb00"
 sass:
     sass_dir: _sass
     style: :compressed
+
+
+#        ____  _
+#       / __ \(_)________ ___  _______
+#      / / / / / ___/ __ `/ / / / ___/
+#     / /_/ / (__  ) /_/ / /_/ (__  )
+#    /_____/_/____/\__, /\__,_/____/
+#                    /_/
+#
+# used in _includes/comments
+
+# disqus_shortname:
 
 
 #       ___                __      __  _

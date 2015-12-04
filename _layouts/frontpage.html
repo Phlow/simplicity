@@ -1,5 +1,6 @@
 ---
 layout: compress
+format: frontpage
 ---
 {% include _1_head.html %}
 
@@ -9,7 +10,7 @@ layout: compress
 
 <div class="wrapper">
 
-{% for post in site.posts %}
+{% for post in site.posts limit:site.posts_limit %}
 	{% if forloop.first %}
 
 		{% if post.youtube %}

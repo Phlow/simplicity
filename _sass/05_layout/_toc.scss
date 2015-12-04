@@ -18,6 +18,12 @@ ul.toc li  {
   line-height: 1.85em;
 }
 
+body.archive ul.toc li:nth-child(5n) {
+  margin-bottom: 2em;
+  border-bottom: 1px solid lighten(#000, 85);
+}
+
+
 ul.toc li:last-child  {
   border-bottom: 1px solid lighten(#000, 85);
 }

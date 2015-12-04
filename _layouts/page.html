@@ -1,7 +1,8 @@
 ---
 layout: default
+format: page
 ---
-<article itemscope itemtype="http://schema.org/Book">
+<article itemscope itemtype="http://schema.org/Article">
 	<header>
 		{% if page.image %}
 		<figure>
@@ -23,21 +24,22 @@ layout: default
 
 		<h1 itemprop="name headline">{{ page.title }}</h1>
 	</header>
-	<div class="content" itemprop="articleBody">
+	<div class="content" itemprop="articleSection">
 
-{% if page.youtube %}
-<div class="flex-video">
-<iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ page.youtube | remove: "https://www.youtube.com/watch?v=" }}" frameborder="0" allowfullscreen></iframe>
-</div>
-{% endif %}
-
-
-{{ content }}
+		{% if page.youtube %}
+		<div class="flex-video">
+		<iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ page.youtube | remove: "https://www.youtube.com/watch?v=" }}" frameborder="0" allowfullscreen></iframe>
+		</div>
+		{% endif %}
 
 
-	</div>
+		{{ content }}
 
+	</div><!-- /.content -->
 
+	{% if page.comments == true %}
+	{% include _comments.html %}
+	{% endif %}
 
 	<footer>
 		<time class="text-right grey block">{{ page.date }}</time>
