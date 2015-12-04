@@ -35,3 +35,15 @@ h6 a, h6 a:visited, h6 a:link
  {
     border: 0;
 }
+
+
+
+a img,
+a:link img,
+a:visited img,
+a:hover img,
+a:focus img,
+a:active img {
+    border: 0;
+    text-decoration: none;
+}
