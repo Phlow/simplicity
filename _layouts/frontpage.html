@@ -8,7 +8,7 @@ format: frontpage
 
 {% include _3_masthead.html %}
 
-<div class="wrapper">
+<div id="content" class="wrapper">
 
 {% for post in site.posts limit:site.posts_limit %}
 	{% if forloop.first %}
