@@ -21,7 +21,7 @@ format: frontpage
 
 		{% if post.image %}
 		<figure>
-			<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" alt="{{ post.title escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" width="100%" alt="{{ post.title escape_once }}" itemprop="image"></a>
+			<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title escape_once }}" itemprop="image"></a>
 
 			{% if post.caption_url && post.caption %}
 			<figcaption>
@@ -55,6 +55,6 @@ format: frontpage
 
 {{ content }}
 
-{% include _3_footer.html %}
+{% include _4_footer.html %}
 
-</div><!-- /.wrapper -->
+</div><!-- /#conent.wrapper -->

@@ -15,7 +15,6 @@
   padding: 0;
 }
 .alert-box a {
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
   color: #fff;
   border-bottom: 1px dotted #fff;
 }
@@ -25,7 +24,6 @@
 
 .alert-box.text,
 .alert-box.text a {
-  text-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
   color: $grey-color-dark;
 }
 
@@ -39,23 +37,18 @@
 
 .alert-box.info {
   background: $info-color;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
 }
 .alert-box.alert {
   background: $alert-color;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
 }
 .alert-box.success {
   background: $success-color;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
 }
 .alert-box.warning {
   background: $warning-color;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
 }
 .alert-box.terminal {
   background: $grey-color-dark;
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.9);
   color: #fff;
   font-family: $font-family-monospace;
 }
@@ -65,4 +58,3 @@
   float: left;
   margin-right: .5em;
 }
-

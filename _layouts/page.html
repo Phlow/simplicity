@@ -6,7 +6,7 @@ format: page
 	<header>
 		{% if page.image %}
 		<figure>
-			<img src="{{ site.urlimg }}{{ page.image }}" width="100%" alt="{{ page.title escape_once }}" itemprop="image">
+			<img src="{{ site.urlimg }}{{ page.image }}" alt="{{ page.title escape_once }}" itemprop="image">
 
 			{% if page.caption_url && page.caption %}
 			<figcaption>
@@ -42,9 +42,8 @@ format: page
 	{% endif %}
 
 	<footer>
-		<time class="text-right grey block">{{ page.date }}</time>
+		<time class="text-right grey block" datetime="{{ page.date | remove: ' +0100' }}"></time>
 	</footer>
-
 
 	{% include _pagination.html %}
 </article>

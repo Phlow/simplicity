@@ -1,3 +1,5 @@
+/* Links
+------------------------------------------------------------------- */
 
 a,
 a:link {
@@ -30,14 +32,11 @@ h3 a, h3 a:visited, h3 a:link,
 h4 a, h4 a:visited, h4 a:link,
 h5 a, h5 a:visited, h5 a:link,
 h6 a, h6 a:visited, h6 a:link
- {
+{
     border: 0;
 }
 
 
-
-/* Links
-------------------------------------------------------------------- */
 a a:visited,
 a:link img,
 a:hover img,
@@ -49,7 +48,7 @@ a img { border: none; }
 
 #content a img  {
     display: block; 
-   border: 0;
+    border: 0;
     -webkit-transition: all .15s cubic-bezier(.33,.66,.66,1);
     transition: all .15s cubic-bezier(.33,.66,.66,1);
     -webkit-backface-visibility: hidden;
