@@ -4,7 +4,7 @@ format: archive
 ---
 {% include _1_head.html %}
 
-{% include _2_navigation.html %}
+{% include _2_topbar_navigation.html %}
 
 {% include _3_masthead.html %}
 
@@ -14,15 +14,19 @@ format: archive
 
 	{{ content }}
 
-	<ul class="toc">
-		{% for post in site.posts %}
+	<div class="class alert-box text">
+		<p><strong>Search</strong></p>
+		{% include search %}
+	</div><!-- /.alert-box -->
 
+	<ul class="toc">
+	{% for post in site.posts %}
 		{% if forloop.last %}
 		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-	</ul>
-	{% else %}
-	<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-	{% endif %}
+		</ul>
+		{% else %}
+		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+		{% endif %}
 	{% endfor %}
 
 	{% include _4_footer.html %}

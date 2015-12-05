@@ -1,9 +1,11 @@
-- name: "Phlow"
-  class: "logo"
+- name: "Start"
+  class: "start"
   url: "/"
-  image: logo-simplicity.svg
 
-- name: "Menu"
-  url: "/navigation/"
-  class: "menu"
-  side: right
+- name: "Info"
+  class: "info"
+  url: "/info/"
+
+- name: "Archive"
+  class: "archive"
+  url: "/archive/"

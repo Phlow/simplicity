@@ -1,0 +1,16 @@
+- name: "Simplicity"
+  class: "logo"
+  url: "/"
+#  image: logo-simplicity.svg
+
+- name: ""
+  class: "search"
+  url: "/search/"
+  side: right
+  image: search.svg
+
+- name: "Menu"
+  class: "navigation"
+  url: "/navigation/"
+  side: right
+  image: bars.svg

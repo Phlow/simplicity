@@ -1,0 +1,22 @@
+<!-- Html Elements for Search -->
+<div id="search-container">
+	<input type="text" id="search-input" accesskey="s" tabindex="1" placeholder="Search [Press Tab and start writing]">
+	<ul id="results-container"></ul>
+</div>
+
+<!-- Script pointing to jekyll-search.js -->
+<script src="{{ site.url }}{{ site.baseurl }}/assets/js/jekyll-search.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+	SimpleJekyllSearch({
+		searchInput: document.getElementById('search-input'),
+		resultsContainer: document.getElementById('results-container'),
+		json: '/search.json',
+		searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+		noResultsText: 'No results found',
+		limit: 10,
+		fuzzy: false,
+		exclude: ['Welcome']
+	})
+</script>

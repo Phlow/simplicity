@@ -21,6 +21,7 @@ urlimg:       "http://phlow.github.io/simplicity/images/"
 markdown: kramdown
 highlighter: pygments
 permalink: /:categories/:title/
+encoding: utf-8
 # How many posts should be seen on front page › here 7
 posts_limit: 7
 

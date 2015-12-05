@@ -1,32 +1,46 @@
 /* Navigation
 ------------------------------------------------------------------- */
 
-#navigation {
+#topbar-navigation {
   height: 2em;
   line-height: 1.85em;
   border-bottom: 1px solid $grey-color-light;
 }
-#navigation ul {
+#topbar-navigation ul {
   margin: 0;
   padding: 0 .5em;
   list-style: none;
 }
-#navigation li {
+#topbar-navigation li {
   margin: 0;
   padding: 0;
   display: inline;
 }
-#navigation li.left {
+#topbar-navigation li.left {
   float: left;
 }
-#navigation li.right {
+#topbar-navigation li.right {
   float: right;
 }
-#navigation a {
+#topbar-navigation a {
     font-size: $font-size-p;
     border: 0;
 }
-#navigation a:hover {
+#topbar-navigation a:hover {
     text-decoration: none;
     color: $ci-1;
+}
+#topbar-navigation .search img {
+    height: 1em;
+    line-height: 1em;
+    display: block;
+    float: right;
+    margin: .45em .25em 0px .25em;
+}
+#topbar-navigation .navigation img {
+    height: 1em;
+    line-height: 1em;
+    display: block;
+    float: right;
+    margin: .45em .25em 0px .25em;
 }

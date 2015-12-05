@@ -1,2 +1,25 @@
 /* Search
 ------------------------------------------------------------------- */
+
+input#search-input {
+  border: 0;
+  border-bottom: 1px solid $ci-1;
+  outline:none;
+  color: $ci-1;
+  background: mix(#fff, $ci-1, 95%);
+  width: 100%;
+}
+
+input#search-input:hover,
+input#search-input:active,
+input#search-input:visited,
+input#search-input:focus,
+input#search-input:hover:focus,
+input#search-input:hover:active {
+  border-bottom: 3px solid $ci-1;
+  background: transparent;
+}
+
+div.class.alert-box.text div#search-container input#search-input {
+	background: transparent !important;
+}
