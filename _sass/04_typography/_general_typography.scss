@@ -180,7 +180,8 @@ article dl dd   { line-height: 1.6; margin-bottom: rem-calc(12); margin-left: re
 ------------------------------------------------------------------- */
 
 blockquote {
-    font-style: italic;
+    margin: 0 0 0 2em;
+    font-style: normal;
     position: relative;
     border: none;
     color:  $grey-color;
@@ -190,30 +191,11 @@ blockquote {
         font-style: italic;
         color: $grey-color;
     }
-
-    blockquote:before {
-        display:block;content:"\00BB";
-        font-size: $font-size-h1;
-        line-height: 0;
-        position:absolute;
-        left: -.55em;
-        top: 0.35em;
-        color: $grey-color;
-    }
-    blockquote:after {
-        display:block;
-        content:"\00AB";
-        font-size: $font-size-h1;
-        line-height: 0;
-        position:absolute;
-        right: -.55em;
-        bottom: .55em;
-        color: $grey-color;
-    }
     blockquote cite:before {
         content:"\2014 \0020";
         margin-left: .25em;
     }
+
     blockquote cite a,blockquote cite a:visited {
         color: $grey-color;
     }

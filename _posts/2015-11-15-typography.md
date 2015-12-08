@@ -6,40 +6,26 @@ With *Simplicity* you can use your favorite web font. Based on one font-size you
 
 <!--more-->
 
-## Lato – A Sans Serif Typeface Family
 
-[<dfn>Lato</dfn>][4] is a sans serif typeface family started in the summer of 2010 by Warsaw-based designer Łukasz Dziedzic. »Lato« means »Summer« in Polish. In December 2010 the Lato family was published under the Open Font License by his foundry tyPoland, with support from Google. 
+## The Elements of Typographic Style
 
-> <span class="teaser">I do not think of type as something that should be readable. It should be beautiful.</span><cite>[Ed Benguiat][3]</cite>
+> <span class="teaser">»I do not think of type as something that should be readable. It should be beautiful.«</span><cite>[Ed Benguiat][3]</cite>
 
-In the last ten or so years, during which Łukasz has been designing type, most of his projects were rooted in a particular design task that he needed to solve. With Lato, it was no different. Originally, the family was conceived as a set of corporate fonts for a large client — who in the end decided to go in different stylistic direction, so the family became available for a public release.
+For too long typographic style and its accompanying attention to detail have been overlooked by website designers, particularly in body copy. In years gone by this could have been put down to the technology, but now the web has caught up. The advent of much improved browsers, text rendering and high resolution screens, combine to negate technology as an excuse.
 
-When working on Lato, Łukasz tried to carefully balance some potentially conflicting priorities. He wanted to create a typeface that would seem quite “transparent” when used in body text but would display some original traits when used in larger sizes. He used classical proportions (particularly visible in the uppercase) to give the letterforms familiar harmony and elegance. At the same time, he created a sleek sans serif look, which makes evident the fact that Lato was designed in 2010 — even though it does not follow any current trend.
+Robert Bringhurst’s book The Elements of Typographic Style is on many a designer’s bookshelf and is considered to be a classic in the field. Indeed the renowned typographer Hermann Zapf proclaims the book to be a must for everybody in the graphic arts, and especially for our new friends entering the field.
 
-The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness. “Male and female, serious but friendly. With the feeling of the Summer,” says Łukasz. Learn more at [www.latofonts.com][6]
+In order to allay some of the myths surrounding typography on the web, I have structured this website to step through Bringhurst’s working principles, explaining how to accomplish each using techniques available in HTML and CSS. The future is considered with coverage of CSS3, and practicality is ever present with workarounds, alternatives and compromises for less able browsers.
 
+At the time of writing, this is a work in progress. I am adding to the site in the order presented in Bringhurst’s book, one principle at a time.
 
-## About Volkhov &lt;h2&gt; 
+I am excluding those principles which are not relevant to the Web or that do not require a technical explanation. Unfortunately this excludes the entire opening chapter, the Grand Design, which I heartily recommend you read as it lays down the foundations, philosophy and approach to good typography in any medium. If you were to take any working principle from the Grand Design, it would be this: Give full typographical attention even to incidental details.
 
-<dfn>Volkhov</dfn> is a low-contrast seriffed typeface with a robust character, intended for providing a motivating reading experience. Volkhov was designed by Ivan Petrov.
+Now start with [Rhythm & Proportion](http://webtypography.net/2.1.1) or dip into the [Table of Contents](http://webtypography.net/toc) and enjoy pushing a few boundaries to create websites of real typographical worth.
 
-### Feeling Responsive uses Volkhov for...  &lt;h3&gt;
-
-* &lt;h1&gt;-headings
-* &lt;h2&gt;-headings
-* &lt;h3&gt;-headings
-* &lt;h4&gt;-headings
-* &lt;h5&gt;-headings
-* &lt;h6&gt;-headings
+{% include alert text='This excerpt was taken from [webtypography.net](http://webtypography.net/)' %}
 
 
-#### Heading  &lt;h4&gt;
-
-As a four-weight family it is well-suited for complex text environments being economic and legible, contemporary and prominent. Many of its design solutions relate to this purpose: large open counters, rather short descenders, and brutal asymmetric serifs.
-
-##### Heading  &lt;h5&gt;
-
-Spacing in Bold is slightly increased compared to the normal weight, because the bold mass is mostly grown inwards. The Italic has a steep angle and a distinctive calligraphically reminiscent character, as a counterpart to the rigorous Regular.
 
 
 

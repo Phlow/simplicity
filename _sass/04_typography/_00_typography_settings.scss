@@ -4,6 +4,10 @@
 // @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic);
 // Roboto
 // @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
+// Roboto Mono
+// @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
+// Roboto Slab
+// @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 // Source Sans Pro
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic);
 // Source Code Pro
@@ -14,7 +18,10 @@
 // @import url(https://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic);
 // Gentium Basic
 // @import url(https://fonts.googleapis.com/css?family=Gentium+Basic:400,400italic,700,700italic);
-
+// Fira Sans
+// @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic);
+// Fira Mono
+// @import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,700);
 
 /* Variables
 ------------------------------------------------------------------- */
@@ -29,7 +36,7 @@ $base-font-family:          $font-family-sans-serif;
 
 $font-family-monospace:     "Source Code Pro", "Courier New", Monaco, monospace;
 
-$header-font-family: $font-family-sans-serif;
+$header-font-family:        $font-family-sans-serif;
 
 
 

@@ -4,6 +4,7 @@ title: "Test Drive for Images in your posts"
 See how images align in your posts. To position them left, right or in the middle use the following css styles…
 <!--more-->
 
+
 ## Clint Eastwood versus Jim Carrey
 
 This is my gun, clyde! ever notice how sometimes you come across somebody you shouldn't have f!*ked with? well, i'm that guy. it's because i'm green isn't it! don't p!ss down my back and tell me it's raining. you want a guarantee, buy a toaster. dyin' ain't much of a livin', boy. what you have to ask yourself is, do i feel lucky. well do ya' punk? good morning, oh in case i don't see you, good afternoon, good evening and goodnight. dyin' ain't much of a livin', boy. when a naked man's chasing a woman through an alley with a butcher knife and a hard-on, i figure he's not out collecting for the red cross. well, do you have anything to say for yourself? i just heard about evans new position,good luck to you evan backstabber, bastard, i mean baxter.

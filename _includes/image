@@ -1,0 +1,65 @@
+{% assign image = 'cat_on xa root xHOT tin roof-229x316.jpg' %}
+{% comment %}
+#
+# First, delete extension: Split at '.' and take the first part
+#
+{% endcomment %}
+{% assign image_no_extension = image | split: '.' %}
+{{ image_no_extension[0] }}
+{% assign image = image_no_extension[0] %}
+{% comment %}
+#
+# Now split {{ image }} in pieces at 'x' and reverse
+# the array in a loop. First part is height, second part is width
+# and if there are more parts just ignore them.
+# Than just remove all other characters to only keep the numbers
+#
+{% endcomment %}
+{% assign image_width_height = image | split: 'x' %}
+{% assign counter = 1 %}
+{% for size in image_width_height reversed %}
+    {% if forloop.first %}
+        {% capture height %}{{ size }}{% endcapture %}
+    {% elsif counter == 2 %}
+        {% capture width %}{{ size
+        | downcase
+        | remove: 'a'
+        | remove: 'b'
+        | remove: 'c'
+        | remove: 'd'
+        | remove: 'e'
+        | remove: 'f'
+        | remove: 'g'
+        | remove: 'h'
+        | remove: 'i'
+        | remove: 'j'
+        | remove: 'k'
+        | remove: 'l'
+        | remove: 'm'
+        | remove: 'n'
+        | remove: 'o'
+        | remove: 'p'
+        | remove: 'q'
+        | remove: 'r'
+        | remove: 's'
+        | remove: 't'
+        | remove: 'u'
+        | remove: 'v'
+        | remove: 'w'
+        | remove: 'x'
+        | remove: 'y'
+        | remove: 'z'
+        | remove: ' '
+        | remove: '-'
+        | remove: '_'
+        }}{% endcapture %}
+    {% endif %}
+    {% assign counter=counter | plus:1 %}
+{% endfor %}
+
+<img src="http://placehold.it/{{ width }}x{{ height }}?text={{ width }}x{{ height }}" width="{{ width }}" height="{{ height }}" alt="" >
+
+
+
+
+{% include image url='test3299x393.jpg' %}
