@@ -8,9 +8,8 @@
 #                                                 /____/
 #
 
-# Title of your website
+# Title and description of your site
 title:        "Simplicity"
-
 description:  "Simplicity is a fast and easy to use jekyll theme for minimalists concentrating on elegance and flexibility."
 
 
@@ -18,10 +17,10 @@ description:  "Simplicity is a fast and easy to use jekyll theme for minimalists
 url:          "http://phlow.github.io/simplicity"
 baseurl:      ""
 urlimg:       "http://phlow.github.io/simplicity/images/"
-markdown: kramdown
-highlighter: pygments
-permalink: /:categories/:title/
-encoding: utf-8
+markdown:     kramdown
+highlighter:  pygments
+permalink:    /:categories/:title/
+encoding:     utf-8
 # How many posts should be seen on front page › here 7
 posts_limit: 7
 
@@ -30,7 +29,6 @@ excerpt_separator: <!--more-->
 
 # The language setting is used in /includes/header.html for html-settings
 language: "en"
-
 
 gems:
     - jekyll-gist
