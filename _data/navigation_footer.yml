@@ -1,0 +1,11 @@
+- name: "About <em>Simplicity</em>"
+  class: "info"
+  url: "/info/"
+
+- name: "Archive"
+  class: "archive"
+  url: "/archive/"
+
+- name: "ToDo"
+  class: "todo"
+  url: "/todo/"

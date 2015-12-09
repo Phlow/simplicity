@@ -8,29 +8,35 @@ format: archive
 
 {% include _3_masthead.html %}
 
-<div class="wrapper">
+<div id="content" class="row">
+	<div class="medium-8 medium-centered columns">
 
-	<h1>{{ page.title }}</h1>
+		<h1>{{ page.title }}</h1>
 
-	{{ content }}
+		{{ content }}
 
-	<div class="class alert-box text">
-		<p><strong>Search</strong></p>
-		{% include search %}
-	</div><!-- /.alert-box -->
+		<div class="class alert-box text">
+			<p><strong>Search</strong></p>
+			{% include search %}
+		</div><!-- /.alert-box -->
 
-	<ul class="toc">
-	{% for post in site.posts %}
-		{% if forloop.last %}
-		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-		</ul>
-		{% else %}
-		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-		{% endif %}
-	{% endfor %}
+		<ul class="toc">
+		{% for post in site.posts %}
+			{% if forloop.last %}
+			<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+			</ul>
+			{% else %}
+			<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+			{% endif %}
+		{% endfor %}
 
-	{% include _4_footer.html %}
 
-</div><!-- /.wrapper -->
+	</div>
+</div><!-- /.row -->
+
+{% include _4_footer.html %}
 
 {% include _5_footer_scripts.html %}
+
+</body>
+</html>

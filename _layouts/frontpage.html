@@ -8,53 +8,61 @@ format: frontpage
 
 {% include _3_masthead.html %}
 
-<div id="content" class="wrapper">
+<div class="row">
+	<div id="content" class="medium-8 medium-centered columns">
 
-{% for post in site.posts limit:site.posts_limit %}
-	{% if forloop.first %}
+	{% for post in site.posts limit:site.posts_limit %}
+		{% if forloop.first %}
 
-		{% if post.youtube %}
-		<div class="flex-video">
-		<iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ post.youtube | remove: "https://www.youtube.com/watch?v=" }}" frameborder="0" allowfullscreen></iframe>
-		</div>
-		{% endif %}
-
-		{% if post.image %}
-		<figure>
-			<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title escape_once }}" itemprop="image"></a>
-
-			{% if post.caption_url && post.caption %}
-			<figcaption>
-				<a href="{{ post.caption_url }}">{{ post.caption }}</a>
-			</figcaption>
-			{% elsif post.caption %}
-			<figcaptionß>
-				{{ post.caption }}
-			</figcaption>
+			{% if post.youtube %}
+			<div class="flex-video">
+			<iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ post.youtube | remove: "https://www.youtube.com/watch?v=" }}" frameborder="0" allowfullscreen></iframe>
+			</div>
 			{% endif %}
-		</figure>
+
+			{% if post.embed %}
+			<div{% if post.embed_height %} style="padding-bottom: {{ post.embed_height }}"{% endif %} class="flex-video b30">
+			{{ post.embed }}
+			</div>
+			{% endif %}
+
+			{% if post.image %}
+			<figure>
+				<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title escape_once }}" itemprop="image"></a>
+
+				{% if post.caption_url && post.caption %}
+				<figcaption>
+					<a href="{{ post.caption_url }}">{{ post.caption }}</a>
+				</figcaption>
+				{% elsif post.caption %}
+				<figcaptionß>
+					{{ post.caption }}
+				</figcaption>
+				{% endif %}
+			</figure>
+			{% endif %}
+
+			{% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
+
+			<h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+			<p class="teaser">
+				{{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
+				<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">Read more ›</a>
+			</p>
+
+			<h2>More Articles</h2>
+			<ul class="toc">
+		{% elsif forloop.last %}
+			<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+			<li class="text-right archive-link"><a href="{{ site.url }}{{ site.baseurl }}/archive/">Show All Articles ›</a></li>
+			</ul>
+		{% else %}
+			<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
 		{% endif %}
+	{% endfor %}
 
-		<h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-		<p class="teaser">
-			{{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
-			<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">Read more ›</a>
-
-		</p>
-
-		<h2>More Articles</h2>
-		<ul class="toc">
-	{% elsif forloop.last %}
-		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-		<li class="text-right archive-link"><a href="{{ site.url }}{{ site.baseurl }}/archive/">Show All Articles ›</a></li>
-		</ul>
-	{% else %}
-		<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-	{% endif %}
-{% endfor %}
-
-{{ content }}
+	{{ content }}
+	</div><!-- /#content -->
+</div><!-- /.row -->
 
 {% include _4_footer.html %}
-
-</div><!-- /#conent.wrapper -->

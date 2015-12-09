@@ -2,14 +2,27 @@
 ------------------------------------------------------------------- */
 
 #footer {
-  margin-top: $spacing-unit*3;
-  padding-bottom: $spacing-unit*3;
+  margin-top: 7em;
+  padding-bottom: 2em;
   letter-spacing: 1px;
   line-height: $font-size-small;
   color: $grey-color;
 }
-
 #footer a {
   border: 0;
-  text-transform: uppercase;
+  color: $grey-color;
+}
+#footer a:hover {
+    color: $ci-1;
+}
+#footer ul.inline-list li:before {
+	// middot
+	content: '//';
+	padding: 0 .5em;
+}
+#footer ul.inline-list li:first-child:before {
+	content: '';
+	padding: 0;
+}
+#footer ul.inline-list li:first-child {
 }

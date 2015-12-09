@@ -5,6 +5,18 @@ format: page
 <article itemscope itemtype="http://schema.org/Article">
 	<meta content="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}" itemprop="inLanguage" />
 	<header>
+		{% if page.youtube %}
+		<div class="flex-video">
+		<iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ page.youtube | remove: "https://www.youtube.com/watch?v=" }}" frameborder="0" allowfullscreen></iframe>
+		</div>
+		{% endif %}
+
+		{% if page.embed %}
+		<div{% if page.embed_height %} style="padding-bottom: {{ page.embed_height }}"{% endif %} class="flex-video b30">
+		{{ page.embed }}
+		</div>
+		{% endif %}
+
 		{% if page.image %}
 		<figure>
 			<img src="{{ site.urlimg }}{{ page.image }}" alt="{{ page.title escape_once }}" itemprop="image">
@@ -14,7 +26,7 @@ format: page
 				<a href="{{ page.caption_url }}" target="_blank">{{ page.caption }}</a>
 			</figcaption>
 			{% elsif page.caption %}
-			<figcaptionß>
+			<figcaption>
 				{{ page.caption }}
 			</figcaption>
 			{% endif %}
@@ -25,18 +37,11 @@ format: page
 
 		<h1 itemprop="name headline">{{ page.title }}</h1>
 	</header>
-	<div class="content" itemprop="articleSection">
 
-		{% if page.youtube %}
-		<div class="flex-video">
-		<iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ page.youtube | remove: "https://www.youtube.com/watch?v=" }}" frameborder="0" allowfullscreen></iframe>
-		</div>
-		{% endif %}
-
-
+	<div class="main-content" itemprop="articleSection">
 		{{ content }}
-
 	</div><!-- /.content -->
+
 
 	{% if page.comments == true %}
 	{% include _comments.html %}

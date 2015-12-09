@@ -1,3 +1,14 @@
 
-<footer id="footer">
+<footer id="footer" class="row">
+	<nav id="navigation-footer" class="medium-8 medium-centered columns">
+		<ul class="inline-list">
+			{% for nav in site.data.navigation_footer %}
+			{% if forloop.first %}
+			{% else %}
+			{% endif %}
+			<li class="{{ nav.side }} {% if nav.class %}{{ nav.class }}{% endif %}"><a href="{{ site.url }}{{ site.baseurl }}{{ nav.url }}">{{ nav.name }}</a></li>
+			{% endfor %}
+			<li id="up-to-top"><a href="#top-of-page">›</a></li>
+		</ul>
+	</nav>
 </footer>

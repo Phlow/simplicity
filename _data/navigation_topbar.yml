@@ -9,7 +9,7 @@
   side: right
   image: search.svg
 
-- name: "Menu"
+- name: ""
   class: "navigation"
   url: "/navigation/"
   side: right

@@ -11,6 +11,21 @@ body {
     background-color: $background-color;
 }
 
+// IMPORTANT FOR FOUNDATION GRID
+html,
+body {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+
+
+
+@import "grid";
+
 @import "navigation";
 
 @import "masthead";
@@ -25,19 +40,21 @@ body {
 
 @import "pagination";
 
-@import "jump_to_top";
-
 @import "footer";
+
+@import "jump_to_top";
 
 @import "layout_media_queries.scss";
 
 @import "alerts.scss";
 
-@import "_toc.scss";
+@import "toc.scss";
 
-@import "_buttons.scss";
+@import "buttons.scss";
 
 @import "_responsive_video.scss";
 
 @import "layout_elements.scss";
+
+@import "inline_list.scss";
 

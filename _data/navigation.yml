@@ -1,11 +1,8 @@
-- name: "Start"
-  class: "start"
-  url: "/"
-
-- name: "Info"
-  class: "info"
+- name: "About <em>Simplicity</em>"
   url: "/info/"
 
-- name: "Archive"
-  class: "archive"
+- name: "Blog Archive"
   url: "/archive/"
+
+- name: "Getting Started"
+  url: "/getting-started/"

@@ -1,7 +1,7 @@
 <nav id="navigation">
 <ul class="toc">
 {% for nav in site.data.navigation %}
-        {% if forloop.first %}<li id="logo" class="{{ nav.side }}"><a href="{{ site.url }}{{ site.baseurl }}{{ nav.url }}"{% if nav.class %} class="{{ nav.name }}"{% endif %}>{% if nav.image %}<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ nav.image }}" alt="Visit the frontpage">{% else %}{{ nav.name }}{% endif %}</a></li>
+        {% if forloop.first %}<li class="{{ nav.side }}"><a href="{{ site.url }}{{ site.baseurl }}{{ nav.url }}"{% if nav.class %} class="{{ nav.name }}"{% endif %}>{% if nav.image %}<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ nav.image }}" alt="Visit the frontpage">{% else %}{{ nav.name }}{% endif %}</a></li>
         {% else %}
         <li class="{{ nav.side }} {% if nav.class %}{{ nav.class }}{% endif %}"><a href="{{ site.url }}{{ site.baseurl }}{{ nav.url }}">{{ nav.name }}{% if nav.image %}<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ nav.image }}" alt="{{ nav.class }}">{% endif %}</a></li>
         {% endif %}
