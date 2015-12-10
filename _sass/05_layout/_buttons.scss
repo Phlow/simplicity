@@ -2,10 +2,40 @@
 ------------------------------------------------------------------- */
 
 button, .button         { letter-spacing: 1px; }
-  button.grey, .button.grey { background: $grey-color-dark; }
-  button.grey:hover,
-  button.grey:focus,
-  .button.grey:hover,
-  .button.grey:focus      { background-color: $grey-color-dark; }
+button.grey, .button.grey { background: $grey-color-dark; }
+button.grey:hover,
+button.grey:focus,
+.button.grey:hover,
+.button.grey:focus      { background-color: $grey-color-dark; }
+
+
+button {
+	color: #fff;
+	background-color: $ci-1;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 0 3px mix(#000, $ci-1, 40%);
+	display: inline-block;
+	text-align: center;
+	line-height: 1;
+	cursor: pointer;
+	-webkit-appearance: none;
+	transition: all 0.25s ease-out;
+	vertical-align: middle;
+	padding: 0.25em 1em;
+	margin: 0 1em .25em 0;
+}
+
+button:hover,
+button.hover {
+	background-color: mix(#fff, $ci-1, 20%);
+}
+
+button:active,
+button.active {
+	background-color: mix(#fff, $ci-1, 20%);
+	box-shadow: 0 5px $ci-1;
+	transform: translateY(3px);
+}
 
 

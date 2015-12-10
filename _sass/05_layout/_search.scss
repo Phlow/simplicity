@@ -1,7 +1,7 @@
 /* Search
 ------------------------------------------------------------------- */
 
-input#search-input {
+#search-container input {
   border: 0;
   border-bottom: 1px solid $ci-1;
   outline:none;
@@ -10,15 +10,26 @@ input#search-input {
   width: 100%;
 }
 
-input#search-input:hover,
-input#search-input:active,
-input#search-input:visited,
-input#search-input:focus,
-input#search-input:hover:focus,
-input#search-input:hover:active {
+#search-container .search-input {
+	width: 55%;
+	margin-right: 1em;
+	padding: 0.25em .25em;
+}
+
+#search-container .search-button {
+
+}
+
+#search-container input:hover,
+#search-container input:active,
+#search-container input:visited,
+#search-container input:focus,
+#search-container input:hover:focus,
+#search-container input:hover:active {
   border-bottom: 3px solid $ci-1;
   background: transparent;
 }
+
 
 div.class.alert-box.text div#search-container input#search-input {
 	background: transparent !important;
