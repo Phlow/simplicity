@@ -6,9 +6,19 @@
 			{% if forloop.first %}
 			{% else %}
 			{% endif %}
-			<li class="{{ nav.side }} {% if nav.class %}{{ nav.class }}{% endif %}"><a href="{{ site.url }}{{ site.baseurl }}{{ nav.url }}">{{ nav.name }}</a></li>
+              {% if nav.url contains 'http' %}
+                {% assign domain = '' %}
+              {% elsif nav.url == '#' %}
+                {% assign domain = '' %}
+              {% else %}
+                {% assign domain = site.url %}
+              {% endif %}
+			<li{% if nav.class or nav.side %} class="{{ nav.side }} {{ nav.class }}"{% endif %}><a href="{{ domain }}{{ site.baseurl }}{{ nav.url }}"{% if nav.url contains 'http' %} target="_blank"{% endif %}>{{ nav.name }}</a></li>
 			{% endfor %}
 			<li id="up-to-top"><a href="#top-of-page">›</a></li>
 		</ul>
 	</nav>
 </footer>
+
+
+

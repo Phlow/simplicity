@@ -1,6 +1,14 @@
 /* Navigation
 ------------------------------------------------------------------- */
-
+.fixed-topbar-navigation {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: $background-color;
+  opacity: 0.9;
+}
 #topbar-navigation {
   height: 2em;
   line-height: 1.85em;
@@ -30,17 +38,21 @@
     text-decoration: none;
     color: $ci-1;
 }
-#topbar-navigation .search img {
-    height: 1em;
-    line-height: 1em;
+.icon-search svg,
+.icon-navigation svg,
+.icon-share svg {
     display: block;
     float: right;
     margin: .45em .25em 0px .25em;
+    width: 1em;
+    height: 1em;
 }
-#topbar-navigation .navigation img {
-    height: 1em;
-    line-height: 1em;
-    display: block;
-    float: right;
-    margin: .45em .25em 0px .25em;
+.nav-icon {
+  fill: $grey-color;
+  transition: all 0.25s ease-out;
+}
+.nav-icon:hover {
+  fill: $ci-1;
+  width: 1.1em;
+  height: 1.1em;
 }

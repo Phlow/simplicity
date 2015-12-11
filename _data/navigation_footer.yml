@@ -9,3 +9,7 @@
 - name: "ToDo"
   class: "todo"
   url: "/todo/"
+
+- name: "Impressum"
+  class: "impressum"
+  url: "http://phlow.de/impressum.html"

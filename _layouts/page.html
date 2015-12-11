@@ -19,7 +19,7 @@ format: page
 
 		{% if page.image %}
 		<figure>
-			<img src="{{ site.urlimg }}{{ page.image }}" alt="{{ page.title escape_once }}" itemprop="image">
+			<img src="{{ site.urlimg }}{{ page.image }}" alt="{{ page.title | strip_html }}" itemprop="image">
 
 			{% if page.caption_url && page.caption %}
 			<figcaption>
@@ -35,7 +35,7 @@ format: page
 
 		{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
 
-		<h1 itemprop="name headline">{{ page.title }}</h1>
+		<h1 itemprop="name headline">{{ page.title | markdownify }}</h1>
 	</header>
 
 	<div class="main-content" itemprop="articleSection">
