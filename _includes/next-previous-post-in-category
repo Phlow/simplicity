@@ -5,16 +5,10 @@
 *
 * Use ›  {% include next-previous-post-in-category %}
 *
-{% endcomment %}
-
-
-{% comment %}
-*
 * assign FIRST category from categories variable from front matter to cat
 * and make a string from the array by using › join: ''
 *
 {% endcomment %}
-
 {% assign cat = page.categories | first | join: '' %}
 {% for post in site.categories.[cat] %}
 {% if post.url == page.url %}
