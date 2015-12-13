@@ -1,42 +1,25 @@
-// Alternative Fonts
-//
-// Titillium Web
-// @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic);
-// Roboto
-// @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic);
-// Roboto Mono
-// @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,700);
-// Roboto Slab
-// @import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
-// Source Sans Pro
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,700,700italic);
-// Source Code Pro
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
-// Merriweather
-// @import url(https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic);
-// Arvo
-// @import url(https://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic);
-// Gentium Basic
-// @import url(https://fonts.googleapis.com/css?family=Gentium+Basic:400,400italic,700,700italic);
-// Fira Sans
-// @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic);
-// Fira Mono
-// @import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,700);
-
 /* Variables
 ------------------------------------------------------------------- */
+
+
+/* Alternative Fonts */
+
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro:400,400italic,700,700italic);
+// @import url(https://fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,700italic);
+// @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic|Roboto+Mono);
+// @import url(https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic);
+// @import url(https://fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic);
+// @import url(https://fonts.googleapis.com/css?family=Gentium+Basic:400,400italic,700,700italic);
+// @import url(https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,700,700italic|Fira+Mono);
+
 
 /* Font Families */
 
 $font-family-serif:         Georgia, "Times New Roman", serif;
-
 $font-family-sans-serif:    "Source Sans Pro", "Neue Helvetica", Arial, serif;
-
-$base-font-family:          $font-family-sans-serif;
-
+$base-font-family:          "Source Sans Pro", "Neue Helvetica", Arial, serif;
 $font-family-monospace:     "Source Code Pro", "Courier New", Monaco, monospace;
-
-$header-font-family:        $font-family-sans-serif;
+$header-font-family:        "Source Sans Pro", "Neue Helvetica", Arial, serif;
 
 
 
@@ -78,9 +61,14 @@ body {
     -webkit-text-size-adjust: 100%;
     // http://blog.typekit.com/2014/02/05/kerning-on-the-web/
     text-rendering: optimizeLegibility;
-    font-feature-settings: "kern";
-    -webkit-font-feature-settings: "kern";
-    -moz-font-feature-settings: "kern";
-    -moz-font-feature-settings: "kern=1";
+    // http://practice.typekit.com/lesson/caring-about-opentype-features/
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures, contextual;
+    -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+    -ms-font-feature-settings: "kern", "liga", "clig", "alt";
+    -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+    font-feature-settings: "kern", "liga", "clig", "calt";
 }
+
+
 
