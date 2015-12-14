@@ -9,7 +9,7 @@ With *Simplicity* you can use your favorite web font. Based on one font-size you
 
 ## The Elements of Typographic Style
 
-> <span class="teaser">»I do not think of type as something that should be readable. It should be beautiful.«</span><cite>[Ed Benguiat][3]</cite>
+> »I do not think of type as something that should be readable. It should be beautiful.«<cite>[Ed Benguiat][3]</cite>
 
 For too long typographic style and its accompanying attention to detail have been overlooked by website designers, particularly in body copy. In years gone by this could have been put down to the technology, but now the web has caught up. The advent of much improved browsers, text rendering and high resolution screens, combine to negate technology as an excuse.
 

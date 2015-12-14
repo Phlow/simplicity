@@ -33,9 +33,13 @@ format: page
 		</figure>
 		{% endif %}
 
-		{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
+		{% if page.link %}
+			<p class="subheadline">Link</p>
+		{% elsif page.subheadline %}
+			<p class="subheadline">{{ page.subheadline }}</p>
+		{% endif %}
 
-		<h1 itemprop="name headline">{{ page.title | markdownify }}</h1>
+		<h1 itemprop="name headline">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
 	</header>
 
 	<div class="main-content" itemprop="articleSection">

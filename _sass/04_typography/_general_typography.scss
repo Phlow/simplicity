@@ -132,6 +132,8 @@ code {
 
 p code {
   background: $ci-4;
+  box-decoration-break: clone;
+  padding: 0 .25em;
 }
 
 
@@ -180,25 +182,22 @@ article dl dd   { line-height: 1.6; margin-bottom: rem-calc(12); margin-left: re
 ------------------------------------------------------------------- */
 
 blockquote {
-  margin: 0 0 0 2em;
-  font-style: normal;
-  position: relative;
-  border: none;
-  color:  $grey-color;
+  margin: 2em 0em 2em 2em;
+  text-transform: uppercase;
+  color: $ci-2;
+  p {
+    font-style: italic;
+  }
+  a {
+    color: $ci-2 !important;
+    border-color: $ci-2 !important;
+  }
+  cite:before {
+    content:"\2014 \0020";
+    margin-left: .25em;
+  }
 }
 
-blockquote p {
-  font-style: italic;
-  color: $grey-color;
-}
-blockquote cite:before {
-  content:"\2014 \0020";
-  margin-left: .25em;
-}
-
-blockquote cite a,blockquote cite a:visited {
-  color: $grey-color;
-}
 cite {
   padding-top: 5px;
 }

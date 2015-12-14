@@ -42,13 +42,21 @@ format: frontpage
 			</figure>
 			{% endif %}
 
-			{% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
-
-			<h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-			<p class="teaser">
-				{{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
-				<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ site.data.language.read_more }}</a>
-			</p>
+			{% if post.link %}
+				<p class="subheadline">{{ post.subheadline }} Link</p>
+				<h1><a href="{{ post.link }}" target="_blank">{{ post.title }}</a></h1>
+				<p class="teaser">
+					{{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
+					<a href="{{ post.link }}">Visit Link ›</a>
+				</p>
+			{% else %}
+				<p class="subheadline">{{ post.subheadline }}</p>
+				<h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+				<p class="teaser">
+					{{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
+					<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ site.data.language.read_more }}</a>
+				</p>
+			{% endif %}
 
 			<h2>More Articles</h2>
 			<ul class="toc">
