@@ -26,3 +26,19 @@
 }
 #footer ul.inline-list li:first-child {
 }
+
+// Meta Information beneath article content
+article footer:before {
+    position: absolute;
+    content:'';
+    height: 1px;
+    width: 4em;
+    background-color: $grey-color-light;
+}
+article footer {
+    margin: 2em auto 3em auto;
+    color: $grey-color;
+}
+article footer p {
+    padding-top: .25em;
+}

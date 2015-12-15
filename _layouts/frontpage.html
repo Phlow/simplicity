@@ -49,8 +49,15 @@ format: frontpage
 					{{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
 					<a href="{{ post.link }}">Visit Link ›</a>
 				</p>
+			{% elsif post.quote %}
+				{% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
+				{% if post.url %}
+					<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" target="_blank"><blockquote>{{ post.quote }}</blockquote></a>
+				{% else %}
+					<blockquote>{{ post.quote }}</blockquote>
+				{% endif %}
 			{% else %}
-				<p class="subheadline">{{ post.subheadline }}</p>
+				{% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
 				<h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 				<p class="teaser">
 					{{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}

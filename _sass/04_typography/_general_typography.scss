@@ -185,6 +185,7 @@ blockquote {
   margin: 2em 0em 2em 2em;
   text-transform: uppercase;
   color: $ci-2;
+  font-style: italic;
   p {
     font-style: italic;
   }
@@ -197,10 +198,13 @@ blockquote {
     margin-left: .25em;
   }
 }
-
 cite {
   padding-top: 5px;
 }
+.frontpage blockquote {
+  margin: 0;
+}
+
 
 button, .button {
   letter-spacing: 1px;
