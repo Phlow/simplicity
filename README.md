@@ -1,3 +1,10 @@
+**Support Theme Development**
+
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=Phlow&url=https://github.com/Phlow/simplicity&title=Support%20Feeling%20Responsive%20Jekyll%20Theme&language=en_GB&tags=github,jekyll,theme,webdesign&category=software)
+
+
+
+
 # [*Simplicity*][1]
 
 [*Simplicity*][1] is a Jekyll Theme for Minimalist focused on essentials avoiding unnecessary clutter. But still giving you all you need to build wonderful pages for your content.
