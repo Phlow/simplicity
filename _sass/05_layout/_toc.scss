@@ -7,38 +7,40 @@
 }
 
 ul.toc  {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-family: $header-font-family;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: $header-font-family;
 }
 
 ul.toc li  {
-  border-top: 1px solid lighten(#000, 85);
+  border-top: 1px solid $line-color;
   line-height: 1.85em;
 }
 
 body.archive ul.toc li:nth-child(5n) {
   margin-bottom: 2em;
-  border-bottom: 1px solid lighten(#000, 85);
+  border-bottom: 1px solid $line-color;
 }
 
 
 ul.toc li:last-child  {
-  border-bottom: 1px solid lighten(#000, 85);
+  border-bottom: 1px solid $line-color;
 }
 
 // If there is a link to the article archive, don't
 // show border bottom and instead a border on top
 ul.toc li.archive-link  {
   border: 0;
-  border-top: 1px solid lighten(#000, 85);
+  border-top: 1px solid $line-color;
 }
 
 ul.toc li a {
   border: 0;
   display: block;
-  transition: background .4s;
+  -webkit-transition: all .15s cubic-bezier(.33,.66,.66,1);
+  transition: all .15s cubic-bezier(.33,.66,.66,1);
+
 }
 
 ul.toc li a span {
@@ -51,7 +53,13 @@ ul.toc li a:hover span {
   display: inline;
 }
 
+ul.toc li {
+ -webkit-transition: all .15s cubic-bezier(.33,.66,.66,1);
+ transition: all .15s cubic-bezier(.33,.66,.66,1);
+}
+
 ul.toc li:hover {
-  background: lighten(#000, 95);
+  background: $background-light-color;
+  padding-left: .25em;
 }
 

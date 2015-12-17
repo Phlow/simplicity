@@ -27,8 +27,6 @@ posts_limit: 7
 # Use <!--more--> in your posts to generate an excerpt and a teaser
 excerpt_separator: <!--more-->
 
-# The language setting is used in /includes/header.html for html-settings
-language: "en"
 
 gems:
     - jekyll-gist
@@ -165,3 +163,24 @@ sass:
 socialmedia:
     twitter: phlow
     facebook: phlow.media
+
+
+#     __
+#    / /   ____ _____  ____ ___  ______ _____ ____
+#   / /   / __ `/ __ \/ __ `/ / / / __ `/ __ `/ _ \
+#  / /___/ /_/ / / / / /_/ / /_/ / /_/ / /_/ /  __/
+# /_____/\__,_/_/ /_/\__, /\__,_/\__,_/\__, /\___/
+#                   /____/            /____/
+#
+
+language:
+    # The language setting is used in /includes/header.html for html-settings
+    html_language:            'en'
+    read_more:                'Read more ›'
+    show_all_articles:        'Show All Articles ›'
+    visit_frontpage:          'Visit the frontpage'
+    comments_headline:        'Comments'
+    enable_disqus:            'Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>'
+    search:                   'Search'
+    search_input_placeholder: 'Search [Hit Tab and start writing]'
+    written_by:               'Written by'

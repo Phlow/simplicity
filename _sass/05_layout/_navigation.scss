@@ -6,13 +6,13 @@
   top: 0;
   left: 0;
   z-index: 1000;
-  background: $background-color;
+  background: $topbar-navigation-background-color;
   opacity: 0.9;
 }
 #topbar-navigation {
   height: 2em;
   line-height: 1.85em;
-  border-bottom: 1px solid $grey-color-light;
+  border-bottom: $topbar-navigation-border-bottom;
 }
 #topbar-navigation ul {
   margin: 0;

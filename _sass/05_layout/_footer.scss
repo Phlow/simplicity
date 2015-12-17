@@ -6,11 +6,11 @@
   padding-bottom: 2em;
   letter-spacing: 1px;
   line-height: $font-size-small;
-  color: $grey-color;
+  color: $footer-color;
 }
 #footer a {
   border: 0;
-  color: $grey-color;
+  color: $footer-color;
 }
 #footer a:hover {
     color: $ci-1;
@@ -33,11 +33,11 @@ article footer:before {
     content:'';
     height: 1px;
     width: 4em;
-    background-color: $grey-color-light;
+    background-color: $footer-color;
 }
 article footer {
     margin: 2em auto 3em auto;
-    color: $grey-color;
+    color: $footer-color;
 }
 article footer p {
     padding-top: .25em;

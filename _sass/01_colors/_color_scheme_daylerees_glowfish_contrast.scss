@@ -1,0 +1,55 @@
+// Legacy Color Scheme by Dayle Rees
+// https://github.com/daylerees/colour-schemes
+
+
+/* Corporate Identity Colorpalette
+------------------------------------------------------------------- */
+
+$ci-2: #95CC5E;           // is used as the secondary branding color.
+$ci-1: #F8BB39;
+$ci-3: #DB784D;
+$ci-4: #6ea240;            // is used as the primary branding color – for example for links.
+
+/* Alerts
+------------------------------------------------------------------- */
+
+$alert-color:   #DB784D;
+$success-color: #6ea240;    // Additional Color not in Color Scheme
+$warning-color: #F8BB39;
+$info-color:    #267fb5;
+
+
+
+/* Grey Scale
+-------------------------------------------------------------------
+
+*Simplicity* allows you to change the colors to your taste quickly.
+Just open *_sass/_01_colors.scss* and tune your colors.
+
+*/
+
+$grey-color:       #95CC5E;
+$grey-color-light: #6ea240;
+$grey-color-dark:  #3c4e2d;
+
+
+/* Basics
+------------------------------------------------------------------- */
+
+$text-color:        #6ea240;
+$background-color:  #090b07;
+$background-light-color:  #3c4e2d;
+$line-color:        #3c4e2d;
+
+
+/* Topbar Navigation
+------------------------------------------------------------------- */
+
+$topbar-navigation-background-color:    #12160d;
+$topbar-navigation-border-bottom:       #12160d;
+
+
+/* Footer (Meta and Site-Footer)
+------------------------------------------------------------------- */
+
+$footer-color:    		#3c4e2d;

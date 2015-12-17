@@ -1,0 +1,59 @@
+/* Color Variables
+-------------------------------------------------------------------
+
+- Basics
+- Corporate Identity Colorpalette
+- Alerts
+- Grey Scale
+- Code
+
+*/
+
+/* Corporate Identity Colorpalette
+------------------------------------------------------------------- */
+
+$ci-1: #900055;            // is used as the primary branding color – for example for links.
+$ci-2: #d4007a;           // is used as the secondary branding color.
+$ci-3: #fabb00;
+$ci-4: #f5b6c9;
+
+
+/* Alerts
+------------------------------------------------------------------- */
+
+$alert-color:   #aa0132;
+$success-color: #6a9519;
+$warning-color: #e05a10;
+$info-color:    #0085ba;
+
+
+
+/* Grey Scale
+------------------------------------------------------------------- */
+
+$grey-color:       #828282;
+$grey-color-light: #E4E4E4;
+$grey-color-dark:  #4b4b4d;
+
+
+/* Basics
+------------------------------------------------------------------- */
+
+$text-color:       		#111;
+$background-color: 		#fefefe;
+// Following Color used for .toc, a:visted;
+$background-light-color: 	$grey-color-light;
+$line-color:       			$grey-color-light;
+
+
+/* Topbar Navigation
+------------------------------------------------------------------- */
+
+$topbar-navigation-background-color:    $background-color;
+$topbar-navigation-border-bottom:       1px solid $line-color;
+
+
+/* Footer (Meta and Site-Footer)
+------------------------------------------------------------------- */
+
+$footer-color:    		#828282;

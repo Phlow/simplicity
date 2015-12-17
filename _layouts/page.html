@@ -2,62 +2,77 @@
 layout: default
 format: page
 ---
-<article itemscope itemtype="http://schema.org/Article">
-  <meta content="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}" itemprop="inLanguage" />
-  <header>
-    {% if page.youtube %}
-    <div class="flex-video">
-    <iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ page.youtube | remove: "https://www.youtube.com/watch?v=" }}" frameborder="0" allowfullscreen></iframe>
-    </div>
-    {% endif %}
+<main role="main" id="content" class="tem4 row">
+  <div class="{% if page.fullwidth == true %}small-12 columns{% else %}medium-8 medium-centered columns{% endif %}">
+    <article itemscope itemtype="http://schema.org/Article">
+      <meta content="{{ site.language.html_language }}" itemprop="inLanguage" />
+      <header>
 
-    {% if page.embed %}
-    <div{% if page.embed_height %} style="padding-bottom: {{ page.embed_height }}"{% endif %} class="flex-video b30">
-    {{ page.embed }}
-    </div>
-    {% endif %}
 
-    {% if page.image %}
-    <figure>
-      <img src="{{ site.urlimg }}{{ page.image }}" alt="{{ page.title | strip_html }}" itemprop="image">
+        {% if page.youtube %}
+        <div class="flex-video">
+        <iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ page.youtube | remove: "https://www.youtube.com/watch?v=" }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        {% endif %}
 
-      {% if page.caption_url && page.caption %}
-      <figcaption>
-        <a href="{{ page.caption_url }}" target="_blank">{{ page.caption }}</a>
-      </figcaption>
-      {% elsif page.caption %}
-      <figcaption>
-        {{ page.caption }}
-      </figcaption>
+
+        {% if page.embed %}
+        <div{% if page.embed_height %} style="padding-bottom: {{ page.embed_height }}"{% endif %} class="flex-video b30">
+        {{ page.embed }}
+        </div>
+        {% endif %}
+
+
+        {% if page.image %}
+        <figure>
+          <img src="{{ site.urlimg }}{{ page.image }}" alt="{{ page.title | strip_html }}" itemprop="image">
+
+          {% if page.caption_url && page.caption %}
+          <figcaption>
+            <a href="{{ page.caption_url }}" target="_blank">{{ page.caption }}</a>
+          </figcaption>
+          {% elsif page.caption %}
+          <figcaption>
+            {{ page.caption }}
+          </figcaption>
+          {% endif %}
+        </figure>
+        {% endif %}
+
+
+        {% if page.link %}
+          <p class="subheadline">Link</p>
+        {% elsif page.subheadline %}
+          <p class="subheadline">{{ page.subheadline }}</p>
+        {% endif %}
+
+
+        <h1 itemprop="name headline">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+      </header>
+
+
+      <div class="main-content" itemprop="articleSection">
+        {{ content }}
+      </div><!-- /.content -->
+
+
+      {% if page.comments == true %}
+      {% include _comments.html %}
       {% endif %}
-    </figure>
-    {% endif %}
-
-    {% if page.link %}
-      <p class="subheadline">Link</p>
-    {% elsif page.subheadline %}
-      <p class="subheadline">{{ page.subheadline }}</p>
-    {% endif %}
-
-    <h1 itemprop="name headline">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
-  </header>
-
-  <div class="main-content" itemprop="articleSection">
-    {{ content }}
-  </div><!-- /.content -->
 
 
-  {% if page.comments == true %}
-  {% include _comments.html %}
-  {% endif %}
+      {% if page.show_meta == true %}
+      <footer>
+        <p>
+          {% if page.author %}{{ site.language.written_by }} {{ page.author }} // {% endif %}
+          {% capture time %}{{ page.date }}{% endcapture %}
+          <time datetime="{{ time | truncate: 13 | remove: '...' }}" itemprop="datePublished">{{ time | truncate: 13 | remove: '...' }}</time>
+        </p>
+      </footer>
+      {% endif %}
 
-  <footer>
-    <p>
-      {% if page.author %}{{ site.data.language.written_by }} {{ page.author }} // {% endif %}
-      {% capture time %}{{ page.date }}{% endcapture %}
-      <time datetime="{{ time | truncate: 13 | remove: '...' }}" itemprop="datePublished">{{ time | truncate: 13 | remove: '...' }}</time>
-    </p>
-  </footer>
 
-  {% include _pagination.html %}
-</article>
+      {% include _pagination.html %}
+    </article>
+  </div>
+</main><!-- /.row -->

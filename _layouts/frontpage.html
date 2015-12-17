@@ -8,7 +8,7 @@ format: frontpage
 
 {% include _3_masthead.html %}
 
-<div class="row">
+<main role="main" id="content" class="row">
 	<div id="content" class="medium-8 medium-centered columns">
 
 	{% for post in site.posts limit:site.posts_limit %}
@@ -61,7 +61,7 @@ format: frontpage
 				<h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 				<p class="teaser">
 					{{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
-					<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ site.data.language.read_more }}</a>
+					<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ site.language.read_more }}</a>
 				</p>
 			{% endif %}
 
@@ -69,7 +69,7 @@ format: frontpage
 			<ul class="toc">
 		{% elsif forloop.last %}
 			<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-			<li class="text-right archive-link"><a href="{{ site.url }}{{ site.baseurl }}/archive/">{{ site.data.language.show_all_articles }}</a></li>
+			<li class="text-right archive-link"><a href="{{ site.url }}{{ site.baseurl }}/archive/">{{ site.language.show_all_articles }}</a></li>
 			</ul>
 		{% else %}
 			<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
@@ -78,6 +78,6 @@ format: frontpage
 
 	{{ content }}
 	</div><!-- /#content -->
-</div><!-- /.row -->
+</main><!-- /.row -->
 
 {% include _4_footer.html %}

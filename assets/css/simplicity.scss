@@ -9,9 +9,20 @@ sitemap:
 
 @import "00_functions/00_functions";
 
-@import "01_colors/00_colors_phlow_ci";
+//     ______      __
+//    / ____/___  / /___  __________
+//   / /   / __ \/ / __ \/ ___/ ___/
+//  / /___/ /_/ / / /_/ / /  (__  )
+//  \____/\____/_/\____/_/  /____/
+//
+// IMPORTANT › Check bottom of this file for additional color settings
 
-@import "01_colors/00_colors";
+@import "01_colors/_color_scheme_simplicity.scss";
+// @import "01_colors/_color_scheme_daylerees_legacy.scss";
+// @import "01_colors/_color_scheme_daylerees_yule.scss";
+// @import "01_colors/_color_scheme_daylerees_gloom_contrast.scss";
+// @import "01_colors/_color_scheme_daylerees_glowfish_contrast.scss";
+
 
 @import "02_settings/00_settings";
 
@@ -20,3 +31,10 @@ sitemap:
 @import "04_typography/00_typography";
 
 @import "05_layout/00_layout";
+
+
+//  When using a dark color scheme, text looks better with some shadow
+//  and links look better when the hover effect lightens up
+//
+// body { text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+// a:hover { color: mix(#fff, $ci-1, 10% ); }

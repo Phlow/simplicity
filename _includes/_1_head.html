@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{% if site.language == nil %}en{% else %}{{ site.language }}{% endif %}">
+<html lang="{% if site.language == nil %}en{% else %}{{ site.language.html_language }}{% endif %}">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">

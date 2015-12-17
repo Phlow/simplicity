@@ -1,0 +1,55 @@
+// Legacy Color Scheme by Dayle Rees
+// https://github.com/daylerees/colour-schemes
+//
+// When using a dark color scheme, text looks better with some shadow
+body {
+   text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+
+/* Corporate Identity Colorpalette
+------------------------------------------------------------------- */
+
+$ci-1: #FFB20D;           // is used as the secondary branding color.
+$ci-2: #267fb5;            // is used as the primary branding color – for example for links.
+$ci-3: #748aa6;
+$ci-4: #FF410D;
+
+
+/* Alerts
+------------------------------------------------------------------- */
+
+$alert-color:   #FF410D;
+$success-color: #81E70C;    // Additional Color not in Color Scheme
+$warning-color: #FFB20D;
+$info-color:    #267fb5;
+
+
+/* Grey Scale
+------------------------------------------------------------------- */
+
+$grey-color:       #4d6785;
+$grey-color-light: #E4E4E4;
+$grey-color-dark:  #4b4b4d;
+
+
+/* Basics
+------------------------------------------------------------------- */
+
+$text-color:        #ffffff;
+$background-color:  #14191f;
+$background-light-color:  #324357;
+$line-color:        #324357;
+
+
+/* Topbar Navigation
+------------------------------------------------------------------- */
+
+$topbar-navigation-background-color:    #1b232c;
+$topbar-navigation-border-bottom:       #1b232c;
+
+
+/* Footer (Meta and Site-Footer)
+------------------------------------------------------------------- */
+
+$footer-color:    		#324357;
