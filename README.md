@@ -1,8 +1,8 @@
-# *Simplicity*
+# [*Simplicity*][1]
 
-A Jekyll Theme for Minimalist focused on essentials avoiding unnecessary clutter. But still giving you all you need to build wonderful pages for your content.
+[*Simplicity*][1] is a Jekyll Theme for Minimalist focused on essentials avoiding unnecessary clutter. But still giving you all you need to build wonderful pages for your content.
 
-https://phlow.github.io/simplicity
+
 
 
 
@@ -22,3 +22,16 @@ If you are a webdesigner interested in Jekyll, the static website generator, thi
 **…helps you** and is well-documented inside.  
 **…is highly customizable** and offers you Tumblr-like postings.  
 **…is minimalistic** and has no clutter.
+
+
+
+ [1]: https://phlow.github.io/simplicity
+ [2]: #
+ [3]: #
+ [4]: #
+ [5]: #
+ [6]: #
+ [7]: #
+ [8]: #
+ [9]: #
+ [10]: #
