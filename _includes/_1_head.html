@@ -1,31 +1,56 @@
-<!doctype html>
+{% comment %}
+#
+#   Liquid variables are created at the top to keep the source DRY and clean.
+#   Idea by ericcarlisle.com
+#
+#   Variables › {{ url }} › site.url + site.baseurl
+#   Variables › {{ description }} › excerpt, page.meta_description, or site.description
+#   Variables › {{ title }} › page.title
+#
+{% endcomment %}{% assign url = site.baseurl | prepend: site.url %}{% capture description %}{% if page.meta_description %}{{ page.meta_description }}{% elsif page.teaser %}{{ page.teaser }}{% elsif page.excerpt %}{{ page.excerpt }}{% elsif site.description %}{{ site.description }}{% endif %}{% endcapture %}{% assign description = description | strip_html | escape | strip %}{% capture title %}{% if page.meta_title %}{{ page.meta_title}}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title | strip_html | strip }}{% endif %}{% endcapture %}{% assign title = title | strip_html | escape | strip_newlines %}<!doctype html>
 <html lang="{% if site.language == nil %}en{% else %}{{ site.language.html_language }}{% endif %}">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>{% if page.meta_title %}{{ page.meta_title | strip_html }}{% elsif page.title %}{{ page.title | strip_html }}{% else %}{{ site.title | strip_html }}{% endif %}</title>
-	<meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% elsif post.excerpt %}{{ post.excerpt | strip_html | strip_newlines | truncate: 160 }}{% elsif page.content contains '<!--more-->' %}{{ page.content | split:'<!--more-->' | first | strip_html | strip_newlines }}{% endif %}">
+  <title>{{ title }}</title>
 
-	<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/simplicity.css">
-	<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
-	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ site.baseurl }}/feed.xml">
+  <link rel="stylesheet" href="{{ url }}/assets/css/simplicity.css">
+  <link rel="canonical" href="{{ url }}{{ page.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ url }}/feed.xml">
 
-	{% include _favicon.html %}
+  <meta name="description" content="{{ description }}">
+  <link type="text/plain" rel="author" href="{{ url }}/humans.txt">
+  {% if page.noindex == true %}<meta name="robots" content="noindex">{% endif %}
+  {% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification}}">{% endif %}
+  {% if site.bing_webmastertools_id %}<meta name="msvalidate.01" content="{{ site.bing_webmastertools_id }}">{% endif %}
+  {% if site.alexa_verify_id %}<meta name="alexaVerifyID" content="{{ site.alexa_verify_id }}">{% endif %}
 
-	{% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification}}" />{% endif %}
-	{% if site.bing_webmastertools_id %}<meta name="msvalidate.01" content="{{ site.bing_webmastertools_id }}" />{% endif %}
-	{% if site.alexa_verify_id %}<meta name="alexaVerifyID" content="{{ site.alexa_verify_id }}" />{% endif %}
+  <!-- Facebook Open Graph -->
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:locale" content="{% if site.og_locale == nil %}en_EN{% else %}{{ site.og_locale }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ url }}/{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  {% if page.image %}<meta property="og:image" content="{{ site.urlimg }}{{ page.image }}">{% endif %}
+  {% if site.socialmedia.facebook %}<meta property="article:author" content="https://www.facebook.com/{{ site.socialmedia.facebook }}">{% endif %}
 
-	<!-- Search Engine Optimization -->
-	{% if page.noindex == true %}<meta name="robots" content="noindex" />{% endif %}
-	{% if page.meta_description %}<meta name="description" content="{{ page.meta_description | strip_html | escape }}"/>{% elsif page.teaser %}<meta name="description" content="{{ page.teaser | strip_html | escape }}" />{% elsif site.description %}<meta name="description" content="{{ site.description | strip_html | escape }}" />{% endif %}
+  {% if site.socialmedia.twitter %}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{ site.socialmedia.twitter }}">
+  <meta name="twitter:creator" content="{{ site.socialmedia.twitter }}">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  {% if page.image %}<meta name="twitter:image" content="{{ site.urlimg }}{{ page.image }}">{% endif %}
+  {% endif %}
 
-	<link type="text/plain" rel="author" href="{{ site.url }}{{ site.baseurl }}/humans.txt" />
-	{% unless page.style == NULL %}
-	<style type="text/css">{{ page.style }}</style>
-	{% endunless %}
 
+  {% include _favicon.html %}
+
+  {% unless page.style == NULL %}<style type="text/css">{{ page.style }}</style>{% endunless %}
 
 </head>
 <body id="top-of-page" class="{{ page.format }}">
+

@@ -6,10 +6,9 @@
   margin-top: 1em;
 }
 #pagination a {
-  // padding: .1em .5em;
   display: block;
-  background: $grey-color-light;
-  color: $grey-color;
+  background: $background-light-color;
+  color: $text-color;
   font-size: $font-size-h4;
   font-style: italic;
   text-decoration: none;
@@ -17,7 +16,7 @@
   border-radius: $global-radius;
 }
 #pagination a:hover {
-  background: $grey-color-light;
+  background: $background-light-color;
   color: $ci-1;
 }
 #pagination a.next {

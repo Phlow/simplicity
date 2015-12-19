@@ -2,7 +2,7 @@
 layout: default
 format: page
 ---
-<main role="main" id="content" class="tem4 row">
+<main role="main" id="content" class="row">
   <div class="{% if page.fullwidth == true %}small-12 columns{% else %}medium-8 medium-centered columns{% endif %}">
     <article itemscope itemtype="http://schema.org/Article">
       <meta content="{{ site.language.html_language }}" itemprop="inLanguage" />
@@ -52,6 +52,7 @@ format: page
 
 
       <div class="main-content" itemprop="articleSection">
+        {% if page.quote %}<blockquote style="margin: 0;">{{ page.quote }}</blockquote>{% endif %}
         {{ content }}
       </div><!-- /.content -->
 

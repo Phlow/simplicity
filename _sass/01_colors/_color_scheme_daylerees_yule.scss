@@ -1,14 +1,24 @@
 // Legacy Color Scheme by Dayle Rees
 // https://github.com/daylerees/colour-schemes
+//
+// When using a dark color scheme, text looks better with some shadow
+body { text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+
+// Turn off shadow for lighter backgrounds
+.alert-box.text,
+.gist { text-shadow: 0 0 0 rgba(0,0,0,0.5) !important; }
+
 
 
 /* Corporate Identity Colorpalette
 ------------------------------------------------------------------- */
 
-$ci-1: #39B81F;           // is used as the secondary branding color.
-$ci-2: #267fb5;            // is used as the primary branding color – for example for links.
+$ci-1: #39B81F;		// is used as the secondary branding color.
+$ci-2: #267fb5;		// is used as the primary branding color – for example for links.
 $ci-3: #748aa6;
 $ci-4: #FF410D;
+
+
 
 /* Alerts
 ------------------------------------------------------------------- */
@@ -21,16 +31,12 @@ $info-color:    #267fb5;
 
 
 /* Grey Scale
--------------------------------------------------------------------
-
-*Simplicity* allows you to change the colors to your taste quickly.
-Just open *_sass/_01_colors.scss* and tune your colors.
-
-*/
+------------------------------------------------------------------- */
 
 $grey-color:       #7A7267;
 $grey-color-light: #bdae9a;
 $grey-color-dark:  #4b4b4d;
+
 
 
 /* Basics
@@ -42,11 +48,13 @@ $background-light-color:  #7A7267;
 $line-color:        #7A7267;
 
 
+
 /* Topbar Navigation
 ------------------------------------------------------------------- */
 
 $topbar-navigation-background-color:    #52504b;
 $topbar-navigation-border-bottom:       #7A7267;
+
 
 
 /* Footer (Meta and Site-Footer)

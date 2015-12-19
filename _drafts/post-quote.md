@@ -5,5 +5,5 @@
 # quote will be linked.
 #
 quote: '<cite>Name</cite>'
-url: ''
+quote_url: ''
 ---

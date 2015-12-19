@@ -9,7 +9,7 @@ format: frontpage
 {% include _3_masthead.html %}
 
 <main role="main" id="content" class="row">
-	<div id="content" class="medium-8 medium-centered columns">
+	<div class="medium-8 medium-centered columns">
 
 	{% for post in site.posts limit:site.posts_limit %}
 		{% if forloop.first %}
@@ -28,14 +28,14 @@ format: frontpage
 
 			{% if post.image %}
 			<figure>
-				<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title escape_once }}" itemprop="image"></a>
+				<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title escape_once }}"></a>
 
 				{% if post.caption_url && post.caption %}
 				<figcaption>
 					<a href="{{ post.caption_url }}">{{ post.caption }}</a>
 				</figcaption>
 				{% elsif post.caption %}
-				<figcaptionß>
+				<figcaption>
 					{{ post.caption }}
 				</figcaption>
 				{% endif %}
@@ -51,8 +51,8 @@ format: frontpage
 				</p>
 			{% elsif post.quote %}
 				{% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
-				{% if post.url %}
-					<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" target="_blank"><blockquote>{{ post.quote }}</blockquote></a>
+				{% if post.quote_url %}
+					<a href="{{ site.url }}{{ site.baseurl }}{{ post.quote_url }}" target="_blank"><blockquote>{{ post.quote }}</blockquote></a>
 				{% else %}
 					<blockquote>{{ post.quote }}</blockquote>
 				{% endif %}
@@ -81,3 +81,6 @@ format: frontpage
 </main><!-- /.row -->
 
 {% include _4_footer.html %}
+
+</body>
+</html>

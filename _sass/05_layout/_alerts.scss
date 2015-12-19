@@ -25,7 +25,7 @@
 
 .alert-box.text,
 .alert-box.text a {
-  color: $grey-color-dark;
+    color: mix(#000, $text-color, 100%);
 }
 
 .alert-box.text a {

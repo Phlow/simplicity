@@ -117,6 +117,7 @@ td {
 
 pre {
   font-size: .75em;
+  font-family: $font-family-monospace;
   font-weight: normal;
   overflow: auto;
   padding: 5px;
@@ -127,6 +128,7 @@ pre code {
 }
 
 code {
+  font-family: $font-family-monospace;
   line-height: 1.5;
 }
 
@@ -232,3 +234,9 @@ hr {
 }
 
 
+// The ::selection CSS pseudo-element applies rules to the portion of
+// a document that has been highlighted by the user.
+
+::selection {
+  background: $ci-4;
+}
