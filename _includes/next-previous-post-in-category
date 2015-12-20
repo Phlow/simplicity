@@ -1,12 +1,12 @@
 {% comment %}
 *
-* This include creates a next/previous link to a post of the same category
-* using the categories-variable in front matter.
+*   This include creates a next/previous link to a post of the same category
+*   using the categories-variable in front matter.
 *
-* Use ›  {% include next-previous-post-in-category %}
+*   Use ›  {% include next-previous-post-in-category %}
 *
-* assign FIRST category from categories variable from front matter to cat
-* and make a string from the array by using › join: ''
+*   assign FIRST category from categories variable from front matter to cat
+*   and make a string from the array by using › join: ''
 *
 {% endcomment %}
 {% assign cat = page.categories | first | join: '' %}

@@ -1,18 +1,4 @@
-// Use media queries like this:
-// @include media-query($small) {
-//     .wrapper {
-//         padding-right: 2em
-//         padding-left: 2em;
-//     }
-// }
-@mixin media-query($screensize) {
-    @media screen and (max-width: $screensize) {
-        @content;
-    }
-}
-
-
-
+//
 // We can still improve things by creating a placeholder––or silent class––selector.
 // This way nothing gets compiled to CSS unless we actually use it.
 // Placeholder selectors are defined by a %, so we’ll need to replace the class with:
@@ -24,13 +10,10 @@
 //   @extend %clearfix;
 // }
 
-
 %clearfix {
-
     &:after {
         content: "";
         display: table;
         clear: both;
     }
 }
-
