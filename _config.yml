@@ -160,6 +160,9 @@ sass:
 #  ___/ / /_/ / /__/ / /_/ / /  / /  / /  __/ /_/ / / /_/ /
 # /____/\____/\___/_/\__,_/_/  /_/  /_/\___/\__,_/_/\__,_/
 #
+# If you have social media-profiles put your username here.
+# Facebook and Twitter will be used in includes/_1_head.html
+# To inject some meta-data.
 
 socialmedia:
     twitter: phlow
@@ -173,10 +176,13 @@ socialmedia:
 # /_____/\__,_/_/ /_/\__, /\__,_/\__,_/\__, /\___/
 #                   /____/            /____/
 #
+# To translate *Simplicity* just edit the following data.
+# The theme uses for example {{ site.language.read_more }} in
+# the layout templates to fill in the according information
+# given beneath.
 
 language:
-    # The language setting is used in /includes/header.html for html-settings
-    html_language:            'en'
+    html_language:            'en'      # The language setting is used in /includes/header.html for html-settings
     read_more:                'Read more ›'
     show_all_articles:        'Show All Articles ›'
     visit_frontpage:          'Visit the frontpage'
@@ -185,3 +191,4 @@ language:
     search:                   'Search'
     search_input_placeholder: 'Search [Hit Tab and start writing]'
     written_by:               'Written by'
+    more_articles:            'More Articles'

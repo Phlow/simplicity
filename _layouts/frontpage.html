@@ -65,7 +65,7 @@ format: frontpage
 				</p>
 			{% endif %}
 
-			<h2>More Articles</h2>
+			<h2>{{ site.language.more_articles }}</h2>
 			<ul class="toc">
 		{% elsif forloop.last %}
 			<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
