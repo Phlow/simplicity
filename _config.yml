@@ -9,14 +9,14 @@
 #
 
 # Title and description of your site
-title:        "Simplicity"
-description:  "Simplicity is a fast and easy to use jekyll theme for minimalists concentrating on elegance and flexibility."
+title:        'Simplicity'
+description:  'Simplicity is a fast and easy to use jekyll theme for minimalists concentrating on elegance and flexibility.'
 
 
 # Build settings
-url:          "http://phlow.github.io/simplicity"
-baseurl:      ""
-urlimg:       "http://phlow.github.io/simplicity/images/"
+url:          'http://phlow.github.io/simplicity'
+baseurl:      ''
+urlimg:       'http://phlow.github.io/simplicity/images/'
 markdown:     kramdown
 highlighter:  pygments
 permalink:    /:categories/:title/
@@ -46,7 +46,7 @@ exclude:
 # Options › http://jch.penibelst.de
 compress_html:
   clippings: all
-  comments: ["<!-- ", " -->"]
+  comments: ['<!-- ', ' -->']
   endings: all
   profile: false
   ignore:
@@ -66,8 +66,8 @@ compress_html:
 defaults:
   -
     scope:
-      path: ""        # an empty string here means all files in the project
-      type: "pages"
+      path: ''        # an empty string here means all files in the project
+      type: 'pages'
     values:
       layout: page      # Set default layout to page
       show_meta: false  # Hide metadata for all pages
@@ -75,8 +75,8 @@ defaults:
       author: 'Moritz »mo.« Sauer'     # Default author for pages
   -
     scope:
-      path: ""
-      type: "posts"
+      path: ''
+      type: 'posts'
     values:
       layout: page      # Set default layout to page
       show_meta: true   # Show metadata for all posts
@@ -90,9 +90,9 @@ defaults:
 #   ___/ / /___/ /_/ /
 #  /____/_____/\____/    Verify Website to Webmaster Tools
 
-# google_site_verification:  ""
-# bing_webmastertools_id:    ""
-# alexa_verify_id:           ""
+google_site_verification:  'Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ'
+# bing_webmastertools_id:  ''
+# alexa_verify_id:         ''
 
 
 
@@ -103,18 +103,18 @@ defaults:
 #   /_/    \__,_/ |___/_/\___/\____/_/ /_/____/   Favicon-Crap: Favicons, Chrome, Android & Apple Touch Buttons
 #                                                 More information » https://mathiasbynens.be/notes/touch-icons
 
-favicon-32x32:                          "favicon-32x32.png"
-touch-icon-192x192:                     "touch-icon-192x192.png"
-apple-touch-icon-180x180-precomposed:   "apple-touch-icon-180x180-precomposed.png"
-apple-touch-icon-152x152-precomposed:   "apple-touch-icon-152x152-precomposed.png"
-apple-touch-icon-144x144-precomposed:   "apple-touch-icon-144x144-precomposed.png"
-apple-touch-icon-120x120-precomposed:   "apple-touch-icon-120x120-precomposed.png"
-apple-touch-icon-114x114-precomposed:   "apple-touch-icon-114x114-precomposed.png"
-apple-touch-icon-76x76-precomposed:     "apple-touch-icon-76x76-precomposed.png"
-apple-touch-icon-72x72-precomposed:     "apple-touch-icon-72x72-precomposed.png"
-apple-touch-icon-precomposed:           "apple-touch-icon-precomposed.png"
-msapplication_tileimage:                "msapplication_tileimage.png"               # Size 144x144
-msapplication_tilecolor:                "#fabb00"
+favicon-32x32:                          'favicon-32x32.png'
+touch-icon-192x192:                     'touch-icon-192x192.png'
+apple-touch-icon-180x180-precomposed:   'apple-touch-icon-180x180-precomposed.png'
+apple-touch-icon-152x152-precomposed:   'apple-touch-icon-152x152-precomposed.png'
+apple-touch-icon-144x144-precomposed:   'apple-touch-icon-144x144-precomposed.png'
+apple-touch-icon-120x120-precomposed:   'apple-touch-icon-120x120-precomposed.png'
+apple-touch-icon-114x114-precomposed:   'apple-touch-icon-114x114-precomposed.png'
+apple-touch-icon-76x76-precomposed:     'apple-touch-icon-76x76-precomposed.png'
+apple-touch-icon-72x72-precomposed:     'apple-touch-icon-72x72-precomposed.png'
+apple-touch-icon-precomposed:           'apple-touch-icon-precomposed.png'
+msapplication_tileimage:                'msapplication_tileimage.png'               # Size 144x144
+msapplication_tilecolor:                '#fabb00'
 
 
 #      _____
