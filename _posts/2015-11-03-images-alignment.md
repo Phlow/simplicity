@@ -1,5 +1,5 @@
 ---
-title: "Test Drive for Images in your posts"
+title: 'Test Drive for Images in your posts'
 ---
 See how images align in your posts. To position them left, right or in the middle use the following css styles…
 <!--more-->

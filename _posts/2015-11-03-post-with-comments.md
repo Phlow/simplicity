@@ -1,5 +1,4 @@
 ---
-title: "Posts with Comments"
 comments: true
 ---
 If you need comments for your blog, *Simplicity* got you covered. It uses the widely adopted service from [Disqus](https://disqus.com). All you need is an own account and than you have to posts enable comments in your posts with…

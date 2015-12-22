@@ -1,6 +1,6 @@
 ---
 subheadline: About this Theme
-title: "What's special about <em>Simplicity</em>?"
+title: 'What&#39;s special about <em>Simplicity</em>?'
 ---
 ***Simplicity…***<br>
 **…delivers your site fast.** No Javascript/jQuery needed.<br>
@@ -15,7 +15,7 @@ title: "What's special about <em>Simplicity</em>?"
 
 There are lots of great themes for Jekyll to start a new blog, portfolio or website. Either these themes are bloated because they use Bootstrap, Foundation, jQuery or they are so minimal, that it doesn't make fun to use them.
 
-
+{% include ad_article %}
 
 ## Speed
 

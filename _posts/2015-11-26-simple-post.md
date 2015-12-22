@@ -1,5 +1,5 @@
 ---
-title: Writing content is so easy…
+title: 'Writing content is so easy…'
 ---
 *Simplicity* makes your live as a writer, blogger and publisher as easy as possible: Just give your post a `title`, the built-in detection of *Simplicity* will choose the right template for your content *on-the-fly*.
 

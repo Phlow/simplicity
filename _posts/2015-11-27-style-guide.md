@@ -1,6 +1,3 @@
----
-title: "Style Guide"
----
 The *Simplicity* styleguide lists all available elemnts to style your content.
 
 <!--more-->

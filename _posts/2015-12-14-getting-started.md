@@ -1,8 +1,7 @@
 ---
-title: Getting Started
-image: photo-matteo-paganelli.jpg
-caption: Photo Matteo Paganelli
-caption_url: http://www.mpaga.it/
+image: 'photo-matteo-paganelli.jpg'
+caption: 'Photo Matteo Paganelli'
+caption_url: 'http://www.mpaga.it/'
 ---
 If you know Jekyll well, you just need five minutes to start your own blog with *Simplicity*. If you know some CSS and Sass, you even customize your site in minutes. Everything is well-documented inside each file. Give it a go!
 

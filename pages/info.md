@@ -1,5 +1,4 @@
 ---
-layout: page
 subheadline: 'Info'
 title: 'Why I designed *Simplicity*?'
 permalink: /info/
@@ -8,26 +7,30 @@ The idea behind *Simplicity* is to build a theme which is elegant, ver&shy;satil
 
 <!--more-->
 
-While sketching *Simplicity* I asked myself: »How much can I strip down from a post. How much front matter is truly needed?« And the answer is really simple. To write a post you just need…
+While sketching *Simplicity* I asked myself: »How much can I strip down from a post. How much front matter is truly needed?« And the answer is really simple: For pages or posts you need **no front matter at all**. You create a file, name it and Jekyll uses the file name autmatically if you don't add `title` to front matter.
+
+
+## *Simplicity* chooses the Layout
+
+And because you can define the default-layout in the *_config.yml*. You don't need to add it to front matter either. But what makes this theme truly elegant is, that if you need some tasty video on top of your posting or a nice image, you do it like this…
 
 {% highlight html %}
 ---
-title: Your Title
+youtube: https://www.youtube.com/watch?v=8pQAWOCofXo
 ---
 {% endhighlight %}
 
-…because you can define the default-layout in the *_config.yml*. But what makes this theme truly elegant is, that if you need some tasty video on top of your posting or a nice image, you do it.
+or that…
 
 {% highlight html %}
 ---
-title: Your Title
 image: image-on-top-of-post.jpg
 ---
 {% endhighlight %}
 
 The layout figures out what to do :)
 
-And if you are a blogger who enjoys to spicing up his posts, there are plenty of possibilities. Maybe like this?!?
+And if you are a blogger who enjoys spicing up his posts, there are plenty of possibilities. Maybe like this?!?
 
 {% highlight html %}
 ---
@@ -35,6 +38,7 @@ subheadline: I love'em
 title: Your Title
 header_image: amazing_header_image.jpg
 comments: true
+show_meta: true
 embed: <iframe>…</iframe>
 ---
 {% endhighlight %}

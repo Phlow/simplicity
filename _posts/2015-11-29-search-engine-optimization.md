@@ -1,7 +1,5 @@
----
-title: "Search Engine Optimization"
----
 *Simplicity* offers you lots of options to optimize your content for search engines like Google.
+
 <!--more-->
 
 - `meta_title:`
