@@ -1,15 +1,11 @@
-- name: "About"
-  class: "info"
-  url: "/info/"
+- name: 'About'
+  class: 'info'
+  url: '/info/'
 
-- name: "Archive"
-  class: "archive"
-  url: "/archive/"
+- name: 'Navigation'
+  class: 'navigation'
+  url: '/navigation/'
 
-- name: "ToDo"
-  class: "todo"
-  url: "/todo/"
-
-- name: "Impressum"
-  class: "impressum"
-  url: "http://phlow.de/impressum.html"
+- name: 'Impressum'
+  class: 'impressum'
+  url: 'http://phlow.de/impressum.html'

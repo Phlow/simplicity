@@ -1,6 +1,6 @@
 ---
 subheadline: About this Theme
-title: 'What&#39;s special about <em>Simplicity</em>?'
+title: "What's special about <em>Simplicity</em>?"
 ---
 ***Simplicity…***<br>
 **…delivers your site fast.** No Javascript/jQuery needed.<br>
