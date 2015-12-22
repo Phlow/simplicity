@@ -26,9 +26,11 @@
 }
 #topbar-navigation li.left {
   float: left;
+  padding-right: 1.5em;
 }
 #topbar-navigation li.right {
   float: right;
+  padding-left: .5em;
 }
 #topbar-navigation a {
     font-size: $font-size-p;
