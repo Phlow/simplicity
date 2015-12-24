@@ -5,9 +5,9 @@ title: "What's special about <em>Simplicity</em>?"
 ***Simplicity…***<br>
 **…delivers your site fast.** No Javascript/jQuery needed.<br>
 **…offers flexible styling** of your content.<br>
-**…helps you** and is well-documented inside.<br>
-**…is highly customizable** and offers you Tumblr-like postings.<br>
-**…is minimalistic** and has no clutter.
+**…helps you** and is well-documented.<br>
+**…is highly customizable** and offers Tumblr-like postings.<br>
+**…is stylish** with beautiful typography.
 <!--more-->
 
 
