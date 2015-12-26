@@ -9,75 +9,76 @@ format: frontpage
 {% include _3_masthead.html %}
 
 <main role="main" id="content" class="row">
-	<div class="medium-8 medium-centered columns">
+    <div class="medium-8 medium-centered columns">
 
-	{% for post in site.posts limit:site.posts_limit %}
-		{% if forloop.first %}
+    {% for post in site.posts limit:site.posts_limit %}
+        {% if forloop.first %}
 
-			{% if post.youtube %}
-			<div class="flex-video">
-			<iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ post.youtube | remove: "https://www.youtube.com/watch?v=" }}" frameborder="0" allowfullscreen></iframe>
-			</div>
-			{% endif %}
+        {% if post.video %}
+        <div{% if post.embed_height %} style="padding-bottom: {{ post.embed_height }}"{% endif %} class="flex-video">
+        <iframe width="1280" height="720" src="{% if post.video contains 'youtu' %}https://www.youtube.com/embed/{{ post.video | remove: "https://www.youtube.com/watch?v=" | remove: "https://youtu.be/" }}{% elsif post.video contains 'vimeo.com' %}https://player.vimeo.com/video/{{ post.video | remove: "https://vimeo.com/" }}{% else %}{{ post.video }}{% endif %}{{ post.embed }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        {% endif %}
 
-			{% if post.embed %}
-			<div{% if post.embed_height %} style="padding-bottom: {{ post.embed_height }}"{% endif %} class="flex-video b30">
-			{{ post.embed }}
-			</div>
-			{% endif %}
 
-			{% if post.image %}
-			<figure>
-				<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title escape_once }}"></a>
+        {% if post.embed %}
+        <div{% if post.embed_height %} style="padding-bottom: {{ post.embed_height }}"{% endif %} class="flex-video">
+        {{ post.embed }}
+        </div>
+        {% endif %}
 
-				{% if post.caption_url && post.caption %}
-				<figcaption>
-					<a href="{{ post.caption_url }}">{{ post.caption }}</a>
-				</figcaption>
-				{% elsif post.caption %}
-				<figcaption>
-					{{ post.caption }}
-				</figcaption>
-				{% endif %}
-			</figure>
-			{% endif %}
+            {% if post.image %}
+            <figure>
+                <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title escape_once }}"></a>
 
-			{% if post.link %}
-				<p class="subheadline">{{ post.subheadline }} Link</p>
-				<h1><a href="{{ post.link }}" target="_blank">{{ post.title }}</a></h1>
-				<p class="teaser">
-					{{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
-					<a href="{{ post.link }}">Visit Link ›</a>
-				</p>
-			{% elsif post.quote %}
-				{% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
-				{% if post.quote_url %}
-					<a href="{{ site.url }}{{ site.baseurl }}{{ post.quote_url }}" target="_blank"><blockquote>{{ post.quote }}</blockquote></a>
-				{% else %}
-					<blockquote>{{ post.quote }}</blockquote>
-				{% endif %}
-			{% else %}
-				{% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
-				<h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-				<p class="teaser">
-					{{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
-					<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ site.language.read_more }}</a>
-				</p>
-			{% endif %}
+                {% if post.caption_url && post.caption %}
+                <figcaption>
+                    <a href="{{ post.caption_url }}">{{ post.caption }}</a>
+                </figcaption>
+                {% elsif post.caption %}
+                <figcaption>
+                    {{ post.caption }}
+                </figcaption>
+                {% endif %}
+            </figure>
+            {% endif %}
 
-			<h2>{{ site.language.more_articles }}</h2>
-			<ul class="toc">
-		{% elsif forloop.last %}
-			<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-			<li class="text-right archive-link"><a href="{{ site.url }}{{ site.baseurl }}/archive/">{{ site.language.show_all_articles }}</a></li>
-			</ul>
-		{% else %}
-			<li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-		{% endif %}
-	{% endfor %}
+            {% if post.link %}
+                <p class="subheadline">{{ post.subheadline }} Link</p>
+                <h1><a href="{{ post.link }}" target="_blank">{{ post.title }}</a></h1>
+                <p class="teaser">
+                    {{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
+                    <a href="{{ post.link }}">Visit Link ›</a>
+                </p>
+            {% elsif post.quote %}
+                {% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
+                {% if post.quote_url %}
+                    <a href="{{ site.url }}{{ site.baseurl }}{{ post.quote_url }}" target="_blank"><blockquote>{{ post.quote }}</blockquote></a>
+                {% else %}
+                    <blockquote>{{ post.quote }}</blockquote>
+                {% endif %}
+            {% else %}
+                {% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
+                <h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+                <p class="teaser">
+                    {{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
+                    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ site.language.read_more }}</a>
+                </p>
+            {% endif %}
 
-	{{ content }}
-	</div><!-- /#content -->
+            <h2>{{ site.language.more_articles }}</h2>
+            <ul class="toc">
+        {% elsif forloop.last %}
+            <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+            <li class="text-right archive-link"><a href="{{ site.url }}{{ site.baseurl }}/archive/">{{ site.language.show_all_articles }}</a></li>
+            </ul>
+        {% else %}
+            <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+
+    {{ content }}
+    </div><!-- /#content -->
 </main><!-- /.row -->
 
 {% include _4_footer.html %}

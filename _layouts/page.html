@@ -8,20 +8,7 @@ format: page
       <meta content="{{ site.language.html_language }}" itemprop="inLanguage" />
       <header>
 
-
-        {% if page.youtube %}
-        <div class="flex-video">
-        <iframe width="1280" height="720" src="https://www.youtube.com/embed/{{ page.youtube | remove: "https://www.youtube.com/watch?v=" }}" frameborder="0" allowfullscreen></iframe>
-        </div>
-        {% endif %}
-
-
-        {% if page.embed %}
-        <div{% if page.embed_height %} style="padding-bottom: {{ page.embed_height }}"{% endif %} class="flex-video b30">
-        {{ page.embed }}
-        </div>
-        {% endif %}
-
+        {% include _video_embed.html %}
 
         {% if page.image %}
         <figure>

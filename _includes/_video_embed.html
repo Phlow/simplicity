@@ -1,0 +1,21 @@
+{% comment %}
+*
+*   Used in _layouts/frontpage.html and _layouts/page.html
+*
+*   Add your favorite video-service if needed to let *Simplicity*
+*   convert the URL properly for use in the iframe.
+*
+{% endcomment %}
+        {% if page.video %}
+        <div{% if page.embed_height %} style="padding-bottom: {{ page.embed_height }}"{% endif %} class="flex-video b30">
+        <iframe width="1280" height="720" src="{% if page.video contains 'youtu' %}https://www.youtube.com/embed/{{ page.video | remove: "https://www.youtube.com/watch?v=" | remove: "https://youtu.be/" }}{% elsif page.video contains 'vimeo.com' %}https://player.vimeo.com/video/{{ page.video | remove: "https://vimeo.com/" }}{% else %}{{ page.video }}{% endif %}{{ page.embed }}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        {% endif %}
+
+
+        {% if page.embed %}
+        <div{% if page.embed_height %} style="padding-bottom: {{ page.embed_height }}"{% endif %} class="flex-video b30">
+        {{ page.embed }}
+        </div>
+        {% endif %}
+
