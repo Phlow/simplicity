@@ -192,3 +192,7 @@ language:
     search_input_placeholder: 'Search [Hit Tab and start writing]'
     written_by:               'Written by'
     more_articles:            'More Articles'
+    # More on Accesskeys › http://www.cs.tut.fi/~jkorpela/forms/accesskey.html
+    navigation_search:        'Press Accesskey [4] for Search'
+    navigation_menu:          'Press Accesskey [6] for Navigation Menu'
+    navigation_home:          'Press Accesskey [1] for Homepage'
