@@ -1,0 +1,40 @@
+---
+layout: compress
+format: introduction
+---
+{% include _1_head.html %}
+
+{% include _2_topbar_navigation.html %}
+
+{% include _3_masthead.html %}
+
+<main role="main" id="content" class="row">
+    <div class="small-5 medium-4 columns">
+        {% if page.link %}
+        {% if page.link contains 'http' %}
+        {% assign domain = '' %}
+        {% elsif page.link == '#' %}
+        {% assign domain = '' %}
+        {% else %}
+        {% assign domain = site.url %}
+        {% endif %}
+        <a href="{{ domain }}{{ site.baseurl }}{{ page.link }}"><img src="{{ site.urlimg }}{{ page.image }}" alt="{{ page.title }}"></a>
+        {% else %}
+        <img src="{{ site.urlimg }}{{ page.image }}" alt="{{ page.title }}">
+        {% endif %}
+    </div>
+
+    <div class="introduction-text small-7 medium-7 end columns">
+        {{ content }}
+    </div>
+
+
+
+
+</main><!-- /#content/.row -->
+
+{% include _4_footer.html %}
+
+</body>
+</html>
+
