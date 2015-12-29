@@ -1,6 +1,14 @@
 ---
 layout: compress
 format: frontpage
+#
+#   Define how many posts should be shown with headline, teaser, image
+#
+posts_with_teaser_limit: 7
+#
+#   Define how many posts should be shown in the list beneath the post(s)
+#
+posts_list_limit: 7
 ---
 {% include _1_head.html %}
 
@@ -11,7 +19,7 @@ format: frontpage
 <main role="main" id="content" class="row">
     <div class="medium-8 medium-centered columns">
 
-    {% for post in site.posts limit:site.posts_limit %}
+    {% for post in site.posts limit:page.posts_list_limit %}
         {% if forloop.first %}
 
         {% if post.video %}
