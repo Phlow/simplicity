@@ -2,7 +2,7 @@
 fullwidth: true
 ---
 This is the full-width page. Use the [Foundation 6 Grid](http://foundation.zurb.com/grid.html) to make everything out of this page. Every layout you desire.
-
+<!--more-->
 <div>
 <img src="http://dummyimage.com/200x200/900054/f5b6c9&text=Placeholder" alt=""><br>
 <img src="http://dummyimage.com/200x200/900054/f5b6c9&text=Placeholder" alt="">

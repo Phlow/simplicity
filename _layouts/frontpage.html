@@ -2,9 +2,9 @@
 layout: compress
 format: frontpage
 #
-#   Define how many posts should be shown with headline, teaser, image
+#   Define how many posts should be shown with headline, teaser, image, video
 #
-posts_with_teaser_limit: 7
+posts_with_teaser_limit: 1
 #
 #   Define how many posts should be shown in the list beneath the post(s)
 #
@@ -19,21 +19,22 @@ posts_list_limit: 7
 <main role="main" id="content" class="row">
     <div class="medium-8 medium-centered columns">
 
-    {% for post in site.posts limit:page.posts_list_limit %}
-        {% if forloop.first %}
 
-        {% if post.video %}
-        <div{% if post.embed_height %} style="padding-bottom: {{ post.embed_height }}"{% endif %} class="flex-video">
-        <iframe width="1280" height="720" src="{% if post.video contains 'youtu' %}https://www.youtube.com/embed/{{ post.video | remove: "https://www.youtube.com/watch?v=" | remove: "https://youtu.be/" }}{% elsif post.video contains 'vimeo.com' %}https://player.vimeo.com/video/{{ post.video | remove: "https://vimeo.com/" }}{% else %}{{ post.video }}{% endif %}{{ post.embed }}" frameborder="0" allowfullscreen></iframe>
-        </div>
-        {% endif %}
+    {% for post in site.posts limit:page.posts_with_teaser_limit %}
+
+            {% if post.video %}
+            <div{% if post.embed_height %} style="padding-bottom: {{ post.embed_height }}"{% endif %} class="flex-video">
+            <iframe width="1280" height="720" src="{% if post.video contains 'youtu' %}https://www.youtube.com/embed/{{ post.video | remove: "https://www.youtube.com/watch?v=" | remove: "https://youtu.be/" }}{% elsif post.video contains 'vimeo.com' %}https://player.vimeo.com/video/{{ post.video | remove: "https://vimeo.com/" }}{% else %}{{ post.video }}{% endif %}{{ post.embed }}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            {% endif %}
 
 
-        {% if post.embed %}
-        <div{% if post.embed_height %} style="padding-bottom: {{ post.embed_height }}"{% endif %} class="flex-video">
-        {{ post.embed }}
-        </div>
-        {% endif %}
+            {% if post.embed %}
+            <div{% if post.embed_height %} style="padding-bottom: {{ post.embed_height }}"{% endif %} class="flex-video">
+            {{ post.embed }}
+            </div>
+            {% endif %}
+
 
             {% if post.image %}
             <figure>
@@ -50,6 +51,8 @@ posts_list_limit: 7
                 {% endif %}
             </figure>
             {% endif %}
+
+
 
             {% if post.link %}
                 <p class="subheadline">{{ post.subheadline }} Link</p>
@@ -74,18 +77,27 @@ posts_list_limit: 7
                 </p>
             {% endif %}
 
-            <h2>{{ site.language.more_articles }}</h2>
-            <ul class="toc">
-        {% elsif forloop.last %}
-            <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-            <li class="text-right archive-link"><a href="{{ site.url }}{{ site.baseurl }}/archive/">{{ site.language.show_all_articles }}</a></li>
-            </ul>
-        {% else %}
-            <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-        {% endif %}
+        <div class="tem2 bem2">&nbsp;</div>
     {% endfor %}
 
-    {{ content }}
+
+
+
+
+
+        <h2>{{ site.language.more_articles }}</h2>
+        <ul class="toc">
+        {% for post in site.posts limit:page.posts_list_limit offset:page.posts_with_teaser_limit %}
+            {% if forloop.last %}
+                <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+                <li class="text-right archive-link"><a href="{{ site.url }}{{ site.baseurl }}/archive/">{{ site.language.show_all_articles }}</a></li>
+                </ul>
+            {% else %}
+                <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {{ content }}
     </div>
 </main><!-- /#content/.row -->
 

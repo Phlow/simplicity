@@ -5,7 +5,8 @@
 	color: $grey-color;
 	margin: 0;
 }
-.teaser,
+.teaser {}
+
 article div.main-content > p:first-child {
-	text-transform: uppercase;
+	font-weight: bold;
 }

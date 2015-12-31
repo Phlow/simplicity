@@ -60,16 +60,25 @@ p {
 img {
   border-radius: $global-radius;
   max-width: 100%;
+  .alignleft,
+  .left        {
+    float: left; 
+    margin: .35em 1em 0 0;
+  }
+  .alignright,
+  .right       {
+    float: right;
+    margin: .35em  0 0 1em;
+  }
+  .aligncenter,
+  .center      {
+    display: block;
+    margin: .25em auto .25em;
+  }
 }
-img.alignleft,
-img.left        { float: left; margin: .35em 1em 0 0; }
-img.alignright,
-img.right       { float: right; margin: .35em  0 0 1em; }
-img.aligncenter,
-img.center      { display: block; margin: .25em auto .25em; }
 
 figure {
-  margin: 0 0 2em 0;
+  margin: 0 0 1em 0;
 }
 #masthead-with-background-color figure,
 #masthead-with-pattern figure {
