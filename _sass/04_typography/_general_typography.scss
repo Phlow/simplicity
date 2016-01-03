@@ -226,7 +226,11 @@ mark {
   box-decoration-break: clone;
   padding: 0 .5em;
 }
-
+kbd {
+  background: $background-light-color;
+  border-radius: $global-radius;
+  padding:0 0.25em;
+}
 
 
 /* Typography
