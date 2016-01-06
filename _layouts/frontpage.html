@@ -36,7 +36,8 @@ posts_list_limit: 7
             {% endif %}
 
 
-            {% if post.image %}
+            {% if post.video or post.embed %}
+            {% elsif post.image %}
             <figure>
                 <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title escape_once }}"></a>
 
@@ -89,7 +90,7 @@ posts_list_limit: 7
         <ul class="toc">
         {% for post in site.posts limit:page.posts_list_limit offset:page.posts_with_teaser_limit %}
             {% if forloop.last %}
-                <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+                <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
                 <li class="text-right archive-link"><a href="{{ site.url }}{{ site.baseurl }}/archive/">{{ site.language.show_all_articles }}</a></li>
                 </ul>
             {% else %}

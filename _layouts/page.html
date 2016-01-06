@@ -10,7 +10,8 @@ format: page
 
         {% include _video_embed.html %}
 
-        {% if page.image %}
+        {% if page.video or page.embed %}
+        {% elsif page.image %}
         <figure>
           <img src="{{ site.urlimg }}{{ page.image }}" alt="{{ page.title | strip_html }}" itemprop="image">
 
