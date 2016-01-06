@@ -1,9 +1,9 @@
 <form id="search-container" name="x" action="//duckduckgo.com/">
-    <input type="hidden" value="{{ site.url }}{{ site.baseurl }}" name="sites"></input>
-    <input type="hidden" value="1" name="kh"></input>
-    <input type="hidden" value="1" name="kn"></input>
-    <input type="hidden" value="1" name="kac"></input>
-    <input accesskey="s" tabindex="1" class="search-input" type="search" placeholder="{{ site.language.search_input_placeholder }}" name="q"></input>
+    <input type="hidden" value="{{ site.url }}{{ site.baseurl }}" name="sites">
+    <input type="hidden" value="1" name="kh">
+    <input type="hidden" value="1" name="kn">
+    <input type="hidden" value="1" name="kac">
+    <input accesskey="s" tabindex="1" class="search-input" type="search" placeholder="{{ site.language.search_input_placeholder }}" name="q">
     <button class="search-button" type="submit">{{ site.language.search }}</button>
 </form>
 
