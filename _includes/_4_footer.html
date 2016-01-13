@@ -1,23 +1,17 @@
 <footer id="footer" class="row">
-	<nav id="navigation-footer" class="small-12 medium-centered columns">
-		<ul class="inline-list">
-			{% for nav in site.data.navigation_footer %}
-			{% if forloop.first %}
-			{% else %}
-			{% endif %}
-              {% if nav.url contains 'http' %}
-                {% assign domain = '' %}
-              {% elsif nav.url == '#' %}
-                {% assign domain = '' %}
-              {% else %}
-                {% assign domain = site.url %}
-              {% endif %}
-			<li{% if nav.class or nav.side %} class="{{ nav.side }} {{ nav.class }}"{% endif %}><a href="{{ domain }}{{ site.baseurl }}{{ nav.url }}"{% if nav.url contains 'http' %} target="_blank"{% endif %}>{{ nav.name }}</a></li>
-			{% endfor %}
-			<li id="up-to-top"><a href="#top-of-page">›</a></li>
-		</ul>
-	</nav>
+  <nav id="navigation-footer" class="small-12 medium-centered columns">
+    <ul class="inline-list">
+      {% for nav in site.data.navigation_footer %}
+        {% if nav.url contains 'http' %}
+          {% assign domain = '' %}
+        {% elsif nav.url == '#' %}
+          {% assign domain = '' %}
+        {% else %}
+          {% assign domain = site.url %}
+        {% endif %}
+      <li{% unless nav.class == NULL and nav.side == NULL %} class="{{ nav.side }} {{ nav.class }}"{% endunless %}><a href="{{ domain }}{{ site.baseurl }}{{ nav.url }}"{% if nav.url contains 'http' %} target="_blank"{% endif %}>{{ nav.name }}</a></li>
+      {% endfor %}
+      <li id="up-to-top"><a href="#top-of-page">›</a></li>
+    </ul>
+  </nav>
 </footer>
-
-
-

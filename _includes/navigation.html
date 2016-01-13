@@ -1,10 +1,14 @@
 <nav id="navigation">
-<ul class="toc">
-{% for nav in site.data.navigation_page %}
-        {% if forloop.first %}<li class="{{ nav.side }}"><a href="{{ site.url }}{{ site.baseurl }}{{ nav.url }}"{% if nav.class %} class="{{ nav.name }}"{% endif %}>{% if nav.image %}<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ nav.image }}" alt="Visit the frontpage">{% else %}{{ nav.name }}{% endif %}</a></li>
-        {% else %}
-        <li class="{{ nav.side }} {% if nav.class %}{{ nav.class }}{% endif %}"><a href="{{ site.url }}{{ site.baseurl }}{{ nav.url }}">{{ nav.name }}{% if nav.image %}<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ nav.image }}" alt="{{ nav.class }}">{% endif %}</a></li>
-        {% endif %}
-        {% endfor %}
-    </ul>
+  <ul class="toc">
+  {% for nav in site.data.navigation_page %}
+    {% if nav.url contains 'http' %}
+      {% assign domain = '' %}
+    {% elsif nav.url == '#' %}
+      {% assign domain = '' %}
+    {% else %}
+      {% assign domain = site.url + site.baseurl %}
+    {% endif %}
+    <li{% unless nav.class == NULL and nav.side == NULL %} class="{{ nav.side }} {{ nav.class }}"{% endunless %}><a href="{{ domain }}{{ nav.url }}"{% if nav.url contains 'http' %} target="_blank"{% endif %}>{{ nav.name }}</a></li>
+  {% endfor %}
+  </ul>
 </nav>
