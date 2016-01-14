@@ -1,9 +1,7 @@
 - name: 'About'
-  class: 'info'
   url: '/info/'
 
 - name: 'Navigation'
-  class: 'navigation'
   url: '/navigation/'
 
 - name: 'Webdesign by Phlow'
