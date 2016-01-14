@@ -58,19 +58,24 @@ button:active,
 }
 
 
-.alert:hover {
+a.alert:hover,
+button.alert:hover {
 	background: mix(#fff, $alert-color, 20%) !important;
 }
-.success:hover {
+a.success:hover,
+button.success:hover {
 	background: mix(#fff, $success-color, 20%) !important;
 }
-.warning:hover {
+a.warning:hover,
+button.warning:hover {
 	background: mix(#fff, $warning-color, 20%) !important;
 }
-.info:hover {
+a.info:hover,
+button.info:hover {
 	background: mix(#fff, $info-color, 20%) !important;
 }
-.grey:hover {
+a.grey:hover,
+button.grey:hover {
 	background: mix(#fff, $grey-color-dark, 20%) !important;
 }
 
