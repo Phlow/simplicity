@@ -3,7 +3,7 @@
     <input type="hidden" value="1" name="kh">
     <input type="hidden" value="1" name="kn">
     <input type="hidden" value="1" name="kac">
-    <input accesskey="s" tabindex="1" class="search-input" type="search" placeholder="{{ site.language.search_input_placeholder }}" name="q">
+    <input accesskey="4" tabindex="1" class="search-input" type="search" placeholder="{{ site.language.search_input_placeholder }}" name="q">
     <button class="search-button" type="submit">{{ site.language.search }}</button>
 </form>
 

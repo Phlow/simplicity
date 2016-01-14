@@ -1,18 +1,13 @@
 /* Buttons
 ------------------------------------------------------------------- */
 
-button, .button         { letter-spacing: 1px; }
-button.grey, .button.grey { background: $grey-color-dark; }
-button.grey:hover,
-button.grey:focus,
-.button.grey:hover,
-.button.grey:focus      { background-color: $grey-color-dark; }
-
-
-button {
+button,
+.button,
+a.button {
 	color: #fff;
 	background-color: $ci-1;
 	border: none;
+	letter-spacing: 1px;
 	border-radius: 5px;
 	box-shadow: 0 3px mix(#000, $ci-1, 40%);
 	display: inline-block;
@@ -27,15 +22,55 @@ button {
 }
 
 button:hover,
-button.hover {
+.button:hover {
 	background-color: mix(#fff, $ci-1, 20%);
 }
 
 button:active,
-button.active {
+.button:active {
 	background-color: mix(#fff, $ci-1, 20%);
 	box-shadow: 0 5px $ci-1;
 	transform: translateY(3px);
 }
 
+
+/* Color Buttons */
+
+.alert {
+	background: $alert-color !important;
+	box-shadow: 0 3px mix(#000, $alert-color, 40%) !important;
+}
+.success {
+	background: $success-color !important;
+	box-shadow: 0 3px mix(#000, $success-color, 40%) !important;
+}
+.warning {
+	background: $warning-color !important;
+	box-shadow: 0 3px mix(#000, $warning-color, 40%) !important;
+}
+.info {
+	background: $info-color !important;
+	box-shadow: 0 3px mix(#000, $info-color, 40%) !important;
+}
+.grey {
+	background: $grey-color-dark !important;
+	box-shadow: 0 3px mix(#000, $grey-color-dark, 40%) !important;
+}
+
+
+.alert:hover {
+	background: mix(#fff, $alert-color, 20%) !important;
+}
+.success:hover {
+	background: mix(#fff, $success-color, 20%) !important;
+}
+.warning:hover {
+	background: mix(#fff, $warning-color, 20%) !important;
+}
+.info:hover {
+	background: mix(#fff, $info-color, 20%) !important;
+}
+.grey:hover {
+	background: mix(#fff, $grey-color-dark, 20%) !important;
+}
 

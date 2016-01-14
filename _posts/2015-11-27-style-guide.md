@@ -2,6 +2,7 @@ The *Simplicity* styleguide lists all available elemnts to style your content.
 
 <!--more-->
 
+
 ## Colors
 
 *Simplicity* allows you to change the colors to your taste quickly. Just open *_sass/_01_colors.scss* and tune your colors.
@@ -31,4 +32,17 @@ With alerts you insert warnings, info-boxes or hints. Use the *alert*-include in
 {% include alert alert='An alert box with a <a href="http://phlow.github.io/feeling-responsive/">Link</a> and <em>italic</em> and <strong>bold</strong> text.' %}
 {% include alert terminal='jekyll -serve' %}
 {% include alert text='Just a note with a <a href="http://phlow.github.io/feeling-responsive/">Link</a> and <em>italic</em> and <strong>bold</strong> text.' %}
+
+
+
+## Buttons
+
+Use them with `<a>` or `<button>`.
+
+<a class="button" href="#">Button</a>
+<a class="button alert" href="#">Alert Button</a>
+<a class="button info" href="#">Info Button</a>
+<a class="button success" href="#">Success Button</a>
+<a class="button warning" href="#">Warning Button</a>
+<a class="button grey" href="#">Grey Button</a>
 
