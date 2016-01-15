@@ -163,8 +163,11 @@ sass:
 # To inject some meta-data.
 
 socialmedia:
+    youtube: PhlowMedia
+    github: phlow
     twitter: phlow
     facebook: phlow.media
+    soundcloud: phlow
 
 
 #     __
@@ -190,6 +193,7 @@ language:
     search_input_placeholder: 'Search [Hit Tab and start writing]'
     written_by:               'Written by'
     more_articles:            'More Articles'
+    follow_me_at:                'Follow me at'
     # More on Accesskeys › http://www.cs.tut.fi/~jkorpela/forms/accesskey.html
     navigation_search:        'Press Accesskey [4] for Search'
     navigation_menu:          'Press Accesskey [6] for Navigation Menu'

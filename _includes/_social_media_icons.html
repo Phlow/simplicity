@@ -1,0 +1,33 @@
+{% comment %}
+#
+#   This include is used in _4_footer.html
+#
+#   The data for the social media profiles is stored in _config.yml
+#   and is stored in site.socialmedia.
+ä
+#   Example: site.socialmedia.twitter
+#
+#   These are just a view icons currently embeded. If you need more
+#   or other icons have a look into _includes/svg-social-media/
+#   and adjust the code beneath.
+#
+{% endcomment %}
+{% if site.socialmedia.github %}
+  <li class="social-media-icon"><a href="https://github.com/{{ site.socialmedia.github }}" target="_blank" title="{{ site.language.follow_me_at }} Github">{% include svg-social-media/github_ring.svg %}</a></li>
+{% endif %}
+
+{% if site.socialmedia.youtube %}
+  <li class="social-media-icon"><a href="https://www.youtube.com/user/{{ site.socialmedia.youtube }}" target="_blank" title="{{ site.language.follow_me_at }} Youtube">{% include svg-social-media/youtube.svg %}</a></li>
+{% endif %}
+
+{% if site.socialmedia.twitter %}
+  <li class="social-media-icon"><a href="https://twitter.com/{{ site.socialmedia.twitter }}" target="_blank" title="{{ site.language.follow_me_at }} Twitter">{% include svg-social-media/twitter.svg %}</a></li>
+{% endif %}
+
+{% if site.socialmedia.facebook %}
+  <li class="social-media-icon"><a href="https://facebook.com/{{ site.socialmedia.facebook }}" target="_blank" title="{{ site.language.follow_me_at }} Facebook">{% include svg-social-media/facebook_square.svg %}</a></li>
+{% endif %}
+
+{% if site.socialmedia.soundcloud %}
+  <li class="social-media-icon"><a href="https://soundcloud.com/{{ site.socialmedia.soundcloud }}" target="_blank" title="{{ site.language.follow_me_at }} Soundcloud">{% include svg-social-media/soundcloud_notext.svg %}</a></li>
+{% endif %}

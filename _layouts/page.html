@@ -35,7 +35,7 @@ format: page
         {% endif %}
 
 
-        <h1 itemprop="name headline">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+        <h1 itemprop="name headline">{{ page.title | remove: '<p>' | remove: '</p>' }}</h1>
       </header>
 
 

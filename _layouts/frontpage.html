@@ -54,7 +54,6 @@ posts_list_limit: 7
             {% endif %}
 
 
-
             {% if post.link %}
                 <p class="subheadline">{{ post.subheadline }} Link</p>
                 <h1><a href="{{ post.link }}" target="_blank">{{ post.title }}</a></h1>
@@ -82,10 +81,6 @@ posts_list_limit: 7
     {% endfor %}
 
 
-
-
-
-
         <h2>{{ site.language.more_articles }}</h2>
         <ul class="toc">
         {% for post in site.posts limit:page.posts_list_limit offset:page.posts_with_teaser_limit %}
@@ -103,6 +98,8 @@ posts_list_limit: 7
 </main><!-- /#content/.row -->
 
 {% include _4_footer.html %}
+
+{% include _5_footer_scripts.html %}
 
 </body>
 </html>

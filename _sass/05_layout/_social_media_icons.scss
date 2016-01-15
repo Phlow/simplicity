@@ -1,0 +1,23 @@
+.social-media-icon,
+.social-media-icon:link,
+.social-media-icon:hover,
+.social-media-icon:visited,
+.social-media-icon:active,
+ {
+	border: 0;
+    // background: #ff0;
+}
+.social-media-icon svg {
+    margin-bottom: -.35em;
+	height: 1.5em;
+	width: 1.5em;
+	fill: $grey-color;
+    transition: all .15s cubic-bezier(.33,.66,.66,1);
+}
+.social-media-icon:hover svg {
+	fill: $ci-1;
+}
+#footer ul.inline-list li.social-media-icon:before {
+    content: '';
+    padding: 0;
+}

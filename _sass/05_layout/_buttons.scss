@@ -24,6 +24,7 @@ a.button {
 button:hover,
 .button:hover {
 	background-color: mix(#fff, $ci-1, 20%);
+	border: 0 !important;
 }
 
 button:active,
