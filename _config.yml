@@ -166,8 +166,11 @@ socialmedia:
     youtube: PhlowMedia
     github: phlow
     twitter: phlow
-    facebook: phlow.media
-    soundcloud: phlow
+    # facebook: phlow.media
+    # soundcloud: phlow
+    # tumblr: motizen
+    # instagram: phlowmedia
+    # rss: # Full URL needed
 
 
 #     __
@@ -193,8 +196,9 @@ language:
     search_input_placeholder: 'Search [Hit Tab and start writing]'
     written_by:               'Written by'
     more_articles:            'More Articles'
-    follow_me_at:                'Follow me at'
+    follow_me_on:                'Follow me at'
     # More on Accesskeys › http://www.cs.tut.fi/~jkorpela/forms/accesskey.html
     navigation_search:        'Press Accesskey [4] for Search'
     navigation_menu:          'Press Accesskey [6] for Navigation Menu'
     navigation_home:          'Press Accesskey [1] for Homepage'
+    subscribe_to_my_rss_feed: 'Subscribe to my RSS Feed'
