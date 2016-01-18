@@ -14,9 +14,9 @@ description:  'Simplicity is a fast and easy to use jekyll theme for minimalists
 
 
 # Build settings
-url:          'http://phlow.github.io/simplicity'
+url:          '//phlow.github.io/simplicity'
 baseurl:      ''
-urlimg:       'http://phlow.github.io/simplicity/images/'
+urlimg:       '//phlow.github.io/simplicity/images/'
 markdown:     kramdown
 highlighter:  pygments
 permalink:    /:categories/:title/
@@ -160,7 +160,8 @@ sass:
 #
 # If you have social media-profiles put your username here.
 # Facebook and Twitter will be used in includes/_1_head.html
-# To inject some meta-data.
+# To inject some meta-data other services will be used in
+# _/includes/_4_footer.html.
 
 socialmedia:
     youtube: PhlowMedia
