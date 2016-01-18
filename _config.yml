@@ -14,9 +14,9 @@ description:  'Simplicity is a fast and easy to use jekyll theme for minimalists
 
 
 # Build settings
-url:          '//phlow.github.io/simplicity'
+url:          'https://phlow.github.io/simplicity'
 baseurl:      ''
-urlimg:       '//phlow.github.io/simplicity/images/'
+urlimg:       'https://phlow.github.io/simplicity/images/'
 markdown:     kramdown
 highlighter:  pygments
 permalink:    /:categories/:title/
