@@ -5,6 +5,7 @@
   color: #fff;
   background-color: $grey-color-light;
   display: block;
+  margin-left: 2em;
   margin-bottom: 1em;
   position: relative;
   padding: 0.5em 0.5em 0.5em 0.5em;
@@ -12,7 +13,7 @@
 }
 .alert-box p {
   margin: 0;
-  padding: 0;
+  padding: 0 .25em;
   text-transform: none !important;
 }
 .alert-box a {
@@ -53,9 +54,42 @@
   color: #fff;
   font-family: $font-family-monospace;
 }
+
+
+.alert-box.warning::before,
+.alert-box.alert::before,
+.alert-box.info::before,
+.alert-box.success::before {
+  margin-left: -1em;
+  font-size: 2em;
+  line-height: .75em;
+  float: left;
+}
+
 .alert-box.terminal::before {
   content: "$ ";
   color: $ci-2;
   float: left;
   margin-right: .5em;
 }
+
+.alert-box.warning::before {
+  content: "!";
+  color: $warning-color;
+}
+
+.alert-box.alert::before {
+  content: "!";
+  color: $alert-color;
+}
+
+.alert-box.info::before {
+  content: "i";
+  color: $info-color;
+}
+
+.alert-box.success::before {
+  content: ":)";
+  color: $success-color;
+}
+
