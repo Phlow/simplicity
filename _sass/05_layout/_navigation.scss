@@ -83,7 +83,6 @@ devices. You find it in _sass/_layout/_layout_media_queries.scss
   top: auto;
   width: inherit;
 }
-
 .tnav-allow-hover:hover > .tnav-children,
 .tnav-active > .tnav-children {
   display: block;
@@ -109,12 +108,10 @@ devices. You find it in _sass/_layout/_layout_media_queries.scss
   letter-spacing: 1px;
 }
 
-
 /* Use this class to hide the dropdown arrow for menus (with an icon – see share icon) */
 .no-dropdown-arrow > a:after {
   content: "" !important;
 }
-
 #tnav-search,
 #tnav-share,
 #tnav-menu {
@@ -123,10 +120,6 @@ devices. You find it in _sass/_layout/_layout_media_queries.scss
 #tnav-menu > a {
   color: $line-color;
 }
-#tnav-menu a:hover {
-  color: $ci-1;
-}
-
 #tnav-share a,
 #tnav-search a {
   display: block;
