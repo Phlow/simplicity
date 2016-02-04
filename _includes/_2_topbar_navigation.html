@@ -1,22 +1,51 @@
-<div class="fixed-topbar-navigation">
-	<nav id="topbar-navigation">
-		<ul>
-	{% comment %}
-	*
-	*   These are the svg icons for search and navigation
-	*
-	*
-	*		<li class="right icon-share"><a href="{{ site.url }}{{ site.baseurl }}/search/"><svg class="nav-icon" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1792 640q0 26-19 45l-512 512q-19 19-45 19t-45-19-19-45v-256h-224q-98 0-175.5 6t-154 21.5-133 42.5-105.5 69.5-80 101-48.5 138.5-17.5 181q0 55 5 123 0 6 2.5 23.5t2.5 26.5q0 15-8.5 25t-23.5 10q-16 0-28-17-7-9-13-22t-13.5-30-10.5-24q-127-285-127-451 0-199 53-333 162-403 875-403h224v-256q0-26 19-45t45-19 45 19l512 512q19 19 19 45z"/></svg></a></li>
-	*
-	{% endcomment %}
-			<li class="right icon-search"><a href="{{ site.url }}{{ site.baseurl }}/search/" accesskey="4" title="{{ site.language.navigation_search }}"><svg class="nav-icon" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1216 832q0-185-131.5-316.5t-316.5-131.5-316.5 131.5-131.5 316.5 131.5 316.5 316.5 131.5 316.5-131.5 131.5-316.5zm512 832q0 52-38 90t-90 38q-54 0-90-38l-343-342q-179 124-399 124-143 0-273.5-55.5t-225-150-150-225-55.5-273.5 55.5-273.5 150-225 225-150 273.5-55.5 273.5 55.5 225 150 150 225 55.5 273.5q0 220-124 399l343 343q37 37 37 90z"/></svg></a></li>
-			<li class="right icon-navigation"><a href="{{ site.url }}{{ site.baseurl }}/navigation/" accesskey="6" title="{{ site.language.navigation_menu }}"><svg class="nav-icon" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"/></svg></a></li>
-			{% for nav in site.data.navigation_topbar %}
-			{% if forloop.first %}<li id="logo" class="{{ nav.side }}"><a href="{{ site.url }}{{ site.baseurl }}{{ nav.url }}" accesskey="1" title="{{ nav.name }}"{% if nav.class %} class="{{ nav.class }}"{% endif %}>{% if nav.image %}<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ nav.image }}" alt="{{ nav.name }}">{% else %}{{ nav.name }}{% endif %}</a></li>
-			{% else %}
-			<li class="{{ nav.side }} {% if nav.class %}{{ nav.class }}{% else %}left{% endif %}"><a href="{{ site.url }}{{ site.baseurl }}{{ nav.url }}">{{ nav.name }}{% if nav.image %}<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ nav.image }}" alt="{{ nav.class }}">{% endif %}</a></li>
-			{% endif %}
-			{% endfor %}
-		</ul>
-	</nav>
-</div>
+<nav id="tnav" class="tnav-horizontal">
+  <ul class="tnav-list">
+
+    <li id="tnav-logo" class="tnav-item tnav-has-children tnav-allow-hover no-dropdown-arrow"><a href="#" accesskey="1">Simplicity</a>
+      <ul class="tnav-children">
+        <li class="tnav-item"><a href="{{ site.url }}{{ site.baseurl }}/">Start</a></li>
+        <li class="tnav-item"><a href="https://github.com/Phlow">Phlow @ GitHub</a></li>
+        <li class="tnav-item"><a href="https://twitter.com/phlow/">Phlow @ Twitter</a></li>
+        <li class="tnav-item"><a href="http://phlow.de/">Phlow.de</a></li>
+      </ul>
+    </li>
+
+{% comment %}
+#   This is just an example of a dropdown menu of the navigation.
+#   Delete comments to use it.
+#
+    <li class="tnav-item tnav-hide tnav-has-children tnav-allow-hover"><a href="#">Dropdown</a>
+      <ul class="tnav-children">
+        <li class="tnav-item"><a href="#">Dropdown Item 1</a></li>
+        <li class="tnav-item"><a href="#">Dropdown Item 2</a></li>
+        <li class="tnav-item"><a href="#">Dropdown Item 3</a></li>
+      </ul>
+    </li>
+{% endcomment %}
+
+    <li id="tnav-search" class="tnav-item"><a href="{{ site.url }}{{ site.baseurl }}/search/">{% include svg/search.svg %}</a></li>
+
+    <li id="tnav-share" class="tnav-item tnav-has-children tnav-allow-hover no-dropdown-arrow"><a href="#">{% include svg/share.svg %}</a>
+      <ul class="tnav-children">
+		<li class="tnav-item"><a href="http://twitter.com/share?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&text=&raquo;{{ page.title }}&laquo;&via={{ site.socialmedia.twitter }}">Tweet it</a></li>
+		<li class="tnav-item"><a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}">Facebook</a></li>
+		<li class="tnav-item"><a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&media={{ site.urlimg }}{{ page.image }}&description={{ page.content | truncatewords: 40 | strip_html }}" class="pin-it-button" count-layout="horizontal">Pin It</a></li>
+		<li class="tnav-item"><a href="https://plus.google.com/share?url={{ site.url }}{{ site.baseurl }}/{{ page.url }}">Google Plus</a></li>
+		<li class="tnav-item"><a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title }}">StumbleUpon</a></li>
+		<li class="tnav-item"><a href="http://reddit.com/submit?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title }}">Reddit</a></li>
+		<li class="tnav-item"><a href="http://www.linkedin.com/shareArticle?url={{ site.url }}{{ site.baseurl }}/{{ page.url }}&title={{ page.title }}&source={{ site.url }}{{ site.baseurl }}/{{ page.url }}">LinkedIn</a></li>
+		<li class="tnav-item"><a href="mailto:?subject={{ page.title }}&body={{ page.url }}">Email</a></li>
+      </ul>
+    </li>
+
+    <li id="tnav-menu" class="tnav-item tnav-has-children tnav-allow-hover"><a href="#">Navigation</a>
+      <ul class="tnav-children">
+        <li class="tnav-item"><a href="{{ site.url }}{{ site.baseurl }}/info/">About {{ site.title }}</a></li>
+        <li class="tnav-item"><a href="{{ site.url }}{{ site.baseurl }}/contact/">Contact</a></li>
+        <li class="tnav-item tnav-hide"><a href="{{ site.url }}{{ site.baseurl }}/archive/">Archive</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</nav>
+

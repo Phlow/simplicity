@@ -28,6 +28,29 @@
   #pagination a:hover span.skip {
     display: none;
   }
+  /* Reduce Font-Size to get more space for elements of Topbar-Navigation */
+  #tnav {
+    font-size: .75em;
+  }
+  #tnav a {
+    padding: .5em 1em .5em 1em;
+    border: 0;
+  }
+#tnav-logo > a {
+  padding: .15em 1em .15em 1em;
+  font-size: 1.3em;
+  letter-spacing: 1px;
+}
+
+
+  #tnav-share a,
+#tnav-search a {
+  padding: .85em .5em .25em .5em;
+}
+  /* Hide elements in Topbar-Navigation */
+  .tnav-hide {
+    display: none !important;
+  }
 }
 
 
@@ -68,3 +91,4 @@
     height: 18em;
   }
 }
+

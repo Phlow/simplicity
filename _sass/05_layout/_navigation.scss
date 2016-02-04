@@ -1,60 +1,141 @@
 /* Navigation
+
+There is a class called .tnav-hide to hide elements on smaller
+devices. You find it in _sass/_layout/_layout_media_queries.scss
+
 ------------------------------------------------------------------- */
-.fixed-topbar-navigation {
+
+#tnav {
+  font-size: 18px;
   width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   position: fixed;
-  top: 0;
   left: 0;
-  z-index: 1000;
-  background: $topbar-navigation-background-color;
-  opacity: 0.9;
+  top: 0;
+  z-index: 3;
+  white-space: nowrap;
+  border-bottom: 1px solid $line-color;
+  background: $background-color;
+  opacity: .9;
 }
-#topbar-navigation {
-  height: 2em;
-  line-height: 1.85em;
-  border-bottom: $topbar-navigation-border-bottom;
+.tnav-list,
+.tnav-item {
+  position: relative;
+  height: 3em;
 }
-#topbar-navigation ul {
-  margin: 0;
-  padding: 0 .5em;
+.tnav-list {
   list-style: none;
-}
-#topbar-navigation li {
   margin: 0;
   padding: 0;
-  display: inline;
 }
-#topbar-navigation li.left {
-  float: left;
-  padding-right: 1.5em;
+.tnav-item {
+  padding: 0;
+  margin: 0;
+  height: 100%;
 }
-#topbar-navigation li.right {
+#tnav li {
+  line-height: 2;
+}
+#tnav a {
+  display: block;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: .5em 2em .5em 2em;
+  border: 0;
+}
+#tnav a:hover {
+  border: 0;
+  color: $ci-2;
+  background: $ci-1;
+}
+.tnav-list {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+}
+/* Initial menus should be inline-block so that they are horizontal */
+.tnav-horizontal .tnav-item,
+.tnav-horizontal .tnav-heading,
+.tnav-horizontal .tnav-separator {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  vertical-align: middle;
+}
+/* Submenus should still be display: block; */
+.tnav-item .tnav-item {
+  display: block;
+}
+.tnav-children {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+  background: $line-color;
+}
+.tnav-horizontal .tnav-children {
+  left: 0;
+  top: auto;
+  width: inherit;
+}
+
+.tnav-allow-hover:hover > .tnav-children,
+.tnav-active > .tnav-children {
+  display: block;
+  position: absolute;
+}
+
+/* Vertical Menus - show the dropdown arrow */
+.tnav-has-children > .tnav-link:after {
+  padding-left: 0.5em;
+  content: "\25B8";
+  font-size: small;
+}
+
+/* Horizontal Menus - show the dropdown arrow */
+.tnav-horizontal .tnav-has-children > a:after {
+  content: " \25BE";
+}
+
+/* TNAV Images – Reduce Size of Images */
+#tnav-logo > a {
+  padding: 0 1em 0 1em;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+
+/* Use this class to hide the dropdown arrow for menus (with an icon – see share icon) */
+.no-dropdown-arrow > a:after {
+  content: "" !important;
+}
+
+#tnav-search,
+#tnav-share,
+#tnav-menu {
   float: right;
-  padding-left: .5em;
 }
-#topbar-navigation a {
-    font-size: $font-size-p;
-    border: 0;
+#tnav-menu > a {
+  color: $line-color;
 }
-#topbar-navigation a:hover {
-    text-decoration: none;
-    color: $ci-1;
+#tnav-menu a:hover {
+  color: $ci-1;
 }
-.icon-search svg,
-.icon-navigation svg,
-.icon-share svg {
-    display: block;
-    float: right;
-    margin: .45em .25em 0px .25em;
-    width: 1em;
-    height: 1em;
+
+#tnav-share a,
+#tnav-search a {
+  display: block;
+  line-height: 1.5;
+  padding: .65em 1em .5em 1em;
 }
-.nav-icon {
-  fill: $grey-color;
-  transition: all 0.25s ease-out;
-}
-.nav-icon:hover {
-  fill: $ci-1;
-  width: 1.1em;
-  height: 1.1em;
+#tnav-share svg,
+#tnav-search svg {
+  width: 1.5em;
+  height: 1.5em;
+  fill: $line-color;
 }
