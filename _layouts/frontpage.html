@@ -1,14 +1,6 @@
 ---
 layout: compress
 format: frontpage
-#
-#   Define how many posts should be shown with headline, teaser, image, video
-#
-posts_with_teaser_limit: 1
-#
-#   Define how many posts should be shown in the list beneath the post(s)
-#
-posts_list_limit: 7
 ---
 {% include _1_head.html %}
 
@@ -20,7 +12,7 @@ posts_list_limit: 7
     <div class="medium-8 medium-centered columns">
 
 
-    {% for post in site.posts limit:page.posts_with_teaser_limit %}
+    {% for post in site.posts limit:site.posts_with_teaser_limit %}
 
             {% if post.video %}
             <div{% if post.embed_height %} style="padding-bottom: {{ post.embed_height }}"{% endif %} class="flex-video">
@@ -83,7 +75,7 @@ posts_list_limit: 7
 
         <h2>{{ site.language.more_articles }}</h2>
         <ul class="toc">
-        {% for post in site.posts limit:page.posts_list_limit offset:page.posts_with_teaser_limit %}
+        {% for post in site.posts limit:site.posts_list_limit offset:site.posts_with_teaser_limit %}
             {% if forloop.last %}
                 <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
                 <li class="text-right archive-link"><a href="{{ site.url }}{{ site.baseurl }}/archive/">{{ site.language.show_all_articles }}</a></li>

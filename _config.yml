@@ -22,15 +22,32 @@ highlighter:  rouge
 permalink:    /:categories/:title/
 encoding:     utf-8
 
+
+# Frontpage-Layout-Settings
+# Define how many posts should be shown with headline, teaser, image, video
+posts_with_teaser_limit: 1
+# Define how many posts should be shown in the list beneath the post(s)
+posts_list_limit: 15
+
+
 # Use <!--more--> in your posts to generate an excerpt and a teaser
 excerpt_separator: <!--more-->
 
+# The language setting is used in /includes/header.html for html-settings
+language: "en"
 
+
+
+#      ______
+#     / ____/__  ____ ___  _____
+#    / / __/ _ \/ __ `__ \/ ___/
+#   / /_/ /  __/ / / / / (__  )
+#   \____/\___/_/ /_/ /_/____/
+#
 gems:
     - jekyll-gist
     - jekyll-sitemap
     - jekyll-paginate
-
 
 # Exclude these files from your production _site
 exclude:
@@ -40,11 +57,19 @@ exclude:
     - README.md
     - INSTALL.md
 
+
+#      ______
+#     / ____/___  ____ ___  ____  ________  __________
+#    / /   / __ \/ __ `__ \/ __ \/ ___/ _ \/ ___/ ___/
+#   / /___/ /_/ / / / / / / /_/ / /  /  __(__  |__  )
+#   \____/\____/_/ /_/ /_/ .___/_/   \___/____/____/
+#                       /_/
+#
 # Used › default.html front-matter and compress.html
 # Options › http://jch.penibelst.de
 compress_html:
   clippings: all
-  comments: ['<!-- ', ' -->']
+  comments: ["<!-- ", " -->"]
   endings: all
   profile: false
   ignore:
@@ -52,7 +77,6 @@ compress_html:
 
 
 
-#
 #       ____       ____            ____
 #      / __ \___  / __/___ ___  __/ / /_
 #     / / / / _ \/ /_/ __ `/ / / / / __/
@@ -80,6 +104,7 @@ defaults:
       show_meta: true   # Show metadata for all posts
       comments: false
       author: 'Moritz »mo.« Sauer'     # Default author for posts
+
 
 
 #     _____ __________
@@ -172,6 +197,7 @@ socialmedia:
     # tumblr: motizen
     # instagram: phlowmedia
     # rss: # Full URL needed
+
 
 
 #     __
