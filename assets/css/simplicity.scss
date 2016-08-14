@@ -12,12 +12,24 @@ sitemap:
 @import "00_functions/00_functions";
 
 //  Set color scheme in _config.yml
-
 @import "01_colors/_color_scheme_{{ site.color_scheme }}.scss";
 
 @import "02_settings/00_settings";
 
 @import "02_settings/00_normalize";
+
+
+
+//  Set font and general font-setting in _config.yml
+@import url(https://fonts.googleapis.com/css?family={{ site.font.import }});
+
+/* Font Families */
+$font-family-serif:         {{ site.font.font-family-serif }}
+$font-family-sans-serif:    {{ site.font.font-family-sans-serif }}
+$base-font-family:          {{ site.font.base-font-family }}
+$font-family-monospace:     {{ site.font.font-family-monospace }}
+$header-font-family:        {{ site.font.header-font-family }}
+
 
 @import "04_typography/00_typography";
 

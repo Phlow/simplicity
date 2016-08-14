@@ -77,6 +77,31 @@ exclude:
 color_scheme: simplicity
 
 
+#       ______            __
+#      / ____/___  ____  / /______
+#     / /_  / __ \/ __ \/ __/ ___/
+#    / __/ / /_/ / / / / /_(__  )
+#   /_/    \____/_/ /_/\__/____/
+#
+#   Choose one of the following font combinations:
+#
+#   import is necessary to import the font from google
+#   the settings for the fonts are used in /assets/css/simplicity.scss
+
+font:
+  import: 'Source+Code+Pro|Source+Sans+Pro:400,400italic,700,700italic'
+#  import: 'Titillium+Web:400,400italic,700,700italic'
+#  import: 'Roboto:400,400italic,700,700italic|Roboto+Mono'
+#  import: 'Merriweather:400,400italic,700,700italic'
+#  import: 'Arvo:400,400italic,700,700italic'
+#  import: 'Gentium+Basic:400,400italic,700,700italic'
+#  import: 'Fira+Sans:400,400italic,700,700italic|Fira+Mono'
+  font-family-serif:      'Georgia, "Times New Roman", serif;'
+  font-family-sans-serif: '"Source Sans", "Neue Helvetica", Arial, serif;'
+  base-font-family:       '"Source Sans", "Neue Helvetica", Arial, serif;'
+  font-family-monospace:  '"Source Code Pro", "Courier New", Monaco, monospace;'
+  header-font-family:     '"Source Sans", "Neue Helvetica", Arial, serif;'
+
 
 #      ______
 #     / ____/___  ____ ___  ____  ________  __________
