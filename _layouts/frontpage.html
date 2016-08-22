@@ -31,9 +31,9 @@ format: frontpage
             {% if post.video or post.embed %}
             {% elsif post.image %}
             <figure>
-                <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title escape_once }}"></a>
+                <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title | escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title | escape_once }}"></a>
 
-                {% if post.caption_url && post.caption %}
+                {% if post.caption_url and post.caption %}
                 <figcaption>
                     <a href="{{ post.caption_url }}">{{ post.caption }}</a>
                 </figcaption>
