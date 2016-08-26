@@ -25,7 +25,7 @@
 
 ## Screenshots
 
-![](https://phlow.github.io/static/simplicity-screenshots-1.jpg)![](https://phlow.github.io/static/simplicity-screenshots-2.jpg)![](https://phlow.github.io/static/simplicity-screenshots-3.jpg)![](https://phlow.github.io/static/simplicity-screenshots-4.jpg)
+![](https://phlow.github.io/static/simplicity-screenshots-1.jpg)
 
 
 
