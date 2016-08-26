@@ -1,7 +1,7 @@
 ---
 subheadline: 'Reading Experience'
 ---
-With *Simplicity* you can use your favorite web font. Based on one font-size you can change the font and the size in a blink of an eye. Just open `_sass/_04_typography.scss` and change the font and size to your liking.
+With *Simplicity* you can use your favorite web font. Based on one font-size you can change the font and the size in a blink of an eye. Set your favorite font in *_config.yml*. To customize your typography settings just open `_sass/_04_typography.scss` and make your adjustements.
 
 <!--more-->
 

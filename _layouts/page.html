@@ -42,6 +42,12 @@ format: page
       <div class="main-content" itemprop="articleSection">
         {% if page.quote %}<blockquote style="margin: 0;">{{ page.quote }}</blockquote>{% endif %}
         {{ content }}
+
+
+        {% if page.link %}
+          <p><a class="button" href="{{ page.link }}" title="{{ site.language.source }} › {{ page.title }}">{{ site.language.check_out_link }}</a></p>
+        {% endif %}
+
       </div><!-- /.content -->
 
 
