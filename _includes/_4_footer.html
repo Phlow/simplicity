@@ -8,9 +8,9 @@
         {% elsif nav.url == '#' %}
           {% assign domain = '' %}
         {% else %}
-          {% assign domain = site.url %}
+          {% assign domain = site.baseurl | prepend: site.url %}
         {% endif %}
-      <li{% unless nav.class == NULL and nav.side == NULL %} class="{{ nav.side }} {{ nav.class }}"{% endunless %}><a href="{{ domain }}{{ site.baseurl }}{{ nav.url }}"{% if nav.url contains 'http' %} target="_blank"{% endif %}>{{ nav.name }}</a></li>
+      <li{% unless nav.class == NULL and nav.side == NULL %} class="{{ nav.side }} {{ nav.class }}"{% endunless %}><a href="{{ domain }}{{ nav.url }}"{% if nav.url contains 'http' %} target="_blank"{% endif %}>{{ nav.name }}</a></li>
       {% endfor %}
       <li id="up-to-top"><a href="#top-of-page">›</a></li>
     </ul>
