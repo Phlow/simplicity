@@ -1,9 +1,11 @@
-<form id="search-container" name="x" action="//duckduckgo.com/">
-    <input type="hidden" value="{{ site.url }}{{ site.baseurl }}" name="sites">
-    <input type="hidden" value="1" name="kh">
-    <input type="hidden" value="1" name="kn">
-    <input type="hidden" value="1" name="kac">
-    <input accesskey="4" tabindex="1" class="search-input" type="search" placeholder="{{ site.language.search_input_placeholder }}" name="q">
-    <button class="search-button" type="submit">{{ site.language.search }}</button>
+{% comment %}
+*
+*   This snippet includes the search form for lunr.js
+*
+*   More information in /pages/search.md
+*
+{% endcomment %}
+<form id="search-container" action="{{ site.url }}{{ site.baseurl }}/search/" method="get">
+  <input accesskey="4" tabindex="1" class="search-input" type="search" placeholder="{{ site.language.search_input_placeholder }}" id="search-box" name="query">
+  <button class="search-button" type="submit">{{ site.language.search }}</button>
 </form>
-
