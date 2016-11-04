@@ -15,8 +15,8 @@ slogan:       'A Minimalistic Jekyll Theme'
 
 
 # Build settings
-url:          'https://phlow.github.io/simplicity'
-baseurl:      ''
+url:          'https://phlow.github.io'
+baseurl:      '/simplicity'
 urlimg:       'https://phlow.github.io/simplicity/images/'
 markdown:     kramdown
 highlighter:  rouge
