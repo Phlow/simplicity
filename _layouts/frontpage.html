@@ -31,7 +31,7 @@ format: frontpage
             {% if post.video or post.embed %}
             {% elsif post.image %}
             <figure>
-                <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title | escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title | escape_once }}"></a>
+                <a href="{{ post.url | absolute_url }}" title="{{ post.title | escape_once }}"><img src="{{ "/images/" | absolute_url }}{{ post.image }}" alt="{{ post.title | escape_once }}"></a>
 
                 {% if post.caption_url and post.caption %}
                 <figcaption>
@@ -56,16 +56,16 @@ format: frontpage
             {% elsif post.quote %}
                 {% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
                 {% if post.quote_url %}
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ post.quote_url }}" target="_blank"><blockquote>{{ post.quote }}</blockquote></a>
+                    <a href="{{ post.quote_url | absolute_url }}" target="_blank"><blockquote>{{ post.quote }}</blockquote></a>
                 {% else %}
                     <blockquote>{{ post.quote }}</blockquote>
                 {% endif %}
             {% else %}
                 {% if post.subheadline %}<p class="subheadline">{{ post.subheadline }}</p>{% endif %}
-                <h1><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+                <h1><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h1>
                 <p class="teaser">
                     {{ post.excerpt  | replace: '<p>', '' | replace: '</p>', ''}}
-                    <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ site.language.read_more }}</a>
+                    <a href="{{ post.url | absolute_url }}">{{ site.language.read_more }}</a>
                 </p>
             {% endif %}
 
@@ -77,11 +77,11 @@ format: frontpage
         <ul class="toc">
         {% for post in site.posts limit:site.posts_list_limit offset:site.posts_with_teaser_limit %}
             {% if forloop.last %}
-                <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-                <li class="text-right archive-link"><a href="{{ site.url }}{{ site.baseurl }}/archive/">{{ site.language.show_all_articles }}</a></li>
+                <li><a href="{{ post.url | absolute_url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+                <li class="text-right archive-link"><a href="{{ "/archive/" | absolute_url }}">{{ site.language.show_all_articles }}</a></li>
                 </ul>
             {% else %}
-                <li><a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+                <li><a href="{{ post.url | absolute_url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
             {% endif %}
         {% endfor %}
 

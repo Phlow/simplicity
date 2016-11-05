@@ -5,7 +5,7 @@
 	<header id="masthead"{% if post.header_image %} class="header-image"{% endif %}>
 		{% if post.header_image %}
 			<figure>
-				<div style="background-image: url('{{ site.urlimg }}{{ post.header_image }}');"></div>
+				<div style="background-image: url('{{ "/images/" | absolute_url }}{{ post.header_image }}');"></div>
 				{% if post.header_caption_url && post.header_caption %}
 				<figcaption>
 					<a href="{{ post.header_caption_url }}" target="_blank">{{ post.header_caption }}</a>
@@ -26,7 +26,7 @@
 	<header id="masthead"{% if page.header_image %} class="header-image"{% endif %}>
 		{% if page.header_image %}
 			<figure>
-				<div style="background-image: url('{{ site.urlimg }}{{ page.header_image }}');"></div>
+				<div style="background-image: url('{{ "/images/" | absolute_url }}{{ page.header_image }}');"></div>
 				{% if page.header_caption_url && page.header_caption %}
 				<figcaption>
 					<a href="{{ page.header_caption_url }}" target="_blank">{{ page.header_caption }}</a>

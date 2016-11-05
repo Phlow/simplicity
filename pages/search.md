@@ -18,11 +18,12 @@ sitemap: false
         "author": "{{ post.author | xml_escape }}",
         "category": "{{ post.category | xml_escape }}",
         "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ post.url | xml_escape }}"
+        "url": "{{ post.url | xml_escape | absolute_url }}"
       }
       {% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
 </script>
-<script src="{{ site.url }}{{ site.baseurl }}/assets/js/lunr.min.js"></script>
-<script src="{{ site.url }}{{ site.baseurl }}/assets/js/search.js"></script>
+<script src="{{ "/assets/js/lunr.min.js" | absolute_url }}"></script>
+<script src="{{ "/assets/js/search.js" | absolute_url }}"></script>
+

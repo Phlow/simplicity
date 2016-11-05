@@ -23,4 +23,4 @@ My favorite mash-up: Rave-People meeting Benny Hill.
 
 
 
- [1]: {{ site.url }}{{ site.baseurl }}/video-postings-made-easy/
+ [1]: {{ "/video-postings-made-easy/" | absolute_url }}

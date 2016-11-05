@@ -13,7 +13,7 @@ format: page
         {% if page.video or page.embed %}
         {% elsif page.image %}
         <figure>
-          <img src="{{ site.urlimg }}{{ page.image }}" alt="{{ page.title | strip_html }}" itemprop="image">
+          <img src="{{ "/images/" | absolute_url }}{{ page.image }}" alt="{{ page.title | strip_html }}" itemprop="image">
 
           {% if page.caption_url and page.caption %}
           <figcaption>

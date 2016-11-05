@@ -5,7 +5,7 @@
 *   More information in /pages/search.md
 *
 {% endcomment %}
-<form id="search-container" action="{{ site.url }}{{ site.baseurl }}/search/" method="get">
+<form id="search-container" action="{{ "/search/" | absolute_url }}" method="get">
   <input accesskey="4" tabindex="1" class="search-input" type="search" placeholder="{{ site.language.search_input_placeholder }}" id="search-box" name="query">
   <button class="search-button" type="submit">{{ site.language.search }}</button>
 </form>

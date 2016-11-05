@@ -13,6 +13,6 @@ Have a [look on my features][3]!
 
 
 
- [1]: {{ site.url }}{{ site.baseurl }}/info/
+ [1]: {{ "/info/" | absolute_url }}
  [2]: http://moritz.sauer.io
- [3]: {{ site.url }}{{ site.baseurl }}/about-simplicity/
+ [3]: {{ "/about-simplicity/" | absolute_url }}

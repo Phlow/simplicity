@@ -1,8 +1,8 @@
 <div id="pagination">
   {% if page.previous.url %}
-    <a class="prev" href="{{ site.url }}{{ site.baseurl }}{{page.previous.url}}" title="{{page.previous.title}}"><span class="skip">&lsaquo;</span><span>»{{ page.previous.title }}«</span></a>
+    <a class="prev" href="{{ page.previous.url  | absolute_url }}" title="{{page.previous.title}}"><span class="skip">&lsaquo;</span><span>»{{ page.previous.title }}«</span></a>
   {% endif %}
   {% if page.next.url %}
-    <a class="next" href="{{ site.url }}{{ site.baseurl }}{{page.next.url}}" title="{{page.next.title}}"><span>»{{ page.next.title }}«</span><span class="skip">&rsaquo;</span></a>
+    <a class="next" href="{{ page.next.url  | absolute_url }}" title="{{page.next.title}}"><span>»{{ page.next.title }}«</span><span class="skip">&rsaquo;</span></a>
   {% endif %}
 </div><!-- /#pagination -->

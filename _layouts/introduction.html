@@ -18,9 +18,9 @@ format: introduction
         {% else %}
         {% assign domain = site.url %}
         {% endif %}
-        <a href="{{ domain }}{{ site.baseurl }}{{ page.link }}"><img src="{{ site.urlimg }}{{ page.image }}" alt="{{ page.title }}"></a>
+        <a href="{{ domain }}{{ site.baseurl }}{{ page.link }}"><img src="{{ "/images/" | absolute_url }}{{ page.image }}" alt="{{ page.title }}"></a>
         {% else %}
-        <img src="{{ site.urlimg }}{{ page.image }}" alt="{{ page.title }}">
+        <img src="{{ "/images/" | absolute_url }}{{ page.image }}" alt="{{ page.title }}">
         {% endif %}
     </div>
 

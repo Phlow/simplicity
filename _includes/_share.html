@@ -4,19 +4,19 @@
 *
 *
 {% endcomment %}
-<li><a href="http://pinterest.com/pin/create/button/?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&media={{ site.urlimg }}{{ page.image }}&description={{ page.content | truncatewords: 40 | strip_html }}" class="pin-it-button" count-layout="horizontal">Pin It</a></li>
+<li><a href="http://pinterest.com/pin/create/button/?url={{ page.url | absolute_url }}&media={{ "/images/" | absolute_url }}{{ page.image }}&description={{ page.content | truncatewords: 40 | strip_html }}" class="pin-it-button" count-layout="horizontal">Pin It</a></li>
 <!-- Twitter (url, text, @mention) -->
-<li><a href="http://twitter.com/share?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&text=&raquo;{{ page.title }}&laquo;&via={{ site.socialmedia.twitter }}">Twitter</a></li>
+<li><a href="http://twitter.com/share?url={{ page.url | absolute_url }}&text=&raquo;{{ page.title }}&laquo;&via={{ site.socialmedia.twitter }}">Twitter</a></li>
 <!-- Google Plus (url) -->
-<li><a href="https://plus.google.com/share?url={{ site.url }}{{ site.baseurl }}/{{ page.url }}">
+<li><a href="https://plus.google.com/share?url={{ page.url | absolute_url }}">
 Google Plus</a></li>
 <!-- Facebook (url) -->
-<li><a href="http://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ site.baseurl }}{{ page.url }}">Facebook</a></li>
+<li><a href="http://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url }}">Facebook</a></li>
 <!-- StumbleUpon (url, title) -->
-<li><a href="http://www.stumbleupon.com/submit?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title }}">StumbleUpon</a></li>
+<li><a href="http://www.stumbleupon.com/submit?url={{ page.url | absolute_url }}&title={{ page.title }}">StumbleUpon</a></li>
 <!-- Reddit (url, title) -->
-<li><a href="http://reddit.com/submit?url={{ site.url }}{{ site.baseurl }}{{ page.url }}&title={{ page.title }}">Reddit</a></li>
+<li><a href="http://reddit.com/submit?url={{ page.url | absolute_url }}&title={{ page.title }}">Reddit</a></li>
 <!-- LinkedIn (url, title, summary, source url) -->
-<li><a href="http://www.linkedin.com/shareArticle?url={{ site.url }}{{ site.baseurl }}/{{ page.url }}&title={{ page.title }}&summary={{ content }}&source={{ site.url }}{{ site.baseurl }}/{{ page.url }}">LinkedIn</a></li>
+<li><a href="http://www.linkedin.com/shareArticle?url={{ page.url | absolute_url }}&title={{ page.title }}&summary={{ content }}&source={{ page.url | absolute_url }}">LinkedIn</a></li>
 <!-- Email (subject, body) -->
 <li><a href="mailto:?subject={{ page.title }}&body={{ content }}">Email</a></li>
