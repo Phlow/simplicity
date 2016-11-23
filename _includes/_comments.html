@@ -1,5 +1,5 @@
 			{% if page.comments %}
-				<h3 id="comments" class="t60">{{ site.language.comments_headline }}</h3>
+				<h3 id="comments" class="t60">{{ site.data.ui[site.lang].comments_headline }}</h3>
 			    <div id="disqus_thread"></div>
 			    <script type="text/javascript">
 			        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -13,7 +13,7 @@
 			            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 			        })();
 			    </script>
-			    <noscript>{{ site.language.enable_disqus }}</noscript>
+			    <noscript>{{ site.data.ui[site.lang].enable_disqus | default: 'Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>' }}</noscript>
 			{% endif %}
 
 

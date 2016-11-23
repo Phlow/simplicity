@@ -13,6 +13,8 @@ title:        'Simplicity'
 description:  'Simplicity is a fast and easy to use jekyll theme for minimalists concentrating on elegance and flexibility.'
 slogan:       'A Minimalistic Jekyll Theme'
 
+# The language setting is used in /includes/header.html for html-settings
+lang: "en"
 
 # Build settings
 url:          'https://phlow.github.io'
@@ -33,8 +35,6 @@ posts_list_limit: 15
 # Use <!--more--> in your posts to generate an excerpt and a teaser
 excerpt_separator: <!--more-->
 
-# The language setting is used in /includes/header.html for html-settings
-language: "en"
 
 
 
@@ -243,35 +243,3 @@ socialmedia:
     # rss: # Full URL needed
 
 
-
-#     __
-#    / /   ____ _____  ____ ___  ______ _____ ____
-#   / /   / __ `/ __ \/ __ `/ / / / __ `/ __ `/ _ \
-#  / /___/ /_/ / / / / /_/ / /_/ / /_/ / /_/ /  __/
-# /_____/\__,_/_/ /_/\__, /\__,_/\__,_/\__, /\___/
-#                   /____/            /____/
-#
-# To translate *Simplicity* just edit the following data.
-# The theme uses for example {{ site.language.read_more }} in
-# the layout templates to fill in the according information
-# given beneath.
-
-language:
-    html_language:            'en'      # The language setting is used in /includes/header.html for html-settings
-    read_more:                'Read more ›'
-    show_all_articles:        'Show All Articles ›'
-    visit_frontpage:          'Visit the frontpage'
-    comments_headline:        'Comments'
-    enable_disqus:            'Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>'
-    search:                   'Search'
-    search_input_placeholder: 'Search [Hit Tab and start writing]'
-    written_by:               'Written by'
-    more_articles:            'More Articles'
-    follow_me_on:                'Follow me at'
-    # More on Accesskeys › http://www.cs.tut.fi/~jkorpela/forms/accesskey.html
-    navigation_search:        'Press Accesskey [4] for Search'
-    navigation_menu:          'Press Accesskey [6] for Navigation Menu'
-    navigation_home:          'Press Accesskey [1] for Homepage'
-    subscribe_to_my_rss_feed: 'Subscribe to my RSS Feed'
-    source:                   'Source'
-    check_out_link:           'Check out the link ›'

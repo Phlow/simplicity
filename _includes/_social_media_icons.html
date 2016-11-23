@@ -13,33 +13,33 @@
 #
 {% endcomment %}
 {% if site.socialmedia.github %}
-  <li class="social-media-icon"><a href="https://github.com/{{ site.socialmedia.github }}" target="_blank" title="{{ site.language.follow_me_on }} Github">{% include svg-social-media/github_ring.svg %}</a></li>
+  <li class="social-media-icon"><a href="https://github.com/{{ site.socialmedia.github }}" target="_blank" title="{{ site.data.ui[site.lang].follow_me_on | default: '' }} Github">{% include svg-social-media/github_ring.svg %}</a></li>
 {% endif %}
 
 {% if site.socialmedia.youtube %}
-  <li class="social-media-icon"><a href="https://www.youtube.com/user/{{ site.socialmedia.youtube }}" target="_blank" title="{{ site.language.follow_me_on }} Youtube">{% include svg-social-media/youtube.svg %}</a></li>
+  <li class="social-media-icon"><a href="https://www.youtube.com/user/{{ site.socialmedia.youtube }}" target="_blank" title="{{ site.data.ui[site.lang].follow_me_on | default: '' }} Youtube">{% include svg-social-media/youtube.svg %}</a></li>
 {% endif %}
 
 {% if site.socialmedia.twitter %}
-  <li class="social-media-icon"><a href="https://twitter.com/{{ site.socialmedia.twitter }}" target="_blank" title="{{ site.language.follow_me_on }} Twitter">{% include svg-social-media/twitter.svg %}</a></li>
+  <li class="social-media-icon"><a href="https://twitter.com/{{ site.socialmedia.twitter }}" target="_blank" title="{{ site.data.ui[site.lang].follow_me_on | default: '' }} Twitter">{% include svg-social-media/twitter.svg %}</a></li>
 {% endif %}
 
 {% if site.socialmedia.facebook %}
-  <li class="social-media-icon"><a href="https://facebook.com/{{ site.socialmedia.facebook }}" target="_blank" title="{{ site.language.follow_me_on }} Facebook">{% include svg-social-media/facebook_square.svg %}</a></li>
+  <li class="social-media-icon"><a href="https://facebook.com/{{ site.socialmedia.facebook }}" target="_blank" title="{{ site.data.ui[site.lang].follow_me_on | default: '' }} Facebook">{% include svg-social-media/facebook_square.svg %}</a></li>
 {% endif %}
 
 {% if site.socialmedia.soundcloud %}
-  <li class="social-media-icon"><a href="https://soundcloud.com/{{ site.socialmedia.soundcloud }}" target="_blank" title="{{ site.language.follow_me_on }} Soundcloud">{% include svg-social-media/soundcloud_notext.svg %}</a></li>
+  <li class="social-media-icon"><a href="https://soundcloud.com/{{ site.socialmedia.soundcloud }}" target="_blank" title="{{ site.data.ui[site.lang].follow_me_on | default: '' }} Soundcloud">{% include svg-social-media/soundcloud_notext.svg %}</a></li>
 {% endif %}
 
 {% if site.socialmedia.instagram %}
-  <li class="social-media-icon"><a href="https://www.instagram.com/{{ site.socialmedia.instagram }}" target="_blank" title="{{ site.language.follow_me_on }} Instagram">{% include svg-social-media/instagram.svg %}</a></li>
+  <li class="social-media-icon"><a href="https://www.instagram.com/{{ site.socialmedia.instagram }}" target="_blank" title="{{ site.data.ui[site.lang].follow_me_on | default: '' }} Instagram">{% include svg-social-media/instagram.svg %}</a></li>
 {% endif %}
 
 {% if site.socialmedia.tumblr %}
-  <li class="social-media-icon"><a href="https://{{ site.socialmedia.tumblr }}.tumblr.com/" target="_blank" title="{{ site.language.follow_me_on }} tumblr">{% include svg-social-media/tumblr.svg %}</a></li>
+  <li class="social-media-icon"><a href="https://{{ site.socialmedia.tumblr }}.tumblr.com/" target="_blank" title="{{ site.data.ui[site.lang].follow_me_on | default: '' }} tumblr">{% include svg-social-media/tumblr.svg %}</a></li>
 {% endif %}
 
 {% if site.socialmedia.rss %}
-  <li class="social-media-icon"><a href="{{ site.socialmedia.rss }}" target="_blank" title="{{ site.language.subscribe_to_my_rss_feed  }}">{% include svg-social-media/rss.svg %}</a></li>
+  <li class="social-media-icon"><a href="{{ site.socialmedia.rss }}" target="_blank" title="{{ site.data.ui[site.lang].subscribe_to_my_rss_feed | default: ''  }}">{% include svg-social-media/rss.svg %}</a></li>
 {% endif %}

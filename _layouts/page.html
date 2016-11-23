@@ -5,7 +5,7 @@ format: page
 <main role="main" id="content" class="row">
   <div class="{% if page.fullwidth == true %}small-12 columns{% else %}medium-8 medium-centered columns{% endif %}">
     <article itemscope itemtype="http://schema.org/Article">
-      <meta content="{{ site.language.html_language }}" itemprop="inLanguage" />
+      <meta content="{{ site.data.ui[site.lang].html_language }}" itemprop="inLanguage" />
       <header>
 
         {% include _video_embed.html %}
@@ -45,7 +45,7 @@ format: page
 
 
         {% if page.link %}
-          <p><a class="button" href="{{ page.link }}" title="{{ site.language.source }} › {{ page.title }}">{{ site.language.check_out_link }}</a></p>
+          <p><a class="button" href="{{ page.link }}" title="{{ site.data.ui[site.lang].source }} › {{ page.title }}">{{ site.data.ui[site.lang].check_out_link }}</a></p>
         {% endif %}
 
       </div><!-- /.content -->
@@ -59,7 +59,7 @@ format: page
       {% if page.show_meta == true %}
       <footer>
         <p>
-          {% if page.author %}{{ site.language.written_by }} {{ page.author }} // {% endif %}
+          {% if page.author %}{{ site.data.ui[site.lang].written_by }} {{ page.author }} // {% endif %}
           {% capture time %}{{ page.date }}{% endcapture %}
           <time datetime="{{ time | truncate: 13 | remove: '...' }}" itemprop="datePublished">{{ time | truncate: 13 | remove: '...' }}</time>
         </p>

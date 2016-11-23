@@ -19,7 +19,7 @@
 {% assign title = title | strip_html | escape | strip_newlines %}
 
 {% endcapture %}<!doctype html>
-<html lang="{% if site.language == nil %}en{% else %}{{ site.language.html_language }}{% endif %}">
+<html lang="{{ site.lang | slice: 0,2 | default: "en" }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">

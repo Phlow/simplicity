@@ -6,7 +6,7 @@ sitemap: false
 ---
 {% include search %}
 
-<h2>{{ site.language.search_results }}</h2>
+<h2>{{ site.data.ui[site.lang].search_results }}</h2>
 
 <ul id="search-results" class="toc"></ul>
 

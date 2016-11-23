@@ -1,0 +1,86 @@
+#     __
+#    / /   ____ _____  ____ ___  ______ _____ ____
+#   / /   / __ `/ __ \/ __ `/ / / / __ `/ __ `/ _ \
+#  / /___/ /_/ / / / / /_/ / /_/ / /_/ / /_/ /  __/
+# /_____/\__,_/_/ /_/\__, /\__,_/\__,_/\__, /\___/
+#                   /____/            /____/
+#
+#   This is the language file of *Simplicity*
+#   Add your translation and set the language in
+#   config.yml
+#
+#   Example for config.yml › lang: 'de'
+#
+#   To translate *Simplicity* just edit the following data.
+#   The theme uses for example it like this:
+#
+#   {{ site.data.ui[site.lang].read_more | default: "Read More&nbsp;›" }}
+
+
+# English (default)
+# -----------------
+# More on Accesskeys › http://www.cs.tut.fi/~jkorpela/forms/accesskey.html
+en: &DEFAULT_EN
+  navigation_search             : 'Press Accesskey [4] for Search'
+  navigation_menu               : 'Press Accesskey [6] for Navigation Menu'
+  navigation_home               : 'Press Accesskey [1] for Homepage'
+  read_more                     : 'Read more ›'
+  show_all_articles             : 'Show All Articles ›'
+  visit_frontpage               : 'Visit the frontpage'
+  comments_headline             : 'Comments'
+  enable_disqus                 : 'Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>'
+  search                        : 'Search'
+  search_input_placeholder      : 'Search [Hit Tab and start writing]'
+  written_by                    : 'Written by'
+  more_articles                 : 'More Articles'
+  follow_me_on                  : 'Follow me at'
+  subscribe_to_my_rss_feed      : 'Subscribe to my RSS Feed'
+  source                        : 'Source'
+  check_out_link                : 'Check out the link ›'
+
+en-US:
+  <<: *DEFAULT_EN
+en-CA:
+  <<: *DEFAULT_EN
+en-GB:
+  <<: *DEFAULT_EN
+en-AU:
+  <<: *DEFAULT_EN
+
+
+
+# German / Deutsch
+# -----------------
+de: &DEFAULT_DE
+  navigation_search             : 'Drück den Accesskey [4] für Suche'
+  navigation_menu               : 'Drück den Accesskey [6] für das Navigation Menü'
+  navigation_home               : 'Drück den Accesskey [1] für die Startseite'
+  read_more                     : 'Weiterlesen&nbsp;›'
+  show_all_articles             : 'Zeige alle Beiträge&nbsp;›'
+  visit_frontpage               : 'Besuch die Startseite'
+  comments_headline             : 'Kommentare'
+  enable_disqus                 : 'Bitte schalte Javascript ein, um die Kommentare zu lesen. <a href="http://disqus.com/?ref_noscript">Kommentarfunktion von Disqus.</a>'
+  search                        : 'Suche'
+  search_input_placeholder      : 'Suchen [Drücke Tab und schreib los]'
+  written_by                    : 'Geschrieben von'
+  more_articles                 : 'Mehr Artikel'
+  follow_me_on                  : 'Folge mir auf'
+  subscribe_to_my_rss_feed      : 'Abonnier meinen RSS Feed'
+  source                        : 'Source'
+  check_out_link                : 'Schau Dir den Link an ›'
+
+de-DE:
+  <<: *DEFAULT_DE
+de-AT:
+  <<: *DEFAULT_DE
+de-CH:
+  <<: *DEFAULT_DE
+de-BE:
+  <<: *DEFAULT_DE
+de-LI:
+  <<: *DEFAULT_DE
+de-LU:
+  <<: *DEFAULT_DE
+
+# Another locale
+# --------------

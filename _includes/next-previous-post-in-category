@@ -25,9 +25,9 @@
 {% endif %}
 {% endfor %}
 {% if next_post %}
-<a class="left button tiny radius icon-chevron-left r15" href="{{ next_post }}">{{ site.language.next_post_in }} {{ cat | upcase }}</a>
+<a class="left button tiny radius icon-chevron-left r15" href="{{ next_post }}">{{ site.data.ui[site.lang].next_post_in }} {{ cat | upcase }}</a>
 {% endif %}
 {% if prev_post %}
-<a class="button tiny radius" href="{{ prev_post }}">{{ site.language.previous_post_in }} {{ cat | upcase }}<span class="icon-chevron-right"></span></a>
+<a class="button tiny radius" href="{{ prev_post }}">{{ site.data.ui[site.lang].previous_post_in }} {{ cat | upcase }}<span class="icon-chevron-right"></span></a>
 {% endif %}
 
