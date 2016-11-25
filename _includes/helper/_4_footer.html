@@ -1,7 +1,7 @@
 <footer id="footer" class="row">
   <nav id="navigation-footer" class="small-12 columns">
     <ul class="inline-list">
-      {% include _social_media_icons.html %}
+      {% include helper/_social_media_icons.html %}
       {% for nav in site.data.navigation_footer %}
         {% if nav.url contains 'http' %}
           {% assign domain = '' %}

@@ -1,36 +1,23 @@
 ---
-layout: compress
+layout: default
 format: archive
 ---
-{% include _1_head.html %}
-
-{% include _2_topbar_navigation.html %}
-
-{% include _3_masthead.html %}
-
 <div id="content" class="row">
-	<div class="medium-8 medium-centered columns">
+  <div class="medium-8 medium-centered columns">
 
-		<h1>{{ page.title }}</h1>
+    <h1>{{ page.title }}</h1>
 
-		{{ content }}
+    {{ content }}
 
-		<div class="bem2">
-			{% include search %}
-		</div>
+    <div class="bem2">
+      {% include search %}
+    </div>
 
-		<ul class="toc">
-		{% for post in site.posts %}
-			<li><a href="{{ post.url | absolute_url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-		{% endfor %}
-		</ul>
+    <ul class="toc">
+      {% for post in site.posts %}
+      <li><a href="{{ post.url | absolute_url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
 
-	</div>
+  </div>
 </div><!-- /.row -->
-
-{% include _4_footer.html %}
-
-{% include _5_footer_scripts.html %}
-
-</body>
-</html>

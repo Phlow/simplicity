@@ -37,6 +37,15 @@ en: &DEFAULT_EN
   subscribe_to_my_rss_feed      : 'Subscribe to my RSS Feed'
   source                        : 'Source'
   check_out_link                : 'Check out the link ›'
+  enter_search_term             : 'Enter search term and hit enter'
+  search_results                : 'Search Results'
+  search                        : 'Search ›'
+  search_input_placeholder      : 'Search [Hit Tab and start writing]'
+  try_404                       : 'Try…  '
+  no_problem_404                : 'No Problem!'
+  start_over_404                : '...to start over on the'
+  search_below_404              : '...to **search** below  '
+  search_404                    : 'Search'
 
 en-US:
   <<: *DEFAULT_EN

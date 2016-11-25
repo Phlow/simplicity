@@ -1,13 +1,7 @@
 ---
-layout: compress
+layout: default
 format: introduction
 ---
-{% include _1_head.html %}
-
-{% include _2_topbar_navigation.html %}
-
-{% include _3_masthead.html %}
-
 <main role="main" id="content" class="row">
     <div class="small-5 medium-4 columns">
         {% if page.link %}
@@ -27,12 +21,4 @@ format: introduction
     <div class="introduction-text small-7 medium-7 end columns">
         {{ content }}
     </div>
-
 </main><!-- /#content/.row -->
-
-{% include _4_footer.html %}
-
-{% include _5_footer_scripts.html %}
-
-</body>
-</html>

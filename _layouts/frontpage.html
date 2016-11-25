@@ -1,16 +1,9 @@
 ---
-layout: compress
+layout: default
 format: frontpage
 ---
-{% include _1_head.html %}
-
-{% include _2_topbar_navigation.html %}
-
-{% include _3_masthead.html %}
-
 <main role="main" id="content" class="row">
     <div class="medium-8 medium-centered columns">
-
 
     {% for post in site.posts limit:site.posts_with_teaser_limit %}
 
@@ -88,10 +81,3 @@ format: frontpage
         {{ content }}
     </div>
 </main><!-- /#content/.row -->
-
-{% include _4_footer.html %}
-
-{% include _5_footer_scripts.html %}
-
-</body>
-</html>

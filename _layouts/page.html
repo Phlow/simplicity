@@ -8,7 +8,7 @@ format: page
       <meta content="{{ site.data.ui[site.lang].html_language }}" itemprop="inLanguage" />
       <header>
 
-        {% include _video_embed.html %}
+        {% include helper/_video_embed.html %}
 
         {% if page.video or page.embed %}
         {% elsif page.image %}
@@ -52,7 +52,7 @@ format: page
 
 
       {% if page.comments == true %}
-      {% include _comments.html %}
+      {% include helper/_comments.html %}
       {% endif %}
 
 
@@ -67,7 +67,7 @@ format: page
       {% endif %}
 
 
-      {% include _pagination.html %}
+      {% include helper/_pagination.html %}
     </article>
   </div>
 </main><!-- /.row -->

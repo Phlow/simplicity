@@ -96,10 +96,10 @@ font:
 #  import: 'Gentium+Basic:400,400italic,700,700italic'
 #  import: 'Fira+Sans:400,400italic,700,700italic|Fira+Mono'
   font-family-serif:      'Georgia, "Times New Roman", serif;'
-  font-family-sans-serif: '"Source Sans", "Neue Helvetica", Arial, serif;'
-  base-font-family:       '"Source Sans", "Neue Helvetica", Arial, serif;'
+  font-family-sans-serif: '"Source Sans Pro", "Neue Helvetica", Arial, serif;'
+  base-font-family:       '"Source Sans Pro", "Neue Helvetica", Arial, serif;'
   font-family-monospace:  '"Source Code Pro", "Courier New", Monaco, monospace;'
-  header-font-family:     '"Source Sans", "Neue Helvetica", Arial, serif;'
+  header-font-family:     '"Source Sans Pro", "Neue Helvetica", Arial, serif;'
 
 
 #      ______

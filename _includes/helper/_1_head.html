@@ -29,6 +29,8 @@
   <link rel="stylesheet" href="{{ url }}/assets/css/simplicity.css">
   <link rel="canonical" href="{{ url }}{{ page.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ url }}/feed.xml">
+  <link href='https://fonts.googleapis.com/css?family={{ site.font.import }}' rel='stylesheet' type='text/css'>
+
 
   <meta name="description" content="{{ description }}">
   <link type="text/plain" rel="author" href="{{ url }}/humans.txt">
@@ -58,7 +60,7 @@
   {% endif %}
 
 
-  {% include _favicon.html %}
+  {% include helper/_favicon.html %}
 
   {% unless page.style == NULL %}<style type="text/css">{{ page.style }}</style>{% endunless %}
 
