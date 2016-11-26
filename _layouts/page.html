@@ -58,11 +58,11 @@ format: page
 
       {% if page.show_meta == true %}
       <footer>
-        <p>
+        <p><small>
           {% if page.author %}{{ site.data.ui[site.lang].written_by }} {{ page.author }} // {% endif %}
           {% capture time %}{{ page.date }}{% endcapture %}
           <time datetime="{{ time | truncate: 13 | remove: '...' }}" itemprop="datePublished">{{ time | truncate: 13 | remove: '...' }}</time>
-        </p>
+        </small></p>
       </footer>
       {% endif %}
 

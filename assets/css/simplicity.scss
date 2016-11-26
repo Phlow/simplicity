@@ -19,9 +19,12 @@ sitemap:
 @import "02_settings/00_normalize";
 
 
-
-//  Set font and general font-setting in _config.yml
-@import url(https://fonts.googleapis.com/css?family={{ site.font.import }});
+//     ______                                         __
+//    /_  __/_  ______  ____  ____ __________ _____  / /_  __  __
+//     / / / / / / __ \/ __ \/ __ `/ ___/ __ `/ __ \/ __ \/ / / /
+//    / / / /_/ / /_/ / /_/ / /_/ / /  / /_/ / /_/ / / / / /_/ /
+//   /_/  \__, / .___/\____/\__, /_/   \__,_/ .___/_/ /_/\__, /
+//       /____/_/          /____/          /_/          /____/
 
 /* Font Families */
 $font-family-serif:         {{ site.font.font-family-serif }}
@@ -30,7 +33,24 @@ $base-font-family:          {{ site.font.base-font-family }}
 $font-family-monospace:     {{ site.font.font-family-monospace }}
 $header-font-family:        {{ site.font.header-font-family }}
 
+/* Line-height */
+$base-line-height: 1.5;
 
-@import "04_typography/00_typography";
+/* Font Weight */
+$base-font-weight: normal;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+
+@import "04_typography/typography_{{ site.modular_scale }}.scss";
+@import "04_typography/general_typography.scss";
+@import "04_typography/typography_article.scss";
+@import "04_typography/typography_media_queries.scss";
+@import "04_typography/typography_css_elements.scss";
+@import "04_typography/syntax_highlighting.scss";
+@import "04_typography/links";
+
+
+
+
 
 @import "05_layout/00_layout";

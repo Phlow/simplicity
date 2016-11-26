@@ -1,28 +1,44 @@
-# ASCII-Font › http://patorjk.com/software/taag/#p=display&f=Slant&t=Phlow
 #
+#   SETTINGS OVERVIEW
+#
+#   - Site Settings
+#   - Color Schemes
+#   - Typography
+#   - Path Defaults
+#   - SEO
+#   - Favicons
+#   - Sass
+#   - disqus
+#   - Analytics
+#   - Social Media
+#   - Gems & Excludes
+#   - Compress
+#
+
+#   ASCII-Font › http://patorjk.com/software/taag/#p=display&f=Slant&t=Phlow
 #      _____ _ __          _____      __  __  _
 #     / ___/(_) /____     / ___/___  / /_/ /_(_)___  ____ ______
 #     \__ \/ / __/ _ \    \__ \/ _ \/ __/ __/ / __ \/ __ `/ ___/
 #    ___/ / / /_/  __/   ___/ /  __/ /_/ /_/ / / / / /_/ (__  )
 #   /____/_/\__/\___/   /____/\___/\__/\__/_/_/ /_/\__, /____/
 #                                                 /____/
-#
+
 
 # Title and description of your site
-title:        'Simplicity'
-description:  'Simplicity is a fast and easy to use jekyll theme for minimalists concentrating on elegance and flexibility.'
-slogan:       'A Minimalistic Jekyll Theme'
+title         : 'Simplicity'
+description   : 'Simplicity is a fast and easy to use jekyll theme for minimalists concentrating on elegance and flexibility.'
+slogan        : 'A Minimalistic Jekyll Theme'
 
 # The language setting is used in /includes/header.html for html-settings
 lang: "en"
 
 # Build settings
-url:          'https://phlow.github.io'
-baseurl:      '/simplicity'
-markdown:     kramdown
-highlighter:  rouge
-permalink:    /:categories/:title/
-encoding:     utf-8
+url           : 'https://phlow.github.io'
+baseurl       : '/simplicity'
+markdown      : kramdown
+highlighter   : rouge
+permalink     : /:categories/:title/
+encoding      : utf-8
 
 
 # Frontpage-Layout-Settings
@@ -30,32 +46,8 @@ encoding:     utf-8
 posts_with_teaser_limit: 1
 # Define how many posts should be shown in the list beneath the post(s)
 posts_list_limit: 15
-
-
 # Use <!--more--> in your posts to generate an excerpt and a teaser
 excerpt_separator: <!--more-->
-
-
-
-
-#      ______
-#     / ____/__  ____ ___  _____
-#    / / __/ _ \/ __ `__ \/ ___/
-#   / /_/ /  __/ / / / / (__  )
-#   \____/\___/_/ /_/ /_/____/
-#
-gems:
-    - jekyll-gist
-    - jekyll-sitemap
-    - jekyll-paginate
-
-# Exclude these files from your production _site
-exclude:
-    - .sass-cache
-    - Gemfile
-    - Gemfile.lock
-    - README.md
-    - INSTALL.md
 
 
 
@@ -76,17 +68,18 @@ exclude:
 color_scheme: simplicity
 
 
-#       ______            __
-#      / ____/___  ____  / /______
-#     / /_  / __ \/ __ \/ __/ ___/
-#    / __/ / /_/ / / / / /_(__  )
-#   /_/    \____/_/ /_/\__/____/
+#     ______                                         __
+#    /_  __/_  ______  ____  ____ __________ _____  / /_  __  __
+#     / / / / / / __ \/ __ \/ __ `/ ___/ __ `/ __ \/ __ \/ / / /
+#    / / / /_/ / /_/ / /_/ / /_/ / /  / /_/ / /_/ / / / / /_/ /
+#   /_/  \__, / .___/\____/\__, /_/   \__,_/ .___/_/ /_/\__, /
+#       /____/_/          /____/          /_/          /____/
 #
+
 #   Choose one of the following font combinations:
 #
 #   import is necessary to import the font from google
 #   the settings for the fonts are used in /assets/css/simplicity.scss
-
 font:
   import: 'Source+Code+Pro|Source+Sans+Pro:400,400italic,700,700italic'
 #  import: 'Titillium+Web:400,400italic,700,700italic'
@@ -95,29 +88,19 @@ font:
 #  import: 'Arvo:400,400italic,700,700italic'
 #  import: 'Gentium+Basic:400,400italic,700,700italic'
 #  import: 'Fira+Sans:400,400italic,700,700italic|Fira+Mono'
-  font-family-serif:      'Georgia, "Times New Roman", serif;'
-  font-family-sans-serif: '"Source Sans Pro", "Neue Helvetica", Arial, serif;'
-  base-font-family:       '"Source Sans Pro", "Neue Helvetica", Arial, serif;'
-  font-family-monospace:  '"Source Code Pro", "Courier New", Monaco, monospace;'
-  header-font-family:     '"Source Sans Pro", "Neue Helvetica", Arial, serif;'
+  font-family-serif         : 'Georgia, "Times New Roman", serif;'
+  font-family-sans-serif    : '"Source Sans Pro", "Neue Helvetica", Arial, serif;'
+  base-font-family          : '"Source Sans Pro", "Neue Helvetica", Arial, serif;'
+  font-family-monospace     : '"Source Code Pro", "Courier New", Monaco, monospace;'
+  header-font-family        : '"Source Sans Pro", "Neue Helvetica", Arial, serif;'
 
+#   Choose a modular scale.
+#   What is a modular scale?
+#   Read this › http://alistapart.com/article/more-meaningful-typography
 
-#      ______
-#     / ____/___  ____ ___  ____  ________  __________
-#    / /   / __ \/ __ `__ \/ __ \/ ___/ _ \/ ___/ ___/
-#   / /___/ /_/ / / / / / / /_/ / /  /  __(__  |__  )
-#   \____/\____/_/ /_/ /_/ .___/_/   \___/____/____/
-#                       /_/
-#
-# Used › default.html front-matter and compress.html
-# Options › http://jch.penibelst.de
-compress_html:
-  clippings: all
-  comments: ["<!-- ", " -->"]
-  endings: all
-  profile: false
-  ignore:
-    envs: [development]
+modular_scale: modular_scale_1em
+# modular_scale: modular_scale_ratio_1_125
+
 
 
 
@@ -157,9 +140,9 @@ defaults:
 #   ___/ / /___/ /_/ /
 #  /____/_____/\____/    Verify Website to Webmaster Tools
 
-google_site_verification:  'Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ'
-# bing_webmastertools_id:  ''
-# alexa_verify_id:         ''
+google_site_verification   : 'Vk0IOJ2jwG_qEoG7fuEXYqv0m2rLa8P778Fi_GrsgEQ'
+# bing_webmastertools_id   : ''
+# alexa_verify_id          : ''
 
 
 
@@ -242,4 +225,42 @@ socialmedia:
     # instagram: phlowmedia
     # rss: # Full URL needed
 
+
+
+#      ______                           ______          __          __
+#     / ____/__  ____ ___       __     / ____/  _______/ /_  ______/ /__  _____
+#    / / __/ _ \/ __ `__ \   __/ /_   / __/ | |/_/ ___/ / / / / __  / _ \/ ___/
+#   / /_/ /  __/ / / / / /  /_  __/  / /____>  </ /__/ / /_/ / /_/ /  __(__  )
+#   \____/\___/_/ /_/ /_/    /_/    /_____/_/|_|\___/_/\__,_/\__,_/\___/____/
+gems:
+    - jekyll-gist
+    - jekyll-sitemap
+    - jekyll-paginate
+
+# Exclude these files from your production _site
+exclude:
+    - .sass-cache
+    - Gemfile
+    - Gemfile.lock
+    - README.md
+    - INSTALL.md
+
+
+
+#      ______
+#     / ____/___  ____ ___  ____  ________  __________
+#    / /   / __ \/ __ `__ \/ __ \/ ___/ _ \/ ___/ ___/
+#   / /___/ /_/ / / / / / / /_/ / /  /  __(__  |__  )
+#   \____/\____/_/ /_/ /_/ .___/_/   \___/____/____/
+#                       /_/
+#
+# Used › default.html front-matter and compress.html
+# Options › http://jch.penibelst.de
+compress_html:
+  clippings : all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  profile: false
+  ignore:
+    envs: [development]
 
