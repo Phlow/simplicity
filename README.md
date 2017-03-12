@@ -7,7 +7,7 @@
 
 # [*Simplicity*][1]
 
-[*Simplicity*][1] is a Jekyll Theme for Minimalist focused on essentials avoiding unnecessary clutter. But still giving you all you need to build wonderful pages for your content.
+[*Simplicity*][1] is a Jekyll Theme for minimalists focused on essentials avoiding unnecessary clutter. But still giving you all you need to build wonderful pages for your content.
 
 
 
