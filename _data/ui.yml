@@ -29,8 +29,6 @@ en: &DEFAULT_EN
   visit_frontpage               : 'Visit the frontpage'
   comments_headline             : 'Comments'
   enable_disqus                 : 'Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>'
-  search                        : 'Search'
-  search_input_placeholder      : 'Search [Hit Tab and start writing]'
   written_by                    : 'Written by'
   more_articles                 : 'More Articles'
   follow_me_on                  : 'Follow me at'
@@ -90,6 +88,38 @@ de-LI:
   <<: *DEFAULT_DE
 de-LU:
   <<: *DEFAULT_DE
+
+# Portuguese
+# -----------------
+pt: &DEFAULT_PT
+  navigation_search             : 'Pressione [4] para usar a busca'
+  navigation_menu               : 'Pressione [6] para acessar o Menu de Navegação'
+  navigation_home               : 'Pressione [1] para acessar a Home'
+  read_more                     : 'Leia mais ›'
+  show_all_articles             : 'Mostrar todos os artigos ›'
+  visit_frontpage               : 'Visite a frontpage'
+  comments_headline             : 'Comentários'
+  enable_disqus                 : 'Por favor ative o JavaScript para ver os <a href="http://disqus.com/?ref_noscript">comentários via Disqus.</a>'
+  written_by                    : 'Escrito por'
+  more_articles                 : 'Mais Artigos'
+  follow_me_on                  : 'Siga-me no'
+  subscribe_to_my_rss_feed      : 'Assine o meu RSS Feed'
+  source                        : 'Fonte'
+  check_out_link                : 'Confira o link ›'
+  enter_search_term             : 'Digite um termo de busca e aperte Enter'
+  search_results                : 'Resultados de busca'
+  search                        : 'Busca ›'
+  search_input_placeholder      : 'Buscar [Aperte tab e comece a escrever]'
+  try_404                       : 'Tente…  '
+  no_problem_404                : 'Sem Problema!'
+  start_over_404                : '...to start over on the'
+  search_below_404              : '...to **search** below  '
+  search_404                    : 'Buscar'
+
+pt-BR:
+  <<: *DEFAULT_PT
+pt-PT:
+  <<: *DEFAULT_PT
 
 # Another locale
 # --------------
