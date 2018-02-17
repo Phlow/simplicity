@@ -29,25 +29,24 @@ title         : 'Simplicity'
 description   : 'Simplicity is a fast and easy to use jekyll theme for minimalists concentrating on elegance and flexibility.'
 slogan        : 'A Minimalistic Jekyll Theme'
 
-# The language setting is used in /includes/header.html for html-settings
-lang: "en"
+
 
 # Build settings
-url           : 'https://phlow.github.io'
-baseurl       : '/simplicity'
+url           : 'https://phlow.github.io/simplicity'
+baseurl       : ''
 markdown      : kramdown
 highlighter   : rouge
 permalink     : /:categories/:title/
 encoding      : utf-8
+destination   : _site
+lang          : 'en'             # The language setting is used in /includes/header.html for html-settings
+
 
 
 # Frontpage-Layout-Settings
-# Define how many posts should be shown with headline, teaser, image, video
-posts_with_teaser_limit: 1
-# Define how many posts should be shown in the list beneath the post(s)
-posts_list_limit: 15
-# Use <!--more--> in your posts to generate an excerpt and a teaser
-excerpt_separator: <!--more-->
+posts_with_teaser_limit  : 1     # Define how many posts should be shown with headline, teaser, image, video
+posts_list_limit         : 15    # Define how many posts should be shown in the list beneath the post(s)
+excerpt_separator: <!--more-->   # Use <!--more--> in your posts to generate an excerpt and a teaser
 
 
 
@@ -66,6 +65,7 @@ excerpt_separator: <!--more-->
 #  - yule
 
 color_scheme: simplicity
+
 
 
 #     ______                                         __
@@ -200,7 +200,7 @@ sass:
 #
 # used in _includes/_4_footer_scripts
 
-# google_analytics_tracking_id: 
+# google_analytics_tracking_id:
 
 
 
@@ -232,7 +232,7 @@ socialmedia:
 #    / / __/ _ \/ __ `__ \   __/ /_   / __/ | |/_/ ___/ / / / / __  / _ \/ ___/
 #   / /_/ /  __/ / / / / /  /_  __/  / /____>  </ /__/ / /_/ / /_/ /  __(__  )
 #   \____/\___/_/ /_/ /_/    /_/    /_____/_/|_|\___/_/\__,_/\__,_/\___/____/
-gems:
+plugins:
     - jekyll-gist
     - jekyll-sitemap
     - jekyll-paginate
@@ -263,4 +263,3 @@ compress_html:
   profile: false
   ignore:
     envs: [development]
-
