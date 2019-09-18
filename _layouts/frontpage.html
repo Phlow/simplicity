@@ -69,14 +69,15 @@ format: frontpage
         <h2>{{ site.data.ui[site.lang].more_articles }}</h2>
         <ul class="toc">
         {% for post in site.posts limit:site.posts_list_limit offset:site.posts_with_teaser_limit %}
-            {% if forloop.last %}
                 <li><a href="{{ post.url | absolute_url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-                <li class="text-right archive-link"><a href="{{ "/archive/" | absolute_url }}">{{ site.data.ui[site.lang].show_all_articles }}</a></li>
-                </ul>
-            {% else %}
-                <li><a href="{{ post.url | absolute_url }}">{% if post.subheadline %}<span>{{ post.subheadline }}</span>{% endif %}{{ post.title }}</a></li>
-            {% endif %}
         {% endfor %}
+
+        {% assign first_page_posts = site.posts_with_teaser_limit | plus: site.posts_list_limit %}
+        {% assign total_posts = site.posts | size %}
+        {% if total_posts > first_page_posts %}
+                <li class="text-right archive-link"><a href="{{ "/archive/" | absolute_url }}">{{ site.data.ui[site.lang].show_all_articles }}</a></li>
+        {% endif %}
+        </ul>
 
         {{ content }}
     </div>
