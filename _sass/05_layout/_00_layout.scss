@@ -24,7 +24,7 @@ body {
 
 @import "grid";
 @import "navigation";
-
+@import "tables";
 @import "masthead";
 @import "logo";
 @import "search";
@@ -33,12 +33,12 @@ body {
 @import "pagination";
 @import "footer";
 @import "jump_to_top";
-@import "layout_media_queries.scss";
-@import "alerts.scss";
-@import "toc.scss";
-@import "buttons.scss";
-@import "_responsive_video.scss";
-@import "layout_elements.scss";
-@import "inline_list.scss";
+@import "layout_media_queries";
+@import "alerts";
+@import "toc";
+@import "buttons";
+@import "_responsive_video";
+@import "layout_elements";
+@import "inline_list";
 @import "layout_introduction_page";
-@import "social_media_icons.scss";
+@import "social_media_icons";

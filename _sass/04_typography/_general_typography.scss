@@ -137,11 +137,19 @@ figcaption {
 
 /* Tables
 ------------------------------------------------------------------- */
-
+table{
+        @extend %table;
+/*      @extend %table-bordered;  */
+        @extend %table-condensed;
+  font-family: $font-family-sans-serif;
+  font-size: .75em;}
+ /*  stripes */
+table   tr:nth-of-type(even) {
+    background: rgba(0,0,0,.2)
+}
 td {
   vertical-align: top;
 }
-
 
 
 /* Code
