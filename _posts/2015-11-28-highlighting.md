@@ -11,7 +11,6 @@ To learn more, read [»Mixing Color for the Web with Sass«](http://alistapart.c
 
 To render a code block with syntax highlighting, surround your code as follows:
 
-
 {% highlight ruby %}
 {% raw %}{% highlight ruby %}{% endraw %}
 def foo
@@ -20,7 +19,7 @@ end
 {% raw %}{% endhighlight %}{% endraw %}
 {% endhighlight %}
 
-If you need lines, add `linenos`…
+If you need lines, add `linenos`:
 
 {% highlight ruby linenos %}
 {% raw %}{% highlight ruby linenos %}{% endraw %}
