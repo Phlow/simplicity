@@ -49,6 +49,6 @@ All the best from [Cologne][1], [Moritz »mo.« Sauer][2]
 
 
 [1]: https://www.google.de/maps/place/K%C3%B6lner+Dom/@38.5398373,2.1154583,4z/data=!3m1!5s0x47bf25baabc20433:0x312b7d4db7d02b48!4m2!3m1!1s0x47bf25a5369c3d2f:0x29ec913896e3a9c6
-[2]: http://moritz.sauer.io
+[2]: https://phlow.de/moritz-mo-sauer/
 [3]: https://jekyllrb.com/docs/frontmatter/
 [4]: https://github.com/Phlow/simplicity
