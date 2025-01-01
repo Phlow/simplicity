@@ -3,5 +3,5 @@
 *  Use this include to use ads inbetween your posts
 *
 {% endcomment %}<div class="border-dotted text-center">
-  <img src="https://placeholdit.imgix.net/~text?txtsize=38&txt=Ad%20Space&w=336&h=280&fm=png" alt="">
+  <img src="https://placehold.co/336x280?text=Ad+Space&font=sourcepro" alt="">
 </div>
