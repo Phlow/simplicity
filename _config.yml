@@ -218,11 +218,11 @@ sass:
 socialmedia:
     youtube: PhlowMedia
     github: phlow
-    twitter: phlow
+    # twitter: phlow
     # facebook: phlow.media
-    # soundcloud: phlow
+    soundcloud: phlow
     # tumblr: motizen
-    # instagram: phlowmedia
+    # instagram: phlow_de
     # rss: # Full URL needed
 
 
